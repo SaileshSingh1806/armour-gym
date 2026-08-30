@@ -53,8 +53,7 @@ export default function ContactPage() {
                       PHYSICAL ADDRESS
                     </h4>
                     <p className="text-gray-300 mt-0.5 leading-relaxed">
-                      Armour 24-7 Gym, 3rd &amp; 4th Floor, Titanium Square Complex,<br />
-                      Opposite Signature Tower, S.G. Highway,<br />
+                      Armour 24-7 Gym, C-601, 602 Shalin Square, Hathijan Circle,<br />
                       <strong className="text-white">Ahmedabad, Gujarat — 382445, India</strong>
                     </p>
                   </div>
@@ -101,7 +100,7 @@ export default function ContactPage() {
                       OFFICIAL EMAIL INQUIRIES
                     </span>
                     <a
-                      href="mailto:contact@armour247gym.com"
+                      href="mailto:armour247gym@gmail.com"
                       className="text-sm font-medium text-white hover:text-[#ff2a3b] transition-colors"
                     >
                       contact@armour247gym.com
@@ -145,7 +144,7 @@ export default function ContactPage() {
               <div className="mt-4 pt-4 border-t border-white/5 grid grid-cols-2 gap-4 text-xs text-gray-400">
                 <div className="flex items-center gap-2">
                   <Car className="w-4 h-4 text-[#ff2a3b]" />
-                  <span>Free Valet &amp; Member Parking</span>
+                  <span>Free Parking</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-[#ff2a3b]" />
@@ -161,12 +160,12 @@ export default function ContactPage() {
                   <MapPin className="w-4 h-4 text-[#ff2a3b]" />
                   LOCATION MAP • AHMEDABAD 382445
                 </span>
-                <span className="text-[10px] text-gray-400 uppercase">S.G. Highway</span>
+                <span className="text-[10px] text-gray-400 uppercase">Hathijan Circle</span>
               </div>
               <div className="relative w-full h-[320px] bg-[#0d0d0d] overflow-hidden">
                 <iframe
                   title="Armour 24-7 Gym Ahmedabad Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117462.67389146955!2d72.483984!3d23.073436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat%20382445!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1298.88922210367!2d72.65593224313736!3d22.957085946512475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e888caf7b654d%3A0xf154cf2006f0e347!2sShalin%20Square!5e0!3m2!1sen!2sin!4v1788094321302!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0, filter: "grayscale(100%) invert(92%) contrast(85%)" }}

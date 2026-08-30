@@ -15,6 +15,8 @@ import {
   Clock,
   Sparkles,
   Zap,
+  Flame,
+  Activity,
 } from "lucide-react";
 
 // Programs data for tabbed section
@@ -172,8 +174,57 @@ export default function HomePage() {
   const [selectedDay, setSelectedDay] = useState<string>("monday");
   const [testimonialIndex, setTestimonialIndex] = useState<number>(0);
 
+  // Smart BMI Calculator State
+  const [bmiGender, setBmiGender] = useState<"male" | "female">("male");
+  const [bmiHeight, setBmiHeight] = useState<number>(166);
+  const [bmiWeight, setBmiWeight] = useState<number>(69);
+
   const currentProgram = programsData[activeTab];
   const currentTestimonial = testimonialItems[testimonialIndex];
+
+  // Dynamic BMI Calculations
+  const heightInMeters = bmiHeight / 100;
+  const bmiValue = parseFloat((bmiWeight / (heightInMeters * heightInMeters)).toFixed(1));
+  const minIdealWeight = Math.round(18.5 * heightInMeters * heightInMeters);
+  const maxIdealWeight = Math.round(24.9 * heightInMeters * heightInMeters);
+
+  const getBmiDetails = () => {
+    if (bmiValue < 18.5) {
+      return {
+        category: "UNDERWEIGHT / LEAN MASS DEFICIT",
+        badgeStyle: "border-cyan-500/50 bg-cyan-950/40 text-cyan-400",
+        advice: "Focus on progressive overload hypertrophy training with a nutrient-dense caloric surplus to build dense muscle mass.",
+        protocol: "HYPERTROPHY & LEAN BULKING PROTOCOL",
+        goalParam: "muscle-gain",
+      };
+    } else if (bmiValue <= 24.9) {
+      return {
+        category: "OPTIMAL ATHLETIC / NORMAL",
+        badgeStyle: "border-emerald-500/50 bg-emerald-950/40 text-emerald-400",
+        advice: "Great foundation! Focus on explosive athletic power, heavy barbell compound mechanics, and muscle conditioning.",
+        protocol: "POWERLIFTING & ATHLETIC PERFORMANCE PROTOCOL",
+        goalParam: "powerlifting",
+      };
+    } else if (bmiValue <= 29.9) {
+      return {
+        category: "OVERWEIGHT / HIGH MASS",
+        badgeStyle: "border-amber-500/50 bg-amber-950/40 text-amber-400",
+        advice: "Combine metabolic weight loss cardio with hypertrophy workouts and caloric deficit.",
+        protocol: "FAT LOSS & BODY RECOMPOSITION PROTOCOL",
+        goalParam: "fat-loss",
+      };
+    } else {
+      return {
+        category: "OBESE / TRANSFORMATION PRIORITY",
+        badgeStyle: "border-red-500/50 bg-red-950/40 text-red-400",
+        advice: "Prioritize joint-friendly cardiovascular conditioning, metabolic fat burn circuits, and targeted macronutrient discipline.",
+        protocol: "INTENSIVE METABOLIC TRANSFORMATION PROTOCOL",
+        goalParam: "fat-loss",
+      };
+    }
+  };
+
+  const bmiDetails = getBmiDetails();
 
   return (
     <div className="bg-[#0a0a0a] text-white min-h-screen">
@@ -741,76 +792,171 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 9. CTA — Mobile App Download */}
+      {/* 9. INTERACTIVE SMART BMI CALCULATOR */}
       {/* ============================================================ */}
-      <section className="py-20 px-6 bg-[#0f0f0f] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#ff2a3b]/5 rounded-l-[100px] hidden lg:block" />
+      <section id="bmi" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] relative overflow-hidden border-t border-white/5">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#ff2a3b]/5 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-2 h-2 bg-[#ff2a3b] rounded-full" />
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Header */}
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <Flame className="w-4 h-4 text-[#ff2a3b] fill-[#ff2a3b]" />
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#ff2a3b] font-oswald">
-                Mobile App
+                INTERACTIVE BODY ASSESSOR
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-oswald font-bold uppercase leading-tight mb-6 text-white">
-              Train Anywhere With<br />
-              Our <span className="text-[#ff2a3b]">Mobile App</span>
+            <h2 className="text-4xl sm:text-6xl font-oswald font-bold uppercase leading-tight text-white">
+              SMART <span className="text-[#ff2a3b]">BMI CALCULATOR</span>
             </h2>
-            <p className="text-gray-300 text-sm leading-relaxed mb-8 max-w-md">
-              Track your workouts, book classes, follow meal plans, and connect with your trainer — all from your phone. Available on iOS and Android.
+            <p className="text-sm sm:text-base text-gray-400 mt-3 font-body">
+              Calculate your Body Mass Index (BMI) and discover your ideal weight range &amp; recommended gym protocol.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="#app"
-                className="bg-white text-black rounded-lg px-6 py-3 flex items-center gap-3 hover:bg-[#ff2a3b] hover:text-white transition-colors shadow-md"
-              >
-                <div className="text-left">
-                  <p className="text-[9px] leading-none opacity-60">Download on the</p>
-                  <p className="text-sm font-bold leading-tight">App Store</p>
-                </div>
-              </a>
-              <a
-                href="#app"
-                className="bg-white text-black rounded-lg px-6 py-3 flex items-center gap-3 hover:bg-[#ff2a3b] hover:text-white transition-colors shadow-md"
-              >
-                <div className="text-left">
-                  <p className="text-[9px] leading-none opacity-60">Get it on</p>
-                  <p className="text-sm font-bold leading-tight">Google Play</p>
-                </div>
-              </a>
-            </div>
           </div>
 
-          {/* 3D Phone Mockup */}
-          <div className="flex justify-center">
-            <div className="relative">
-              <div className="w-64 h-[500px] bg-[#1a1a1a] rounded-[2.5rem] border-4 border-white/10 overflow-hidden shadow-2xl relative">
-                <Image
-                  src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80"
-                  alt="App interface"
-                  fill
-                  className="object-cover opacity-60"
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8">
-                  <div className="relative h-14 w-36 mb-3">
-                    <Image
-                      src="/logo.png"
-                      alt="Armour 24-7 App"
-                      fill
-                      className="object-contain"
-                    />
+          {/* Calculator Card Container */}
+          <div className="max-w-4xl mx-auto bg-[#141414] border border-white/10 p-6 sm:p-10 rounded-2xl shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+              
+              {/* Left Column: Interactive Controls (7 cols) */}
+              <div className="lg:col-span-7 flex flex-col justify-between space-y-7">
+                {/* Gender Selector */}
+                <div>
+                  <label className="block text-xs font-oswald uppercase tracking-widest text-gray-400 font-bold mb-2.5">
+                    GENDER
+                  </label>
+                  <div className="grid grid-cols-2 gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setBmiGender("male")}
+                      className={`py-3 px-4 font-oswald font-bold uppercase text-sm tracking-wider rounded-lg transition-all cursor-pointer ${
+                        bmiGender === "male"
+                          ? "bg-[#ff2a3b] text-white shadow-[0_0_20px_rgba(255,42,59,0.45)]"
+                          : "bg-[#1f1f1f] text-gray-400 hover:text-white border border-white/5"
+                      }`}
+                    >
+                      MALE
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setBmiGender("female")}
+                      className={`py-3 px-4 font-oswald font-bold uppercase text-sm tracking-wider rounded-lg transition-all cursor-pointer ${
+                        bmiGender === "female"
+                          ? "bg-[#ff2a3b] text-white shadow-[0_0_20px_rgba(255,42,59,0.45)]"
+                          : "bg-[#1f1f1f] text-gray-400 hover:text-white border border-white/5"
+                      }`}
+                    >
+                      FEMALE
+                    </button>
                   </div>
-                  <p className="font-oswald font-bold uppercase text-lg text-center text-white">Armour 24-7 App</p>
-                  <p className="text-[10px] text-gray-400 text-center mt-1">Your 24/7 pocket trainer</p>
+                </div>
+
+                {/* Height Slider */}
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-xs font-oswald uppercase tracking-widest text-gray-400 font-bold">
+                      HEIGHT
+                    </span>
+                    <span className="font-oswald text-lg font-bold text-[#ff2a3b]">
+                      {bmiHeight} CM
+                    </span>
+                  </div>
+                  <input
+                    type="range"
+                    min="120"
+                    max="220"
+                    value={bmiHeight}
+                    onChange={(e) => setBmiHeight(Number(e.target.value))}
+                    className="w-full h-2 bg-[#222222] rounded-lg appearance-none cursor-pointer accent-[#ff2a3b]"
+                  />
+                  <div className="flex justify-between text-[10px] text-gray-500 font-mono mt-1">
+                    <span>120 CM</span>
+                    <span>170 CM</span>
+                    <span>220 CM</span>
+                  </div>
+                </div>
+
+                {/* Weight Slider */}
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-xs font-oswald uppercase tracking-widest text-gray-400 font-bold">
+                      WEIGHT
+                    </span>
+                    <span className="font-oswald text-lg font-bold text-[#ff2a3b]">
+                      {bmiWeight} KG
+                    </span>
+                  </div>
+                  <input
+                    type="range"
+                    min="35"
+                    max="160"
+                    value={bmiWeight}
+                    onChange={(e) => setBmiWeight(Number(e.target.value))}
+                    className="w-full h-2 bg-[#222222] rounded-lg appearance-none cursor-pointer accent-[#ff2a3b]"
+                  />
+                  <div className="flex justify-between text-[10px] text-gray-500 font-mono mt-1">
+                    <span>35 KG</span>
+                    <span>95 KG</span>
+                    <span>160 KG</span>
+                  </div>
+                </div>
+
+                {/* Ideal Weight Range Box */}
+                <div className="bg-[#0d0d0d] border border-white/5 p-4 rounded-xl">
+                  <span className="text-[10px] font-oswald uppercase tracking-widest text-gray-400 font-bold block mb-1">
+                    YOUR IDEAL WEIGHT RANGE
+                  </span>
+                  <div className="font-oswald text-2xl sm:text-3xl font-bold text-white tracking-wide">
+                    {minIdealWeight} KG – {maxIdealWeight} KG
+                  </div>
                 </div>
               </div>
 
-              {/* Floating notification bubble */}
-              <div className="absolute -top-4 -right-8 glass py-2 px-4 rounded-lg text-xs font-bold shadow-2xl">
-                <span className="text-[#ff2a3b]">+2,450</span> <span className="text-gray-300">cal burned today</span>
+              {/* Right Column: Calculated Results Card (5 cols) */}
+              <div className="lg:col-span-5 bg-[#0d0d0d] border border-white/10 p-6 sm:p-8 rounded-xl flex flex-col justify-between text-center shadow-inner">
+                <div>
+                  <span className="text-xs font-oswald uppercase tracking-widest text-gray-400 font-bold block">
+                    YOUR CALCULATED BMI
+                  </span>
+                  
+                  {/* Huge Numeric BMI */}
+                  <div className="font-oswald text-6xl sm:text-7xl font-bold text-[#ff2a3b] my-2 leading-none">
+                    {bmiValue}
+                  </div>
+
+                  {/* Category Badge */}
+                  <div className={`inline-block px-4 py-1.5 rounded-full border text-xs font-oswald font-bold uppercase tracking-wider mb-4 ${bmiDetails.badgeStyle}`}>
+                    {bmiDetails.category}
+                  </div>
+
+                  {/* Advice Snippet */}
+                  <p className="text-xs text-gray-300 leading-relaxed max-w-xs mx-auto mb-6">
+                    {bmiDetails.advice}
+                  </p>
+                </div>
+
+                <div>
+                  {/* Recommended Protocol Box */}
+                  <div className="bg-[#181818] border border-[#ff2a3b]/30 p-3.5 rounded-lg mb-6 text-left">
+                    <span className="text-[9px] uppercase font-oswald tracking-widest text-[#ff2a3b] font-bold block">
+                      RECOMMENDED GYM PROTOCOL
+                    </span>
+                    <div className="font-oswald text-sm sm:text-base font-bold text-white uppercase tracking-wider mt-0.5">
+                      {bmiDetails.protocol}
+                    </div>
+                  </div>
+
+                  {/* Action CTA */}
+                  <Link
+                    href={`/contact?goal=${bmiDetails.goalParam}&bmi=${bmiValue}`}
+                    className="w-full py-3.5 px-4 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold text-sm sm:text-base uppercase tracking-wider rounded-lg shadow-[0_0_25px_rgba(255,42,59,0.45)] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    <Flame className="w-4 h-4 fill-current" />
+                    <span>BOOK FREE TRIAL FOR THIS PLAN</span>
+                  </Link>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -851,7 +997,7 @@ export default function HomePage() {
               <span className="text-[#ff2a3b]">1-Day Workout Pass</span>
             </h2>
             <p className="text-sm text-gray-300 leading-relaxed">
-              Experience the Armour 24-7 facility in Titanium Square Complex, S.G. Highway, Ahmedabad with zero obligation.
+              Experience the Armour 24-7 facility at C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad with zero obligation.
             </p>
           </div>
           <div className="lg:col-span-6">

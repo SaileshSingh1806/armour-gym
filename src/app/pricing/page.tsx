@@ -86,7 +86,7 @@ const faqs = [
   },
   {
     q: "Where exactly is Armour 24-7 Gym located in Ahmedabad?",
-    a: "We are located on S.G. Highway, Ahmedabad, Gujarat 382445, equipped with ample dedicated parking for two-wheelers and cars.",
+    a: "We are located at C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445, equipped with ample dedicated parking for two-wheelers and cars.",
   },
 ];
 

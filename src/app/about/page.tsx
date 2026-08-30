@@ -19,10 +19,10 @@ export const metadata = {
 };
 
 const stats = [
-  { value: "24/7/365", label: "ALWAYS OPEN ACCESS", sub: "No Holidays, No Shutdowns" },
-  { value: "22,000+", label: "SQUARE FEET FLOOR", sub: "4 Dedicated Training Sectors" },
-  { value: "100+", label: "ELITE MACHINES", sub: "Hammer Strength & Eleiko" },
-  { value: "12+", label: "CERTIFIED COACHES", sub: "IFBB, CSCS & ACSM Certified" },
+  { value: "24-7", label: "ALWAYS OPEN ACCESS", sub: "No Holidays, No Shutdowns" },
+  { value: "15,000+", label: "SQUARE FEET FLOOR", sub: "4 Dedicated Training Sectors" },
+  { value: "40+", label: "ELITE MACHINES", sub: "Hammer Strength & Eleiko" },
+  { value: "5+", label: "CERTIFIED COACHES", sub: "IFBB, CSCS & ACSM Certified" },
 ];
 
 const pillars = [
@@ -136,7 +136,7 @@ export default function AboutPage() {
               WHY ATHLETES CHOOSE US
             </span>
             <h2 className="font-heading text-3xl sm:text-5xl font-bold uppercase tracking-tight text-white mt-1">
-              THE FOUR PILLARS OF <span className="text-[#ff2a3b]">ARMOUR 24-7</span>
+              THE FOUR PILLARS OF <span className="text-[#ff2a3b] inline-block whitespace-nowrap">ARMOUR 24-7</span>
             </h2>
           </div>
           <p className="text-xs text-gray-400 max-w-md">

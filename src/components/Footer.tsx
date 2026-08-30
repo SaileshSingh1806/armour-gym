@@ -24,7 +24,7 @@ export default function Footer() {
             />
           </div>
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
-            Ahmedabad’s premier 24/7 bodybuilding and athletic training sanctuary. Titanium Square Complex, S.G. Highway, Ahmedabad 382445.
+            Ahmedabad’s premier 24/7 bodybuilding and athletic training sanctuary.<br></br> C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad 382445.
           </p>
           <div className="flex gap-3">
             <a
@@ -144,7 +144,7 @@ export default function Footer() {
       {/* Giant Bottom Faint Watermark */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full text-center z-0 pointer-events-none">
         <span className="text-[7rem] md:text-[13rem] font-oswald font-bold text-white/[0.02] leading-none tracking-tighter block whitespace-nowrap">
-          ARMOUR 24/7
+          ARMOUR 24-7
         </span>
       </div>
     </footer>
