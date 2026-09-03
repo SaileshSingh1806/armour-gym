@@ -9,8 +9,8 @@ import { Menu, X, ArrowRight } from "lucide-react";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Programs", href: "/#programs" },
+  { name: "Ladies Program", href: "/#ladies-program" },
   { name: "About", href: "/about" },
-  { name: "Schedule", href: "/schedule" },
   { name: "Pricing", href: "/pricing" },
   { name: "Gallery", href: "/#gallery" },
   { name: "Contact", href: "/contact" },
@@ -38,6 +38,10 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
+  const closeMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header
       id="mainHeader"
@@ -48,8 +52,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Large Prominent Responsive Logo */}
-        <Link href="/" className="flex items-center group relative z-10 py-1">
+        {/* Large Prominent Responsive Logo - Links to Homepage */}
+        <Link
+          href="/"
+          onClick={closeMenu}
+          className="flex items-center group relative z-10 py-1"
+          aria-label="Armour 24-7 Gym - Go to Homepage"
+        >
           <Image
             src="/logo.png"
             alt="Armour 24-7 Gym Ahmedabad"
@@ -95,6 +104,7 @@ export default function Navbar() {
         <div className="flex items-center lg:hidden gap-3">
           <Link
             href="/contact"
+            onClick={closeMenu}
             className="bg-[#ff2a3b] text-white font-oswald font-bold px-4 py-2 text-xs uppercase tracking-wider rounded-sm shadow-md"
           >
             Join
@@ -122,6 +132,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
+                onClick={closeMenu}
                 className="py-2.5 text-lg font-oswald font-bold uppercase tracking-wider text-gray-300 hover:text-[#ff2a3b] transition-colors flex items-center justify-between border-b border-white/5"
               >
                 <span>{link.name}</span>
@@ -133,6 +144,7 @@ export default function Navbar() {
           <div className="pt-4">
             <Link
               href="/contact"
+              onClick={closeMenu}
               className="block w-full py-3.5 text-center bg-[#ff2a3b] text-white font-oswald font-bold text-base uppercase tracking-wider rounded-sm shadow-[0_0_20px_rgba(255,42,59,0.35)]"
             >
               Get Free Pass • Ahmedabad 382445

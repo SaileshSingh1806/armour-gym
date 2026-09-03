@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
@@ -17,6 +17,9 @@ import {
   Zap,
   Flame,
   Activity,
+  CheckCircle2,
+  X,
+  Heart,
 } from "lucide-react";
 
 // Programs data for tabbed section
@@ -83,96 +86,106 @@ const programsData = {
   },
 };
 
-// Weekly Schedule data
-const scheduleData: Record<string, Array<{ time: string; title: string; trainer: string; room: string; duration: string; isHighlight?: boolean }>> = {
-  monday: [
-    { time: "06:00", title: "Morning Yoga", trainer: "Emily Chen", room: "Studio A", duration: "60 min" },
-    { time: "08:00", title: "CrossFit WOD", trainer: "Coach Vikram", room: "Box Arena", duration: "60 min" },
-    { time: "10:00", title: "HIIT Cardio", trainer: "Coach Ananya", room: "Studio B", duration: "45 min" },
-    { time: "14:00", title: "Strength Training", trainer: "Coach Kabir", room: "Main Floor", duration: "75 min", isHighlight: true },
-    { time: "17:00", title: "Boxing Fundamentals", trainer: "Coach Devendra", room: "Boxing Ring", duration: "90 min" },
-    { time: "19:30", title: "Evening Power", trainer: "Coach Vikram", room: "Main Floor", duration: "60 min" },
-  ],
-  tuesday: [
-    { time: "07:00", title: "Spin Class", trainer: "Coach Ananya", room: "Cycle Room", duration: "45 min" },
-    { time: "09:30", title: "Pilates", trainer: "Coach Maya", room: "Studio A", duration: "60 min" },
-    { time: "12:00", title: "Power Lunch Express", trainer: "Coach Kabir", room: "Studio B", duration: "30 min", isHighlight: true },
-    { time: "16:00", title: "Olympic Lifting", trainer: "Coach Vikram", room: "Platform", duration: "75 min" },
-    { time: "20:00", title: "Night Burn", trainer: "Coach Ananya", room: "Studio B", duration: "45 min" },
-  ],
-  wednesday: [
-    { time: "06:30", title: "Morning Burn", trainer: "Coach Ananya", room: "Studio A", duration: "45 min" },
-    { time: "09:00", title: "Functional Training", trainer: "Coach Vikram", room: "Main Floor", duration: "60 min" },
-    { time: "12:00", title: "Power Hour", trainer: "Coach Kabir", room: "Studio B", duration: "60 min", isHighlight: true },
-    { time: "15:00", title: "MMA Conditioning", trainer: "Coach Devendra", room: "Boxing Ring", duration: "90 min" },
-    { time: "18:30", title: "Vinyasa Flow", trainer: "Coach Maya", room: "Yoga Studio", duration: "75 min" },
-  ],
-  thursday: [
-    { time: "07:00", title: "Athletic Mobility", trainer: "Coach Maya", room: "Studio A", duration: "50 min" },
-    { time: "09:30", title: "Power Hypertrophy", trainer: "Coach Kabir", room: "Main Floor", duration: "75 min" },
-    { time: "12:30", title: "Core & Abs Blast", trainer: "Coach Ananya", room: "Studio B", duration: "40 min", isHighlight: true },
-    { time: "17:00", title: "Combat Striking", trainer: "Coach Devendra", room: "Boxing Ring", duration: "75 min" },
-    { time: "19:00", title: "Heavy Barbell Squad", trainer: "Coach Vikram", room: "Platform", duration: "60 min" },
-  ],
-  friday: [
-    { time: "06:30", title: "Fast Metabolic HIIT", trainer: "Coach Ananya", room: "Studio A", duration: "45 min" },
-    { time: "09:00", title: "Full Body Sculpt", trainer: "Coach Kabir", room: "Main Floor", duration: "60 min" },
-    { time: "12:00", title: "Lunch Deadlift Clinic", trainer: "Coach Vikram", room: "Platform", duration: "60 min", isHighlight: true },
-    { time: "16:30", title: "Friday Fight Club", trainer: "Coach Devendra", room: "Boxing Ring", duration: "90 min" },
-    { time: "19:00", title: "Weekend Warmup Flow", trainer: "Coach Maya", room: "Yoga Studio", duration: "60 min" },
-  ],
-  saturday: [
-    { time: "08:00", title: "Weekend Warrior Boot Camp", trainer: "Coach Ananya", room: "Turf Area", duration: "75 min" },
-    { time: "10:00", title: "Strongman & Tire Flips", trainer: "Coach Vikram", room: "Outdoor Yard", duration: "90 min", isHighlight: true },
-    { time: "12:30", title: "Yin Yoga & Deep Stretch", trainer: "Coach Maya", room: "Yoga Studio", duration: "60 min" },
-    { time: "15:00", title: "Open Sparring & Ring", trainer: "Coach Devendra", room: "Boxing Ring", duration: "60 min" },
-  ],
-};
-
-// Testimonials data
-const testimonialItems = [
+// Google Reviews Data
+const googleReviews = [
   {
-    quote: "Armour 24-7 Gym didn't just transform my body — it transformed my entire mindset. I walk taller, I think bigger, I live bolder.",
-    name: "Jessica Torres",
-    role: "Professional Athlete",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+    initial: "H",
+    name: "HARDIK TRIVEDI",
+    time: "1 week ago",
+    rating: 5,
+    text: "One of the best gyms around. Massive 15,000 sq ft setup with an incredible variety of imported machines. Highly recommended in Hathijan Circle!",
   },
   {
-    quote: "The community at Armour 24-7 is incredible. Everyone from the coaches to fellow members pushes you to be your absolute best.",
-    name: "Robert Kim",
-    role: "Fitness Enthusiast",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80",
+    initial: "S",
+    name: "SNEHA MEHTA",
+    time: "2 weeks ago",
+    rating: 5,
+    text: "Good atmosphere, supportive trainers and open 24-7. As a working professional, being able to workout at 11 PM is a game-changer.",
+  },
+  {
+    initial: "R",
+    name: "ROHAN DAVE",
+    time: "1 month ago",
+    rating: 5,
+    text: "Clean gym with amazing equipment and friendly staff. Hygiene is top notch and the air conditioning keeps it cool even in summer peak hours.",
+  },
+  {
+    initial: "J",
+    name: "JIGNESH JOSHI",
+    time: "1 month ago",
+    rating: 5,
+    text: "Trainer Krish is very supportive, knowledgeable and professional. Guided me through my knee recovery and deadlift posture flawlessly.",
   },
 ];
 
-// Blog posts
+// Blog posts with full interactive article content
 const blogPosts = [
   {
+    id: 1,
     title: "5 Compound Exercises That Build Total-Body Strength",
     category: "Training",
     date: "Dec 15, 2025",
+    readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80",
+    desc: "Master the fundamental movements that recruit maximum muscle fibers, stimulate growth hormones, and forge raw power.",
+    content: [
+      "Compound exercises are multi-joint movements that work several muscle groups simultaneously. Unlike isolation exercises, compound movements yield the highest hormonal response and functional strength transfer.",
+      "1. Barbell Squat: The undisputed king of lower-body development. Squats build immense quadriceps, hamstrings, and core stability.",
+      "2. Conventional Deadlift: Tests and builds your entire posterior chain, spinal erectors, and grip strength.",
+      "3. Standing Overhead Press: Creates powerful shoulders, triceps, and upper chest density while engaging stabilizing core muscles.",
+      "4. Barbell Bench Press: Develops pushing power across the pectorals, anterior deltoids, and triceps.",
+      "5. Weighted Pull-Ups / Rows: Builds a wide, thick back (V-taper) and protects shoulders against injury.",
+      "At Armour 24-7 Gym, our Eleiko calibrated plates and dedicated Olympic platforms give you the exact pro setup needed to lift heavy safely."
+    ],
   },
   {
+    id: 2,
     title: "The Ultimate Guide to Pre & Post Workout Nutrition",
     category: "Nutrition",
     date: "Dec 10, 2025",
+    readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80",
     desc: "Fuel your performance and optimize recovery with the right nutrients at the right time.",
+    content: [
+      "Nutrition is 70% of your physical transformation. What you consume before and after strenuous training determines your energy output and muscle recovery speed.",
+      "Pre-Workout Window (60-90 min before): Consume complex carbohydrates paired with moderate lean protein (e.g. oats with whey or banana with eggs) to maximize muscle glycogen without digestive sluggishness.",
+      "Hydration & Electrolytes: Dehydration by just 2% can reduce your strength and endurance by over 15%. Drink at least 500ml water before stepping onto the gym floor.",
+      "Post-Workout Window (Within 45 min): Prioritize fast-absorbing protein (25-35g) and simple carbs to spike insulin, drive amino acids into torn muscle fibers, and kickstart protein synthesis.",
+      "Consistency is Key: Hit your daily protein targets (1.6g - 2.2g per kg of body weight) consistently to see compounding results week over week."
+    ],
   },
   {
+    id: 3,
     title: "Why Flexibility Training Is the Missing Piece in Your Routine",
     category: "Wellness",
     date: "Dec 5, 2025",
+    readTime: "3 min read",
     image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80",
     desc: "Improve mobility, prevent injury, and enhance performance with dedicated stretching sessions.",
+    content: [
+      "True athletic power requires both maximum tension and full active range of motion. Tight hips, stiff ankles, and rounded upper backs compromise heavy lifting technique.",
+      "Dynamic Warmups vs. Static Stretching: Perform dynamic mobility drills (leg swings, world's greatest stretch) before your workout to increase synovial fluid in joints. Save deep static stretching for post-workout when muscles are warm.",
+      "Spinal & Hip Health: Spending long hours sitting compresses the lumbar spine and shortens hip flexors. Daily 10-minute mobility drills relieve chronic lower back pain and enhance deep squat depth.",
+      "Recovery Acceleration: Foam rolling and mobility work boost circulation, flushing out lactic acid and reducing delayed onset muscle soreness (DOMS)."
+    ],
   },
 ];
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState<keyof typeof programsData>("strength");
-  const [selectedDay, setSelectedDay] = useState<string>("monday");
-  const [testimonialIndex, setTestimonialIndex] = useState<number>(0);
+
+  // Selected Blog Article for Interactive Modal
+  const [selectedBlog, setSelectedBlog] = useState<(typeof blogPosts)[0] | null>(null);
+
+  // Google Reviews Mobile Slider Autoplay State
+  const [activeReview, setActiveReview] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveReview((prev) => (prev + 1) % googleReviews.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, []);
 
   // Smart BMI Calculator State
   const [bmiGender, setBmiGender] = useState<"male" | "female">("male");
@@ -180,7 +193,6 @@ export default function HomePage() {
   const [bmiWeight, setBmiWeight] = useState<number>(69);
 
   const currentProgram = programsData[activeTab];
-  const currentTestimonial = testimonialItems[testimonialIndex];
 
   // Dynamic BMI Calculations
   const heightInMeters = bmiHeight / 100;
@@ -274,25 +286,24 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Mini stats */}
+            {/* Mini stats - New Grand Opening Facility */}
             <div className="flex gap-8 pt-8 border-t border-white/10">
               <div className="text-center">
-                <span className="text-3xl font-oswald font-bold text-[#ff2a3b]">24/7</span>
+                <span className="text-3xl font-oswald font-bold text-[#ff2a3b]">24-7</span>
                 <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Biometric Access</p>
               </div>
               <div className="text-center">
-                <span className="text-3xl font-oswald font-bold text-white">200+</span>
-                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Trainers &amp; Rigs</p>
+                <span className="text-3xl font-oswald font-bold text-white">15,000</span>
+                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Sq. Ft. Floor Space</p>
               </div>
               <div className="text-center">
-                <span className="text-3xl font-oswald font-bold text-white">15K</span>
-                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Active Members</p>
+                <span className="text-3xl font-oswald font-bold text-white">40+</span>
+                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Elite Machines &amp; Rigs</p>
               </div>
             </div>
 
           </div>
         </div>
-
         {/* Right Image with Floating Glass Cards */}
         <div className="relative hidden lg:block overflow-hidden">
           <Image
@@ -599,197 +610,497 @@ export default function HomePage() {
 
         <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <span className="text-5xl md:text-6xl font-oswald font-bold text-[#ff2a3b] block leading-none">15K+</span>
+            <span className="text-5xl md:text-6xl font-oswald font-bold text-[#ff2a3b] block leading-none">24-7</span>
             <div className="w-8 h-[2px] bg-[#ff2a3b] mx-auto my-3" />
-            <p className="text-xs text-gray-300 uppercase tracking-wider font-bold">Happy Members</p>
+            <p className="text-xs text-gray-300 uppercase tracking-wider font-bold">Biometric Access</p>
           </div>
 
           <div>
-            <span className="text-5xl md:text-6xl font-oswald font-bold text-white block leading-none">200+</span>
+            <span className="text-5xl md:text-6xl font-oswald font-bold text-white block leading-none">15,000</span>
             <div className="w-8 h-[2px] bg-white/20 mx-auto my-3" />
-            <p className="text-xs text-gray-300 uppercase tracking-wider font-bold">Expert Trainers</p>
+            <p className="text-xs text-gray-300 uppercase tracking-wider font-bold">Sq. Ft. Floor Space</p>
           </div>
 
           <div>
-            <span className="text-5xl md:text-6xl font-oswald font-bold text-white block leading-none">50+</span>
+            <span className="text-5xl md:text-6xl font-oswald font-bold text-white block leading-none">40+</span>
             <div className="w-8 h-[2px] bg-white/20 mx-auto my-3" />
-            <p className="text-xs text-gray-300 uppercase tracking-wider font-bold">Training Stations</p>
+            <p className="text-xs text-gray-300 uppercase tracking-wider font-bold">Imported Machines</p>
           </div>
 
           <div>
-            <span className="text-5xl md:text-6xl font-oswald font-bold text-[#ff2a3b] block leading-none">24/7</span>
+            <span className="text-5xl md:text-6xl font-oswald font-bold text-[#ff2a3b] block leading-none">5+</span>
             <div className="w-8 h-[2px] bg-[#ff2a3b] mx-auto my-3" />
-            <p className="text-xs text-gray-300 uppercase tracking-wider font-bold">Always Open</p>
+            <p className="text-xs text-gray-300 uppercase tracking-wider font-bold">Certified Coaches</p>
           </div>
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/* 6. SCHEDULE — Visual Timeline */}
+      {/* 6. SPECIALIZED LADIES FITNESS PROGRAM */}
       {/* ============================================================ */}
-      <section className="py-28 px-6 relative">
-        <div className="max-w-7xl mx-auto">
+      <section id="ladies-program" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-[#0d0d0d] border-t border-white/5 overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-2 h-2 bg-[#ff2a3b] rounded-full" />
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#ff2a3b] font-oswald">
-                Weekly Schedule
-              </span>
-              <div className="w-2 h-2 bg-[#ff2a3b] rounded-full" />
-            </div>
-            <h2 className="text-4xl md:text-6xl font-oswald font-bold uppercase leading-tight text-white">
-              Class <span className="text-[#ff2a3b]">Schedule</span>
-            </h2>
-          </div>
+          {/* Left: Inspiring Women's Workout Image with Floating Glass Badge */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative h-[420px] sm:h-[500px] w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <Image
+                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1000&q=80"
+                alt="Ladies Fitness Training at Armour 24-7 Gym"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
 
-          {/* Day Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
-            {["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"].map((day) => {
-              const isSelected = selectedDay === day;
-              return (
-                <button
-                  key={day}
-                  onClick={() => setSelectedDay(day)}
-                  className={`px-5 py-2.5 font-oswald font-bold uppercase text-xs tracking-wider transition-all rounded-sm cursor-pointer ${
-                    isSelected
-                      ? "bg-[#ff2a3b] text-white shadow-[0_0_15px_rgba(255,42,59,0.4)]"
-                      : "bg-[#111] border border-white/5 text-gray-400 hover:text-white"
-                  }`}
-                >
-                  {day}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Timeline List */}
-          <div className="space-y-3 max-w-4xl mx-auto animate-in fade-in duration-200">
-            {scheduleData[selectedDay]?.map((item, idx) => (
-              <div
-                key={idx}
-                className={`grid grid-cols-[80px_1fr_120px] md:grid-cols-[120px_1fr_150px] items-center p-4 rounded-sm transition-colors ${
-                  item.isHighlight
-                    ? "bg-[#ff2a3b] text-white shadow-[0_0_20px_rgba(255,42,59,0.3)]"
-                    : "bg-[#111] border border-white/5 hover:border-[#ff2a3b]/40 text-white"
-                }`}
-              >
-                <span className={`text-sm font-oswald font-bold ${item.isHighlight ? "text-white" : "text-[#ff2a3b]"}`}>
-                  {item.time}
-                </span>
+              {/* Floating Bottom Badge */}
+              <div className="absolute bottom-5 left-5 right-5 bg-black/85 backdrop-blur-md border border-white/15 p-4 rounded-xl flex items-center gap-3.5 shadow-2xl">
+                <div className="w-10 h-10 bg-[#ff2a3b]/15 border border-[#ff2a3b]/40 rounded-lg flex items-center justify-center text-[#ff2a3b] shrink-0 shadow-md">
+                </div>
                 <div>
-                  <h4 className="font-oswald font-bold uppercase">{item.title}</h4>
-                  <p className={`text-[10px] ${item.isHighlight ? "text-white/80" : "text-gray-400"}`}>
-                    {item.trainer} • {item.room}
+                  <h4 className="font-oswald font-bold uppercase text-white text-sm tracking-wide">
+                    EMPOWERING FEMALE FITNESS IN HATHIJAN CIRCLE
+                  </h4>
+                  <p className="text-[11px] text-gray-300 font-body">
+                    Personal Guidance • Comfortable &amp; Hygienic Setup
                   </p>
                 </div>
-                <span className={`text-[10px] font-bold uppercase tracking-wider text-right ${item.isHighlight ? "text-white/80" : "text-gray-400"}`}>
-                  {item.duration}
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Program Details & 6 Benefit Cards */}
+          <div className="lg:col-span-7 space-y-6">
+            
+            {/* Eyebrow & Title */}
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-2 h-2 bg-[#ff2a3b] rounded-full shadow-[0_0_8px_#ff2a3b]" />
+                <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#ff2a3b] font-oswald">
+                  SPECIALIZED LADIES PROGRAM
                 </span>
+              </div>
+              <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase leading-tight text-white">
+                STRONG IS BEAUTIFUL<br />
+                <span className="text-[#ff2a3b]">TRANSFORM WITH CONFIDENCE</span>
+              </h2>
+              <p className="text-sm text-gray-300 leading-relaxed mt-4 font-body">
+                At Armour 24-7 Gym, we provide a safe, respectful, and motivating sanctuary for women of all fitness backgrounds. Whether you want to lose postpartum weight, tone your waistline, or build athletic strength, our dedicated female fitness programs provide expert instruction every step of the way.
+              </p>
+            </div>
+
+            {/* 6 Benefit Points Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+              
+              <div className="bg-[#141414] border border-white/10 p-4 rounded-xl hover:border-[#ff2a3b]/50 transition-colors">
+                <div className="flex items-center gap-2 mb-1 text-[#ff2a3b]">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  <h4 className="font-oswald font-bold uppercase text-sm text-white tracking-wider">
+                    TARGETED FAT LOSS
+                  </h4>
+                </div>
+                <p className="text-[11px] text-gray-400 leading-relaxed pl-6">
+                  Scientific high-calorie burn splits combined with sustained macro diets.
+                </p>
+              </div>
+
+              <div className="bg-[#141414] border border-white/10 p-4 rounded-xl hover:border-[#ff2a3b]/50 transition-colors">
+                <div className="flex items-center gap-2 mb-1 text-[#ff2a3b]">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  <h4 className="font-oswald font-bold uppercase text-sm text-white tracking-wider">
+                    BODY TONING &amp; GLUTE FOCUS
+                  </h4>
+                </div>
+                <p className="text-[11px] text-gray-400 leading-relaxed pl-6">
+                  Specialized resistance training for waist trimming and leg curvature.
+                </p>
+              </div>
+
+              <div className="bg-[#141414] border border-white/10 p-4 rounded-xl hover:border-[#ff2a3b]/50 transition-colors">
+                <div className="flex items-center gap-2 mb-1 text-[#ff2a3b]">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  <h4 className="font-oswald font-bold uppercase text-sm text-white tracking-wider">
+                    SAFE &amp; SUPPORTIVE AMBIENCE
+                  </h4>
+                </div>
+                <p className="text-[11px] text-gray-400 leading-relaxed pl-6">
+                  Comfortable, zero-intimidation atmosphere with supportive female peers.
+                </p>
+              </div>
+
+              <div className="bg-[#141414] border border-white/10 p-4 rounded-xl hover:border-[#ff2a3b]/50 transition-colors">
+                <div className="flex items-center gap-2 mb-1 text-[#ff2a3b]">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  <h4 className="font-oswald font-bold uppercase text-sm text-white tracking-wider">
+                    FEMALE TRAINER OPTION
+                  </h4>
+                </div>
+                <p className="text-[11px] text-gray-400 leading-relaxed pl-6">
+                  Experienced certified female fitness coaches dedicated to your progress.
+                </p>
+              </div>
+
+              <div className="bg-[#141414] border border-white/10 p-4 rounded-xl hover:border-[#ff2a3b]/50 transition-colors">
+                <div className="flex items-center gap-2 mb-1 text-[#ff2a3b]">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  <h4 className="font-oswald font-bold uppercase text-sm text-white tracking-wider">
+                    BEGINNER FRIENDLY
+                  </h4>
+                </div>
+                <p className="text-[11px] text-gray-400 leading-relaxed pl-6">
+                  Step-by-step guidance on machine usage without overwhelming workouts.
+                </p>
+              </div>
+
+              <div className="bg-[#141414] border border-white/10 p-4 rounded-xl hover:border-[#ff2a3b]/50 transition-colors">
+                <div className="flex items-center gap-2 mb-1 text-[#ff2a3b]">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  <h4 className="font-oswald font-bold uppercase text-sm text-white tracking-wider">
+                    CONFIDENCE &amp; STAMINA
+                  </h4>
+                </div>
+                <p className="text-[11px] text-gray-400 leading-relaxed pl-6">
+                  Build physical resilience, bone density, and everyday posture.
+                </p>
+              </div>
+
+            </div>
+
+            {/* CTA Button */}
+            <div className="pt-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-sm font-bold uppercase tracking-wider px-8 py-4 rounded-xl shadow-[0_0_25px_rgba(255,42,59,0.45)] transition-all cursor-pointer"
+              >
+                <Sparkles className="w-4 h-4 fill-current" />
+                <span>JOIN LADIES FITNESS PROGRAM</span>
+              </Link>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 7. GOOGLE REVIEWS & REPUTATION */}
+      {/* ============================================================ */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] relative overflow-hidden border-t border-white/5">
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Header & Google Score Card Split */}
+          <div className="flex flex-col lg:flex-row justify-between items-center text-center lg:text-left gap-8 mb-14">
+            <div className="flex flex-col items-center lg:items-start max-w-xl">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-2 h-2 bg-[#ff2a3b] rounded-full shadow-[0_0_8px_#ff2a3b]" />
+                <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#ff2a3b] font-oswald">
+                  GOOGLE REVIEWS &amp; REPUTATION
+                </span>
+              </div>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-oswald font-bold uppercase leading-tight text-white">
+                WHAT OUR <span className="text-[#ff2a3b]">MEMBERS SAY</span>
+              </h2>
+              <p className="text-sm sm:text-base text-gray-400 mt-2 font-body">
+                Real feedback from lifters and fitness enthusiasts in Hathijan Circle, Ahmedabad.
+              </p>
+            </div>
+
+            {/* Google Rating Card */}
+            <div className="bg-[#141414] border border-white/10 p-5 sm:p-6 rounded-2xl flex items-center gap-6 shadow-2xl shrink-0 w-full sm:w-auto justify-center">
+              <div className="text-center pr-6 border-r border-white/10 flex flex-col items-center justify-center">
+                <div className="font-oswald text-4xl sm:text-5xl font-bold text-white leading-none">
+                  4.9
+                </div>
+                <div className="flex items-center justify-center gap-1 my-2 text-amber-400">
+                  <Star className="w-3.5 h-3.5 fill-current" />
+                  <Star className="w-3.5 h-3.5 fill-current" />
+                  <Star className="w-3.5 h-3.5 fill-current" />
+                  <Star className="w-3.5 h-3.5 fill-current" />
+                  <Star className="w-3.5 h-3.5 fill-current" />
+                </div>
+                <span className="text-[10px] text-gray-400 font-mono tracking-widest block">
+                  OUT OF 5.0
+                </span>
+              </div>
+
+              <div className="text-left">
+                <div className="flex items-center gap-2 mb-1">
+                  <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+                    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"/>
+                    <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.98 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                  </svg>
+                  <span className="font-bold text-sm text-white">Google Reviews</span>
+                </div>
+                <p className="text-xs text-gray-300 font-medium">88+ Verified 5-Star Reviews</p>
+                <a
+                  href="https://maps.google.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs font-bold text-[#ff2a3b] hover:underline flex items-center gap-1 mt-1 cursor-pointer"
+                >
+                  <span>View on Google Maps</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop 2x2 Reviews Grid */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
+            {googleReviews.map((rev, idx) => (
+              <div
+                key={idx}
+                className="bg-[#141414] border border-white/10 p-6 sm:p-7 rounded-2xl relative group hover:border-[#ff2a3b]/50 transition-all shadow-lg flex flex-col justify-between"
+              >
+                {/* Decorative Quote Icon */}
+                <span className="font-oswald text-5xl font-bold text-white/5 group-hover:text-[#ff2a3b]/20 transition-colors absolute top-4 right-6 select-none leading-none">
+                  ””
+                </span>
+
+                <div>
+                  <div className="flex items-center gap-3.5 mb-4">
+                    <div className="w-11 h-11 bg-[#ff2a3b] rounded-full flex items-center justify-center text-white font-oswald font-bold text-lg shadow-[0_0_15px_rgba(255,42,59,0.35)] shrink-0">
+                      {rev.initial}
+                    </div>
+                    <div>
+                      <h4 className="font-oswald font-bold uppercase text-base text-white tracking-wider leading-tight">
+                        {rev.name}
+                      </h4>
+                      <div className="flex items-center gap-2 mt-1">
+                        <div className="flex text-amber-400">
+                          {Array.from({ length: rev.rating }).map((_, rIdx) => (
+                            <Star key={rIdx} className="w-3 h-3 fill-current" />
+                          ))}
+                        </div>
+                        <span className="text-[11px] text-gray-500 font-mono">• {rev.time}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-gray-300 italic leading-relaxed">
+                    &ldquo;{rev.text}&rdquo;
+                  </p>
+                </div>
               </div>
             ))}
           </div>
 
+          {/* Mobile Autoplay Slider (1 card at a time with smooth transition and controls) */}
+          <div className="md:hidden">
+            <div className="bg-[#141414] border border-white/10 p-6 rounded-2xl relative shadow-xl min-h-[220px] flex flex-col justify-between transition-all duration-300">
+              <span className="font-oswald text-5xl font-bold text-white/5 absolute top-4 right-6 select-none leading-none">
+                ””
+              </span>
+
+              <div>
+                <div className="flex items-center gap-3.5 mb-4">
+                  <div className="w-11 h-11 bg-[#ff2a3b] rounded-full flex items-center justify-center text-white font-oswald font-bold text-lg shadow-[0_0_15px_rgba(255,42,59,0.35)] shrink-0">
+                    {googleReviews[activeReview].initial}
+                  </div>
+                  <div>
+                    <h4 className="font-oswald font-bold uppercase text-base text-white tracking-wider leading-tight">
+                      {googleReviews[activeReview].name}
+                    </h4>
+                    <div className="flex items-center gap-2 mt-1">
+                      <div className="flex text-amber-400">
+                        {Array.from({ length: googleReviews[activeReview].rating }).map((_, rIdx) => (
+                          <Star key={rIdx} className="w-3 h-3 fill-current" />
+                        ))}
+                      </div>
+                      <span className="text-[11px] text-gray-500 font-mono">• {googleReviews[activeReview].time}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-sm text-gray-300 italic leading-relaxed">
+                  &ldquo;{googleReviews[activeReview].text}&rdquo;
+                </p>
+              </div>
+
+              {/* Slider Controls & Autoplay Indicators */}
+              <div className="flex items-center justify-between pt-5 mt-4 border-t border-white/5">
+                {/* Dots */}
+                <div className="flex items-center gap-1.5">
+                  {googleReviews.map((_, dotIdx) => (
+                    <button
+                      key={dotIdx}
+                      type="button"
+                      onClick={() => setActiveReview(dotIdx)}
+                      className={`h-2 rounded-full transition-all cursor-pointer ${
+                        activeReview === dotIdx
+                          ? "w-6 bg-[#ff2a3b]"
+                          : "w-2 bg-white/20 hover:bg-white/40"
+                      }`}
+                      aria-label={`Go to review ${dotIdx + 1}`}
+                    />
+                  ))}
+                </div>
+
+                {/* Arrow Buttons */}
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setActiveReview((prev) => (prev === 0 ? googleReviews.length - 1 : prev - 1))}
+                    className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:border-[#ff2a3b] transition-colors cursor-pointer"
+                    aria-label="Previous Review"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveReview((prev) => (prev + 1) % googleReviews.length)}
+                    className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:border-[#ff2a3b] transition-colors cursor-pointer"
+                    aria-label="Next Review"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/* 7. TESTIMONIAL — Full-width Quote Slider */}
-      {/* ============================================================ */}
-      <section className="relative py-32 px-6 overflow-hidden bg-[#0f0f0f]">
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="text-[#ff2a3b] text-6xl font-oswald leading-none mb-6">&ldquo;</div>
-          
-          <p className="text-2xl md:text-4xl font-oswald uppercase leading-tight mb-8 text-white">
-            {currentTestimonial.quote}
-          </p>
-
-          <div className="flex items-center justify-center gap-4">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#ff2a3b]">
-              <Image
-                src={currentTestimonial.image}
-                alt={currentTestimonial.name}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="text-left">
-              <p className="font-oswald font-bold uppercase text-white">{currentTestimonial.name}</p>
-              <p className="text-xs text-gray-400">{currentTestimonial.role}</p>
-            </div>
-          </div>
-
-          <div className="flex justify-center gap-3 mt-10">
-            <button
-              onClick={() => setTestimonialIndex((prev) => (prev === 0 ? testimonialItems.length - 1 : prev - 1))}
-              className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-[#ff2a3b] hover:text-white hover:border-[#ff2a3b] transition-colors cursor-pointer"
-              aria-label="Previous quote"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={() => setTestimonialIndex((prev) => (prev === testimonialItems.length - 1 ? 0 : prev + 1))}
-              className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-[#ff2a3b] hover:text-white hover:border-[#ff2a3b] transition-colors cursor-pointer"
-              aria-label="Next quote"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* 8. BLOG PREVIEW */}
+      {/* 8. BLOG PREVIEW & INTERACTIVE ARTICLE READER */}
       {/* ============================================================ */}
       <section className="py-28 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-2 h-2 bg-[#ff2a3b] rounded-full" />
+                <div className="w-2 h-2 bg-[#ff2a3b] rounded-full shadow-[0_0_8px_#ff2a3b]" />
                 <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#ff2a3b] font-oswald">
-                  Latest News
+                  KNOWLEDGE &amp; TIPS
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-oswald font-bold uppercase leading-tight text-white">
                 From Our <span className="text-[#ff2a3b]">Blog</span>
               </h2>
             </div>
-            <Link
-              href="/contact"
-              className="text-sm font-bold uppercase tracking-wider text-gray-400 hover:text-[#ff2a3b] transition-colors flex items-center gap-2"
-            >
-              <span>View All Posts</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <p className="text-xs font-mono text-gray-400">
+              Click any article to read full guide
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {blogPosts.map((post, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="relative h-56 w-full overflow-hidden rounded-sm mb-4">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+              <div
+                key={i}
+                onClick={() => setSelectedBlog(post)}
+                className="bg-[#141414] border border-white/10 p-4 rounded-xl group cursor-pointer hover:border-[#ff2a3b]/50 transition-all shadow-lg flex flex-col justify-between"
+              >
+                <div>
+                  <div className="relative h-52 w-full overflow-hidden rounded-lg mb-4">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-3 left-3 bg-[#ff2a3b] text-white text-[10px] font-oswald font-bold uppercase px-2.5 py-1 rounded-sm shadow-md">
+                      {post.category}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between text-[11px] text-gray-400 mb-2 font-mono">
+                    <span>{post.date}</span>
+                    <span>{post.readTime}</span>
+                  </div>
+
+                  <h3 className="font-oswald font-bold uppercase text-lg group-hover:text-[#ff2a3b] transition-colors leading-snug mb-2 text-white">
+                    {post.title}
+                  </h3>
+                  <p className="text-xs text-gray-400 leading-relaxed line-clamp-2">
+                    {post.desc}
+                  </p>
                 </div>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#ff2a3b] font-oswald">{post.category}</span>
-                  <span className="text-[10px] text-gray-600">•</span>
-                  <span className="text-[10px] text-gray-500">{post.date}</span>
+
+                <div className="pt-4 mt-4 border-t border-white/5 flex items-center justify-between">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#ff2a3b] group-hover:underline flex items-center gap-1">
+                    <span>Read Article</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
                 </div>
-                <h3 className="font-oswald font-bold uppercase text-lg group-hover:text-[#ff2a3b] transition-colors leading-snug mb-2 text-white">
-                  {post.title}
-                </h3>
-                <p className="text-xs text-gray-400 leading-relaxed">{post.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Interactive Blog Article Reader Modal */}
+      {selectedBlog && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200">
+          <div className="bg-[#141414] border border-white/20 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            
+            {/* Close Button */}
+            <button
+              type="button"
+              onClick={() => setSelectedBlog(null)}
+              className="absolute top-4 right-4 z-20 w-10 h-10 bg-black/70 hover:bg-[#ff2a3b] text-white rounded-full flex items-center justify-center transition-colors cursor-pointer"
+              aria-label="Close article"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Banner Image */}
+            <div className="relative h-64 w-full overflow-hidden rounded-t-2xl">
+              <Image
+                src={selectedBlog.image}
+                alt={selectedBlog.title}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-6 flex items-center gap-3">
+                <span className="bg-[#ff2a3b] text-white text-xs font-oswald font-bold uppercase px-3 py-1 rounded-sm">
+                  {selectedBlog.category}
+                </span>
+                <span className="text-xs text-gray-300 font-mono">• {selectedBlog.date}</span>
+                <span className="text-xs text-gray-300 font-mono">• {selectedBlog.readTime}</span>
+              </div>
+            </div>
+
+            {/* Article Content */}
+            <div className="p-6 sm:p-8 space-y-5">
+              <h2 className="font-oswald text-2xl sm:text-3xl font-bold uppercase leading-tight text-white">
+                {selectedBlog.title}
+              </h2>
+
+              <p className="text-sm text-[#ff2a3b] font-semibold italic border-l-2 border-[#ff2a3b] pl-4">
+                {selectedBlog.desc}
+              </p>
+
+              <div className="space-y-4 text-sm text-gray-300 leading-relaxed font-body">
+                {selectedBlog.content?.map((paragraph, pIdx) => (
+                  <p key={pIdx} className={paragraph.startsWith("1.") || paragraph.startsWith("2.") || paragraph.startsWith("3.") || paragraph.startsWith("4.") || paragraph.startsWith("5.") ? "font-semibold text-white pl-2" : ""}>
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+
+              {/* Bottom CTA within Article */}
+              <div className="pt-6 mt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                  <h4 className="font-oswald font-bold uppercase text-white text-base">Ready To Put Knowledge Into Action?</h4>
+                  <p className="text-xs text-gray-400">Join Armour 24-7 Gym in Hathijan Circle, Ahmedabad today.</p>
+                </div>
+                <Link
+                  href="/contact"
+                  onClick={() => setSelectedBlog(null)}
+                  className="px-6 py-3 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold text-xs uppercase tracking-wider rounded-sm transition-all shadow-lg shrink-0"
+                >
+                  Claim Free Trial Pass
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
 
       {/* ============================================================ */}
       {/* 9. INTERACTIVE SMART BMI CALCULATOR */}
@@ -801,31 +1112,31 @@ export default function HomePage() {
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="flex items-center justify-center gap-2 mb-3">
-              <Flame className="w-4 h-4 text-[#ff2a3b] fill-[#ff2a3b]" />
+              <div className="w-2 h-2 bg-[#ff2a3b] rounded-full shadow-[0_0_8px_#ff2a3b]" />
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#ff2a3b] font-oswald">
-                INTERACTIVE BODY ASSESSOR
+                FITNESS ASSESSMENT
               </span>
+              <div className="w-2 h-2 bg-[#ff2a3b] rounded-full shadow-[0_0_8px_#ff2a3b]" />
             </div>
-            <h2 className="text-4xl sm:text-6xl font-oswald font-bold uppercase leading-tight text-white">
+            <h2 className="text-4xl md:text-5xl font-oswald font-bold uppercase leading-tight text-white">
               SMART <span className="text-[#ff2a3b]">BMI CALCULATOR</span>
             </h2>
-            <p className="text-sm sm:text-base text-gray-400 mt-3 font-body">
-              Calculate your Body Mass Index (BMI) and discover your ideal weight range &amp; recommended gym protocol.
+            <p className="text-sm text-gray-400 mt-2 font-body">
+              Calculate your Body Mass Index and discover your optimal workout &amp; nutrition pathway.
             </p>
           </div>
 
-          {/* Calculator Card Container */}
-          <div className="max-w-4xl mx-auto bg-[#141414] border border-white/10 p-6 sm:p-10 rounded-2xl shadow-2xl">
+          <div className="bg-[#141414] border border-white/10 p-6 sm:p-10 rounded-2xl shadow-2xl max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
               
               {/* Left Column: Interactive Controls (7 cols) */}
               <div className="lg:col-span-7 flex flex-col justify-between space-y-7">
                 {/* Gender Selector */}
                 <div>
-                  <label className="block text-xs font-oswald uppercase tracking-widest text-gray-400 font-bold mb-2.5">
-                    GENDER
+                  <label className="text-xs font-oswald uppercase tracking-wider text-gray-300 font-bold block mb-3">
+                    Select Gender
                   </label>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-2 gap-4">
                     <button
                       type="button"
                       onClick={() => setBmiGender("male")}
@@ -854,11 +1165,11 @@ export default function HomePage() {
                 {/* Height Slider */}
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-xs font-oswald uppercase tracking-widest text-gray-400 font-bold">
-                      HEIGHT
-                    </span>
-                    <span className="font-oswald text-lg font-bold text-[#ff2a3b]">
-                      {bmiHeight} CM
+                    <label className="text-xs font-oswald uppercase tracking-wider text-gray-300 font-bold">
+                      Height
+                    </label>
+                    <span className="font-oswald text-xl font-bold text-white">
+                      {bmiHeight} <span className="text-xs text-[#ff2a3b] font-normal">cm</span>
                     </span>
                   </div>
                   <input
@@ -867,23 +1178,23 @@ export default function HomePage() {
                     max="220"
                     value={bmiHeight}
                     onChange={(e) => setBmiHeight(Number(e.target.value))}
-                    className="w-full h-2 bg-[#222222] rounded-lg appearance-none cursor-pointer accent-[#ff2a3b]"
+                    className="w-full h-2 bg-[#1f1f1f] rounded-lg appearance-none cursor-pointer accent-[#ff2a3b]"
                   />
-                  <div className="flex justify-between text-[10px] text-gray-500 font-mono mt-1">
-                    <span>120 CM</span>
-                    <span>170 CM</span>
-                    <span>220 CM</span>
+                  <div className="flex justify-between text-[10px] text-gray-600 font-mono mt-1">
+                    <span>120 cm</span>
+                    <span>170 cm</span>
+                    <span>220 cm</span>
                   </div>
                 </div>
 
                 {/* Weight Slider */}
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-xs font-oswald uppercase tracking-widest text-gray-400 font-bold">
-                      WEIGHT
-                    </span>
-                    <span className="font-oswald text-lg font-bold text-[#ff2a3b]">
-                      {bmiWeight} KG
+                    <label className="text-xs font-oswald uppercase tracking-wider text-gray-300 font-bold">
+                      Weight
+                    </label>
+                    <span className="font-oswald text-xl font-bold text-white">
+                      {bmiWeight} <span className="text-xs text-[#ff2a3b] font-normal">kg</span>
                     </span>
                   </div>
                   <input
@@ -892,22 +1203,12 @@ export default function HomePage() {
                     max="160"
                     value={bmiWeight}
                     onChange={(e) => setBmiWeight(Number(e.target.value))}
-                    className="w-full h-2 bg-[#222222] rounded-lg appearance-none cursor-pointer accent-[#ff2a3b]"
+                    className="w-full h-2 bg-[#1f1f1f] rounded-lg appearance-none cursor-pointer accent-[#ff2a3b]"
                   />
-                  <div className="flex justify-between text-[10px] text-gray-500 font-mono mt-1">
-                    <span>35 KG</span>
-                    <span>95 KG</span>
-                    <span>160 KG</span>
-                  </div>
-                </div>
-
-                {/* Ideal Weight Range Box */}
-                <div className="bg-[#0d0d0d] border border-white/5 p-4 rounded-xl">
-                  <span className="text-[10px] font-oswald uppercase tracking-widest text-gray-400 font-bold block mb-1">
-                    YOUR IDEAL WEIGHT RANGE
-                  </span>
-                  <div className="font-oswald text-2xl sm:text-3xl font-bold text-white tracking-wide">
-                    {minIdealWeight} KG – {maxIdealWeight} KG
+                  <div className="flex justify-between text-[10px] text-gray-600 font-mono mt-1">
+                    <span>35 kg</span>
+                    <span>95 kg</span>
+                    <span>160 kg</span>
                   </div>
                 </div>
               </div>
@@ -967,25 +1268,27 @@ export default function HomePage() {
       {/* ============================================================ */}
       <div className="bg-[#ff2a3b] py-4 border-y border-black/10 marquee-container shadow-2xl">
         <div className="marquee-content font-oswald font-bold uppercase tracking-wider text-sm flex gap-12 items-center text-white">
-          <span>• 10+ Years of Experience</span>
-          <span>• Become A Member</span>
-          <span>• Special 24/7 Member Access</span>
-          <span>• Certified Gym Trainers</span>
-          <span>• Ahmedabad 382445 Facility</span>
-          <span>• 10+ Years of Experience</span>
-          <span>• Become A Member</span>
-          <span>• Special 24/7 Member Access</span>
-          <span>• Certified Gym Trainers</span>
-          <span>• Ahmedabad 382445 Facility</span>
+          <span>• GRAND OPENING IN HATHIJAN CIRCLE</span>
+          <span>• 15,000 SQ. FT. PREMIUM ARENA</span>
+          <span>• 24/7 BIOMETRIC MEMBER ACCESS</span>
+          <span>• 40+ ELITE MACHINES &amp; RIGS</span>
+          <span>• 5+ CERTIFIED MASTER COACHES</span>
+          <span>• CLAIM FREE 1-DAY WORKOUT PASS</span>
+          <span>• GRAND OPENING IN HATHIJAN CIRCLE</span>
+          <span>• 15,000 SQ. FT. PREMIUM ARENA</span>
+          <span>• 24/7 BIOMETRIC MEMBER ACCESS</span>
+          <span>• 40+ ELITE MACHINES &amp; RIGS</span>
+          <span>• 5+ CERTIFIED MASTER COACHES</span>
+          <span>• CLAIM FREE 1-DAY WORKOUT PASS</span>
         </div>
       </div>
 
       {/* ============================================================ */}
-      {/* 11. LEAD CAPTURE PASS (Ahmedabad 382445) */}
+      {/* 11. LEAD CAPTURE PASS (Hathijan Circle, Ahmedabad) */}
       {/* ============================================================ */}
-      <section className="py-24 px-6 bg-[#0a0a0a] border-t border-white/10">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] relative border-t border-white/5">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start">
             <div className="flex items-center gap-3">
               <div className="w-2.5 h-2.5 bg-[#ff2a3b] rounded-full shadow-[0_0_10px_#ff2a3b]" />
               <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#ff2a3b] font-oswald">
@@ -996,7 +1299,7 @@ export default function HomePage() {
               Claim Your Free <br />
               <span className="text-[#ff2a3b]">1-Day Workout Pass</span>
             </h2>
-            <p className="text-sm text-gray-300 leading-relaxed">
+            <p className="text-sm text-gray-300 leading-relaxed max-w-lg">
               Experience the Armour 24-7 facility at C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad with zero obligation.
             </p>
           </div>

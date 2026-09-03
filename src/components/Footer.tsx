@@ -73,8 +73,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/schedule" className="hover:text-[#ff2a3b] transition-colors">
-                Class Schedule
+              <Link href="/#ladies-program" className="hover:text-[#ff2a3b] transition-colors">
+                Ladies Fitness Program
               </Link>
             </li>
             <li>

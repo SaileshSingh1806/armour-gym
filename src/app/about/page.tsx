@@ -11,6 +11,7 @@ import {
   HeartPulse,
   ArrowRight,
   CheckCircle2,
+  Music,
 } from "lucide-react";
 
 export const metadata = {
@@ -45,10 +46,10 @@ const pillars = [
     image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
   },
   {
-    icon: HeartPulse,
-    title: "RAPID RECOVERY & WELLNESS SUITE",
-    desc: "True gains happen during recovery. Members enjoy commercial Finnish dry cedar saunas, high-pressure eucalyptus steam rooms, ice cold plunge hydrotherapy tubs, and InBody 570 clinical composition analysis.",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
+    icon: Music,
+    title: "HIGH-ENERGY ZUMBA & DANCE STUDIO",
+    desc: "Experience calorie-torching, rhythm-driven workouts in our dedicated air-conditioned studio. Led by certified Zumba instructors, our high-energy sessions combine Latin beats, cardio fitness, and full-body toning in a vibrant, motivating atmosphere.",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
