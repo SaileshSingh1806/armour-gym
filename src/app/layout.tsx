@@ -20,6 +20,15 @@ export const metadata: Metadata = {
   title: "Armour 24-7 Gym | Ahmedabad’s Hardcore Strength & Performance Hub",
   description: "Experience 24/7 biometric gym access, elite Hammer Strength & Eleiko equipment, certified strength coaches, and recovery zones in Ahmedabad 382445.",
   keywords: ["Armour 24-7 Gym", "Gym in Ahmedabad", "24/7 Gym Ahmedabad", "Bodybuilding gym", "Powerlifting Ahmedabad", "Fitness center 382445"],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
