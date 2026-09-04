@@ -15,7 +15,7 @@ export default function Footer() {
         
         {/* Col 1: Brand & Socials */}
         <div>
-          <div className="relative h-14 sm:h-16 w-52 sm:w-64 mb-5">
+          <div className="relative h-14 sm:h-16 w-56 sm:w-64 mb-5">
             <Image
               src="/logo.png"
               alt="Armour 24-7 Gym"

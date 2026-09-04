@@ -46,10 +46,10 @@ export default function Navbar() {
     <header
       id="mainHeader"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-8 lg:px-12 ${
-        isScrolled
-          ? "bg-[#0a0a0a]/95 backdrop-blur-md py-3 border-b border-white/10 shadow-2xl"
-          : "bg-transparent py-4 sm:py-5"
-      }`}
+  isScrolled
+    ? "bg-[#0a0a0a]/95 backdrop-blur-md py-2 sm:py-3 border-b border-white/10 shadow-2xl"
+    : "bg-transparent py-3 sm:py-4 md:py-5"
+}`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Large Prominent Responsive Logo - Links to Homepage */}
@@ -59,16 +59,15 @@ export default function Navbar() {
           className="flex items-center group relative z-10 py-1"
           aria-label="Armour 24-7 Gym - Go to Homepage"
         >
-          <Image
-            src="/logo.png"
-            alt="Armour 24-7 Gym Ahmedabad"
-            width={350}
-            height={110}
-            priority
-            className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain drop-shadow-[0_2px_15px_rgba(255,42,59,0.25)] transition-transform duration-300 group-hover:scale-105"
-          />
+      <Image
+  src="/logo.png"
+  alt="Armour 24-7 Gym Ahmedabad"
+  width={460}
+  height={140}
+  priority
+  className="h-[45px] sm:h-[56px] md:h-[50px] lg:h-[50px] w-auto object-contain drop-shadow-[0_2px_15px_rgba(255,42,59,0.25)] transition-transform duration-300 group-hover:scale-105"
+/>
         </Link>
-
         {/* Desktop Nav Links */}
         <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold uppercase tracking-wider text-gray-300">
           {navLinks.map((link) => {
@@ -89,8 +88,8 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Right CTA */}
-        <div className="hidden md:flex items-center gap-5">
+        {/* Right CTA - Desktop Only */}
+        <div className="hidden lg:flex items-center gap-5">
           <Link
             href="/contact"
             className="bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold px-7 py-3 text-sm uppercase tracking-wider transition-all rounded-sm shadow-[0_0_25px_rgba(255,42,59,0.45)] flex items-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
