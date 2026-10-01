@@ -107,8 +107,34 @@ export default function PricingPage() {
         </p>
       </div>
 
+      {/* Pre-Launch Founder Spotlight */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <div className="bg-gradient-to-r from-[#1c1212] via-[#161212] to-[#121212] border-2 border-[#ff2a3b]/60 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_0_35px_rgba(255,42,59,0.2)]">
+          <div className="space-y-2 text-center md:text-left">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#ff2a3b] text-white text-[11px] font-heading font-bold uppercase tracking-wider rounded-sm">
+              <Sparkles className="w-3.5 h-3.5 fill-current" />
+              <span>LIMITED PRE-LAUNCH OFFER</span>
+            </div>
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold uppercase text-white tracking-wide">
+              1-Year Founder Pass: <span className="text-[#ff2a3b]">₹9,999</span>{" "}
+              <span className="text-gray-500 line-through text-lg font-mono">₹15,000</span>
+            </h3>
+            <p className="text-xs text-gray-300 max-w-xl">
+              Includes 365 Days 24/7 Access, Free Starter Kit (Bag + Shaker + Towel), 2 Free PT sessions &amp; 100% Pre-Launch Refund Guarantee.
+            </p>
+          </div>
+          <Link
+            href="/pre-launch-offer"
+            className="shrink-0 px-8 py-4 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-heading text-sm font-bold uppercase tracking-widest rounded-sm transition-all shadow-[0_0_20px_rgba(255,42,59,0.4)] flex items-center gap-2"
+          >
+            <span>CLAIM ₹9,999 PASS</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+
       {/* 3 Tier Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {pricingPlans.map((plan) => (
             <div

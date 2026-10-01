@@ -10,21 +10,23 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#050505] text-white pt-20 pb-10 px-4 sm:px-6 md:px-8 relative overflow-hidden">
+    <footer className="bg-[#050505] text-white pt-20 pb-10 px-4 sm:px-6 md:px-8 relative overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 relative z-10">
         
         {/* Col 1: Brand & Socials */}
         <div>
           <div className="relative h-14 sm:h-16 w-56 sm:w-64 mb-5">
             <Image
-              src="/logo.png"
+              src="/armour-logo.png"
               alt="Armour 24-7 Gym"
               fill
+              sizes="(max-width: 768px) 224px, 256px"
               className="object-contain object-left"
             />
           </div>
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
-            Ahmedabad’s premier 24/7 bodybuilding and athletic training sanctuary.<br></br> C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad 382445.
+            Ahmedabad’s premier 24/7 bodybuilding and athletic training sanctuary.<br />
+            C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445.
           </p>
           <div className="flex gap-3">
             <a
@@ -65,8 +67,13 @@ export default function Footer() {
 
         {/* Col 2: Quick Links */}
         <div>
-          <h4 className="font-oswald font-bold uppercase text-lg mb-6 text-white">Quick Links</h4>
+          <h4 className="font-oswald font-bold uppercase text-lg mb-6 text-white tracking-wider">Quick Navigation</h4>
           <ul className="space-y-3 text-sm text-gray-400">
+            <li>
+              <Link href="/pre-launch-offer" className="text-[#ff2a3b] font-bold hover:text-white transition-colors flex items-center gap-1.5">
+                <span>★ Pre-Launch Offer @ ₹9,999</span>
+              </Link>
+            </li>
             <li>
               <Link href="/about" className="hover:text-[#ff2a3b] transition-colors">
                 About Us
@@ -84,60 +91,92 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/contact" className="hover:text-[#ff2a3b] transition-colors">
-                Contact &amp; Free Pass
+                Contact &amp; Free Trial Pass
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Col 3: Working Hours */}
+        {/* Col 3: Policy Pages (Payment Gateway Compliance) */}
         <div>
-          <h4 className="font-oswald font-bold uppercase text-lg mb-6 text-white">Working Hours</h4>
+          <h4 className="font-oswald font-bold uppercase text-lg mb-6 text-white tracking-wider">Policies &amp; Support</h4>
           <ul className="space-y-3 text-sm text-gray-400">
-            <li className="flex justify-between border-b border-white/5 pb-2">
-              <span>Mon – Fri</span>
-              <span className="text-gray-300">05:30 – 24:00</span>
+            <li>
+              <Link href="/terms-conditions" className="hover:text-[#ff2a3b] transition-colors">
+                Terms &amp; Conditions
+              </Link>
             </li>
-            <li className="flex justify-between border-b border-white/5 pb-2">
-              <span>Weekends</span>
-              <span className="text-[#ff2a3b] font-bold">24 Hours Open</span>
+            <li>
+              <Link href="/privacy-policy" className="hover:text-[#ff2a3b] transition-colors">
+                Privacy Policy
+              </Link>
             </li>
-            <li className="text-[11px] text-gray-500 pt-1">
-              * Biometric keycard members have 24/7/365 unrestricted entry.
+            <li>
+              <Link href="/refund-policy" className="hover:text-[#ff2a3b] transition-colors">
+                Refund &amp; Cancellation Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/shipping-policy" className="hover:text-[#ff2a3b] transition-colors">
+                Shipping &amp; Delivery Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-[#ff2a3b] transition-colors">
+                Customer Support Desk
+              </Link>
             </li>
           </ul>
         </div>
 
-        {/* Col 4: Newsletter */}
+        {/* Col 4: Working Hours & Location */}
         <div>
-          <h4 className="font-oswald font-bold uppercase text-lg mb-6 text-white">Newsletter</h4>
-          <p className="text-sm text-gray-400 mb-4">Stay connected with latest fitness trends &amp; workout programs.</p>
-          <form
-            onSubmit={handleNewsletterSubmit}
-            className="flex border border-white/10 rounded-sm overflow-hidden"
-          >
-            <input
-              type="email"
-              placeholder="Email"
-              className="bg-transparent text-sm p-3 w-full focus:outline-none text-white placeholder-gray-500"
-            />
-            <button
-              type="submit"
-              className="bg-[#ff2a3b] text-white font-bold uppercase text-xs px-4 font-oswald hover:bg-white hover:text-black transition-colors shrink-0 cursor-pointer"
-            >
-              Go
-            </button>
-          </form>
+          <h4 className="font-oswald font-bold uppercase text-lg mb-6 text-white tracking-wider">Facility Hours</h4>
+          <ul className="space-y-3 text-sm text-gray-400">
+            <li className="flex justify-between border-b border-white/5 pb-2">
+              <span>Member Biometric Access</span>
+              <span className="text-[#ff2a3b] font-bold">24/7/365 Open</span>
+            </li>
+            <li className="flex justify-between border-b border-white/5 pb-2">
+              <span>Front Desk &amp; Tours</span>
+              <span className="text-gray-300">06:00 AM – 10:00 PM</span>
+            </li>
+            <li className="text-xs text-gray-400 pt-1">
+              📞 <a href="tel:+919714840999" className="text-white hover:underline">+91 97148 40999</a><br />
+              ✉️ <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] hover:underline">armour247gym@gmail.com</a>
+            </li>
+          </ul>
         </div>
 
       </div>
 
-      {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 relative z-10">
+      {/* Compliance Policy Bar */}
+      <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 relative z-10 gap-4">
         <p suppressHydrationWarning>Copyright © 2026 Armour 24-7 Gym Ahmedabad. All Rights Reserved.</p>
-        <div className="flex gap-4 mt-4 md:mt-0">
-          <span className="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
-          <span className="hover:text-white cursor-pointer transition-colors">Terms of Service</span>
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[11px] text-gray-400">
+          <Link href="/terms-conditions" className="hover:text-white transition-colors">
+            Terms &amp; Conditions
+          </Link>
+          <span>|</span>
+          <Link href="/privacy-policy" className="hover:text-white transition-colors">
+            Privacy Policy
+          </Link>
+          <span>|</span>
+          <Link href="/refund-policy" className="hover:text-white transition-colors">
+            Refund &amp; Cancellation Policy
+          </Link>
+          <span>|</span>
+          <Link href="/shipping-policy" className="hover:text-white transition-colors">
+            Shipping/Delivery Policy
+          </Link>
+          <span>|</span>
+          <Link href="/contact" className="hover:text-white transition-colors">
+            Contact Us
+          </Link>
+          <span>|</span>
+          <Link href="/about" className="hover:text-white transition-colors">
+            About Us
+          </Link>
         </div>
       </div>
 
