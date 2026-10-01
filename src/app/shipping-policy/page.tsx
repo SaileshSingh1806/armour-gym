@@ -42,7 +42,7 @@ export default function ShippingPolicyPage() {
               <span className="text-[#ff2a3b]">1.</span> Nature of Services &amp; Products
             </h2>
             <p>
-              <strong>Armour 24-7 Gym</strong> operates a premier physical fitness training center and bodybuilding gym facility. Services sold online through this website primarily consist of <strong>Digital Membership Passes, Gym Subscriptions, and Personal Coaching Programs</strong>.
+              <strong>Armour 24-7 Gym</strong> operates a premier physical fitness training center and bodybuilding gym facility. Services sold online through this website primarily consist of <strong>Digital Membership Passes, Gym Subscriptions, Pre-Launch Passes, and Personal Coaching Programs</strong>.
             </p>
           </section>
 
@@ -64,8 +64,8 @@ export default function ShippingPolicyPage() {
               <div className="bg-[#0a0a0a] border border-white/10 p-4 rounded-xl">
                 <Zap className="w-5 h-5 text-[#ff2a3b] mb-2" />
                 <span className="text-xs font-mono text-gray-400 block uppercase">Account Activation</span>
-                <span className="font-oswald text-base font-bold text-white">Instant / 1st Check-in</span>
-                <p className="text-[11px] text-gray-400 mt-1">Pass validity begins on your first physical facility visit.</p>
+                <span className="font-oswald text-base font-bold text-white">Grand Opening Day</span>
+                <p className="text-[11px] text-gray-400 mt-1">Pre-launch memberships start on opening or 1st check-in.</p>
               </div>
 
               <div className="bg-[#0a0a0a] border border-white/10 p-4 rounded-xl">
@@ -82,7 +82,7 @@ export default function ShippingPolicyPage() {
               <span className="text-[#ff2a3b]">3.</span> Physical Merchandise &amp; Starter Kit Delivery
             </h2>
             <p>
-              Certain premium memberships (such as the Elite Annual Membership) include physical welcome kits (Armour Gym Duffel Bag, Stainless Steel Shaker, Heavy-Duty Workout Towel) and RFID biometric access cards.
+              Certain premium memberships (such as the <strong>Pre-Launch Founder Pass</strong> and Elite Annual Membership) include physical welcome kits (Armour Gym Duffel Bag, Stainless Steel Shaker, Heavy-Duty Workout Towel) and RFID biometric access cards.
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 pl-2">
               <li><strong>Pickup Location:</strong> Front Desk Reception, Armour 24-7 Gym, C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad 382445.</li>

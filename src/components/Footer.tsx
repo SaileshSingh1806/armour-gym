@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FormEvent } from "react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   const handleNewsletterSubmit = (e: FormEvent) => {
@@ -126,19 +127,23 @@ export default function Footer() {
 
         {/* Col 4: Working Hours & Location */}
         <div>
-          <h4 className="font-oswald font-bold uppercase text-lg mb-6 text-white tracking-wider">Facility Hours</h4>
+          <h4 className="font-oswald font-bold uppercase text-lg mb-6 text-white tracking-wider">Facility &amp; Support</h4>
           <ul className="space-y-3 text-sm text-gray-400">
             <li className="flex justify-between border-b border-white/5 pb-2">
-              <span>Member Biometric Access</span>
+              <span>Biometric Access</span>
               <span className="text-[#ff2a3b] font-bold">24/7/365 Open</span>
             </li>
             <li className="flex justify-between border-b border-white/5 pb-2">
-              <span>Front Desk &amp; Tours</span>
+              <span>Front Desk Hours</span>
               <span className="text-gray-300">06:00 AM – 10:00 PM</span>
             </li>
-            <li className="text-xs text-gray-400 pt-1">
-              📞 <a href="tel:+919714840999" className="text-white hover:underline">+91 97148 40999</a><br />
-              ✉️ <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] hover:underline">armour247gym@gmail.com</a>
+            <li className="text-xs text-gray-300 pt-1 space-y-1">
+              <p>
+                📞 <a href="tel:+918160697163" className="text-white hover:text-[#ff2a3b] font-bold transition-colors">+91 81606 97163</a>
+              </p>
+              <p>
+                ✉️ <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] hover:underline">armour247gym@gmail.com</a>
+              </p>
             </li>
           </ul>
         </div>
@@ -184,3 +189,4 @@ export default function Footer() {
     </footer>
   );
 }
+

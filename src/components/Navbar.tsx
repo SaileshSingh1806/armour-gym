@@ -183,14 +183,14 @@ export default function Navbar() {
 
             <div className="grid grid-cols-2 gap-3 pt-1">
               <a
-                href="tel:+919714840999"
+                href="tel:+918160697163"
                 className="py-2.5 px-3 bg-[#141414] border border-white/10 rounded-lg text-xs font-oswald font-bold uppercase text-gray-300 hover:text-white flex items-center justify-center gap-2"
               >
                 <Phone className="w-3.5 h-3.5 text-[#ff2a3b]" />
                 <span>Call Desk</span>
               </a>
               <a
-                href="https://wa.me/919714840999?text=Hi%20Armour%20Gym%2C%20I%20want%20to%20know%20more%20about%20membership%20plans"
+                href="https://wa.me/918160697163?text=Hi%20Armour%20Gym%2C%20I%20want%20to%20know%20more%20about%20membership%20plans"
                 target="_blank"
                 rel="noreferrer"
                 className="py-2.5 px-3 bg-[#141414] border border-white/10 rounded-lg text-xs font-oswald font-bold uppercase text-green-400 hover:text-green-300 flex items-center justify-center gap-2"
