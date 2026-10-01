@@ -59,14 +59,14 @@ export default function Navbar() {
           className="flex items-center group relative z-10 py-1"
           aria-label="Armour 24-7 Gym - Go to Homepage"
         >
-      <Image
-  src="/logo.png"
-  alt="Armour 24-7 Gym Ahmedabad"
-  width={460}
-  height={140}
-  priority
-  className="h-[45px] sm:h-[56px] md:h-[50px] lg:h-[50px] w-auto object-contain drop-shadow-[0_2px_15px_rgba(255,42,59,0.25)] transition-transform duration-300 group-hover:scale-105"
-/>
+          <Image
+            src="/armour-logo.png"
+            alt="Armour 24-7 Gym Ahmedabad"
+            width={906}
+            height={223}
+            priority
+            className="h-[40px] sm:h-[46px] md:h-[50px] lg:h-[54px] w-auto object-contain drop-shadow-[0_2px_15px_rgba(255,42,59,0.25)] transition-transform duration-300 group-hover:scale-105"
+          />
         </Link>
         {/* Desktop Nav Links */}
         <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold uppercase tracking-wider text-gray-300">
