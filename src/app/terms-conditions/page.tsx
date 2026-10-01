@@ -63,15 +63,15 @@ export default function TermsConditionsPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">3.</span> Pre-Launch Offer Terms &amp; Conditions
+              <span className="text-[#ff2a3b]">3.</span> Membership Plans &amp; Subscriptions
             </h2>
             <p>
-              The <strong>Pre-Launch Founder Pass (₹9,999)</strong> is a special promotional membership with limited availability (100 passes):
+              Armour 24-7 Gym offers flexible membership plans (Day Pass, Monthly Pro, and Annual Elite VIP):
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 pl-2">
-              <li><strong>Membership Activation:</strong> The 365-day annual duration commences on the official facility opening date or the member&apos;s first physical check-in date, whichever is later.</li>
-              <li><strong>100% Pre-Launch Refund Guarantee:</strong> If a purchaser wishes to cancel before the official gym opening date, a 100% full refund will be processed back to the original payment source.</li>
-              <li><strong>Welcome Starter Kit:</strong> Starter kits (bag, shaker, towel) will be distributed at the front desk upon the member&apos;s first onboarding visit.</li>
+              <li><strong>Activation:</strong> Membership validity commences on the designated start date or member&apos;s initial physical biometric check-in.</li>
+              <li><strong>Amenities:</strong> Access to weight rooms, cardiovascular equipment, locker areas, and group exercise zones is subject to specific plan entitlements.</li>
+              <li><strong>Welcome Kit:</strong> Applicable promotional welcome kits are distributed upon physical member verification at the front desk.</li>
             </ul>
           </section>
 

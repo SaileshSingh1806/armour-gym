@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
-import PreLaunchOffer from "@/components/PreLaunchOffer";
 import {
   ArrowRight,
   Star,
@@ -271,35 +270,35 @@ export default function HomePage() {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-10 sm:mb-12">
+            <div className="flex flex-wrap items-center gap-4 mb-12">
               <Link
-                href="#pre-launch-offer"
-                className="bg-[#ff2a3b] text-white font-oswald font-bold uppercase text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 tracking-wider sm:tracking-widest hover:bg-white hover:text-black transition-all rounded-sm inline-flex items-center justify-center gap-2.5 shadow-[0_0_25px_rgba(255,42,59,0.4)]"
+                href="/contact"
+                className="bg-[#ff2a3b] text-white font-oswald font-bold uppercase text-sm px-10 py-4 tracking-widest hover:bg-white hover:text-black transition-all rounded-sm inline-flex items-center gap-3 shadow-[0_0_25px_rgba(255,42,59,0.4)]"
               >
-                <span>GET PRE-LAUNCH PASS @ ₹9,999</span>
+                <span>Get Started</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/about"
-                className="text-center text-xs sm:text-sm font-bold uppercase tracking-wider text-gray-400 hover:text-[#ff2a3b] transition-colors py-2 underline underline-offset-4 decoration-[#ff2a3b]/40 hover:decoration-[#ff2a3b]"
+                className="text-sm font-bold uppercase tracking-wider text-gray-400 hover:text-[#ff2a3b] transition-colors underline underline-offset-4 decoration-[#ff2a3b]/40 hover:decoration-[#ff2a3b]"
               >
                 Our Story
               </Link>
             </div>
 
             {/* Mini stats - New Grand Opening Facility */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-6 pt-6 sm:pt-8 border-t border-white/10 text-center">
-              <div>
-                <span className="text-2xl sm:text-3xl font-oswald font-bold text-[#ff2a3b]">24-7</span>
-                <p className="text-[9px] sm:text-[10px] text-gray-400 uppercase tracking-wider mt-0.5">Biometric Access</p>
+            <div className="flex gap-8 pt-8 border-t border-white/10">
+              <div className="text-center">
+                <span className="text-3xl font-oswald font-bold text-[#ff2a3b]">24-7</span>
+                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Biometric Access</p>
               </div>
-              <div>
-                <span className="text-2xl sm:text-3xl font-oswald font-bold text-white">15,000</span>
-                <p className="text-[9px] sm:text-[10px] text-gray-400 uppercase tracking-wider mt-0.5">Sq. Ft. Floor</p>
+              <div className="text-center">
+                <span className="text-3xl font-oswald font-bold text-white">15,000</span>
+                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Sq. Ft. Floor Space</p>
               </div>
-              <div>
-                <span className="text-2xl sm:text-3xl font-oswald font-bold text-white">40+</span>
-                <p className="text-[9px] sm:text-[10px] text-gray-400 uppercase tracking-wider mt-0.5">Elite Rigs</p>
+              <div className="text-center">
+                <span className="text-3xl font-oswald font-bold text-white">40+</span>
+                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Elite Machines &amp; Rigs</p>
               </div>
             </div>
 
@@ -346,11 +345,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ============================================================ */}
-      {/* 2. PRE-LAUNCH OFFER — ₹9,999 EXCLUSIVE FOUNDER PASS */}
-      {/* ============================================================ */}
-      <PreLaunchOffer />
 
       {/* ============================================================ */}
       {/* 2. PROGRAMS — Interactive Tabbed Component */}

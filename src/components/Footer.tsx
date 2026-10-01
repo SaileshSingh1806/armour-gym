@@ -70,11 +70,6 @@ export default function Footer() {
           <h4 className="font-oswald font-bold uppercase text-lg mb-6 text-white tracking-wider">Quick Navigation</h4>
           <ul className="space-y-3 text-sm text-gray-400">
             <li>
-              <Link href="/pre-launch-offer" className="text-[#ff2a3b] font-bold hover:text-white transition-colors flex items-center gap-1.5">
-                <span>★ Pre-Launch Offer @ ₹9,999</span>
-              </Link>
-            </li>
-            <li>
               <Link href="/about" className="hover:text-[#ff2a3b] transition-colors">
                 About Us
               </Link>

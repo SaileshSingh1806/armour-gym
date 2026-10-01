@@ -3,7 +3,7 @@ import { ShieldCheck, RefreshCw, ArrowLeft, Mail, Phone, MapPin, CheckCircle2 } 
 
 export const metadata = {
   title: "Refund & Cancellation Policy | Armour 24-7 Gym Ahmedabad",
-  description: "Transparent refund and cancellation policy for Armour 24-7 Gym memberships, including the 100% Pre-Launch Founder Pass guarantee.",
+  description: "Transparent refund and cancellation policy for Armour 24-7 Gym memberships and subscriptions in Hathijan Circle, Ahmedabad.",
 };
 
 export default function RefundPolicyPage() {
@@ -37,28 +37,28 @@ export default function RefundPolicyPage() {
         {/* Content Body */}
         <div className="space-y-10 text-sm text-gray-300 leading-relaxed font-body">
           
-          {/* Highlight Card: 100% Pre-Launch Guarantee */}
+          {/* Highlight Card: 7-Day Guarantee */}
           <div className="bg-gradient-to-r from-[#1c1414] to-[#141414] border-2 border-[#ff2a3b]/60 p-6 sm:p-8 rounded-2xl space-y-3">
             <div className="flex items-center gap-2 text-[#ff2a3b]">
               <ShieldCheck className="w-6 h-6 shrink-0" />
               <h2 className="text-xl sm:text-2xl font-oswald font-bold uppercase text-white tracking-wider">
-                100% Pre-Launch Money-Back Guarantee
+                7-Day Zero-Risk Money-Back Guarantee
               </h2>
             </div>
             <p className="text-gray-200">
-              We stand completely behind our world-class facility. If you purchase the <strong>Pre-Launch Founder Pass (₹9,999)</strong> and decide to cancel for <em>any reason</em> before the official Grand Opening date of our Hathijan Circle facility, we will issue a <strong>100% full refund with ZERO cancellation deductions</strong>.
+              We stand completely behind our world-class training facility. If you purchase any annual membership and decide to cancel within 7 days of your first check-in, we will issue a full refund minus minimal onboarding processing fees.
             </p>
           </div>
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">1.</span> Post-Opening Refund Policy
+              <span className="text-[#ff2a3b]">1.</span> Membership Cancellation &amp; Refund Terms
             </h2>
             <p>
-              Once the facility is officially open and a member has begun utilizing gym facilities (first biometric check-in), memberships are generally non-refundable except under the following circumstances:
+              Memberships are active upon first biometric check-in. Cancellation requests are eligible under the following circumstances:
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300 pl-2">
-              <li><strong>7-Day Trial Period for Annual Members:</strong> New annual members may request a cancellation within 7 days of their initial check-in date if dissatisfied with the training equipment, environment, or coaching. A pro-rata refund will be issued minus standard onboarding administrative fees (₹500).</li>
+              <li><strong>7-Day Trial Period for Annual Members:</strong> New annual members may request a cancellation within 7 days of their initial check-in date if dissatisfied with the training equipment, environment, or coaching.</li>
               <li><strong>Medical Exemption:</strong> In case of debilitating medical illness or severe injury certified by a registered medical practitioner, members can apply for a medical pause or pro-rata refund for unused full months.</li>
               <li><strong>Relocation:</strong> If a member relocates to a city outside Ahmedabad (more than 25 km from the gym), they may request a pro-rata refund upon submitting verified proof of residential relocation.</li>
             </ul>
@@ -74,7 +74,7 @@ export default function RefundPolicyPage() {
             <ol className="list-decimal list-inside space-y-2 text-gray-300 pl-2">
               <li>Send an email to <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] font-bold hover:underline">armour247gym@gmail.com</a> or WhatsApp message to <a href="https://wa.me/919714840999" className="text-white font-bold hover:underline">+91 97148 40999</a>.</li>
               <li>Include your <strong>Order ID / Payment Reference ID</strong>, Full Name, and Registered Mobile Number.</li>
-              <li>State the reason for cancellation (for pre-launch refunds, no reason is required; simply mention &quot;Pre-Launch Refund Request&quot;).</li>
+              <li>State the reason for cancellation along with any supporting documents (if medical/relocation).</li>
             </ol>
           </section>
 
@@ -93,7 +93,7 @@ export default function RefundPolicyPage() {
               </div>
             </div>
             <p className="text-xs text-gray-400 pt-2">
-              * Approved refunds are credited directly back to the original source payment method (Bank Account, UPI, Debit/Credit Card) through the payment gateway. Cash refunds are not issued for online transactions.
+              * Approved refunds are credited directly back to the original source payment method (Bank Account, UPI, Debit/Credit Card) through the payment gateway.
             </p>
           </section>
 
