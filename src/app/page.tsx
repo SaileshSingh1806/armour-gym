@@ -242,107 +242,100 @@ export default function HomePage() {
     <div className="bg-[#0a0a0a] text-white min-h-screen">
       
       {/* ============================================================ */}
-      {/* 1. HERO — Split Screen (Armour 24-7 Crimson Red Theme) */}
+      {/* 1. HERO — Full Bleed Premium Arena (Mobile & Desktop) */}
       {/* ============================================================ */}
-      <section className="min-h-screen grid grid-cols-1 lg:grid-cols-2 relative gs-hero-section">
-        {/* Left Content */}
-        <div className="flex items-center px-8 md:px-16 lg:px-20 pt-36 pb-20 lg:pt-0 lg:pb-0 relative gs-hero-left">
-          <div className="grid-pattern absolute inset-0 opacity-40 pointer-events-none" />
-          <div className="relative z-10 max-w-xl">
+      <section className="min-h-screen relative flex items-center overflow-hidden">
+        {/* Full-width Immersive Gym Background with Cinematic Lighting Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/img_7854.webp"
+            alt="Armour 24-7 Gym Training Arena"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[70%_center] md:object-center"
+          />
+          {/* Multi-layered cinematic gradient: strong left dark vignette for pristine text readability, bottom fade into next section */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/90 md:via-[#0a0a0a]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-black/40" />
+          {/* Subtle brand red ambient glow on top-left */}
+          <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#ff2a3b]/15 rounded-full blur-[120px] pointer-events-none" />
+          <div className="grid-pattern absolute inset-0 opacity-20 pointer-events-none" />
+        </div>
+
+        {/* Hero Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 w-full pt-32 pb-20 md:pt-40 md:pb-28">
+          <div className="max-w-2xl">
             
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-2.5 h-2.5 bg-[#ff2a3b] rounded-full animate-pulse shadow-[0_0_10px_#ff2a3b]" />
-              <span className="text-xs font-bold uppercase tracking-[0.4em] text-[#ff2a3b] font-oswald">
-                Fitness Redefined • Ahmedabad 382445
+            {/* Eyebrow Badge */}
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-[#141414]/80 border border-[#ff2a3b]/40 backdrop-blur-md rounded-full mb-6">
+              <div className="w-2 h-2 bg-[#ff2a3b] rounded-full animate-pulse shadow-[0_0_8px_#ff2a3b]" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#ff2a3b] font-oswald">
+                Now Open • Hathijan Circle, Ahmedabad
               </span>
             </div>
 
             {/* Title with Clean Non-Intersecting Solid & Red Outline Text */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-oswald font-bold uppercase leading-[0.92] mb-8">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-oswald font-bold uppercase leading-[0.92] tracking-tight mb-6 text-white drop-shadow-lg">
               Forge Your<br />
               <span className="text-outline-brand inline-block my-1 tracking-wider">STRONGEST</span><br />
               Self <span className="text-[#ff2a3b]">Today</span>
             </h1>
 
-            <p className="text-gray-300 leading-relaxed mb-10 max-w-md text-sm sm:text-base font-body">
-              Discover a new approach to fitness with personalized training, cutting-edge equipment, and a community that celebrates every milestone at Armour 24-7 Gym Ahmedabad.
+            <p className="text-gray-300 leading-relaxed mb-8 max-w-lg text-sm sm:text-base font-body drop-shadow">
+              Ahmedabad’s premier 24/7 strength sanctuary. Built with imported biomechanical equipment, certified coaches, and an unyielding iron community that fuels your transformation.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 mb-12">
+            <div className="flex flex-wrap items-center gap-4 mb-10">
               <Link
                 href="/contact"
-                className="bg-[#ff2a3b] text-white font-oswald font-bold uppercase text-sm px-10 py-4 tracking-widest hover:bg-white hover:text-black transition-all rounded-sm inline-flex items-center gap-3 shadow-[0_0_25px_rgba(255,42,59,0.4)]"
+                className="bg-[#ff2a3b] text-white font-oswald font-bold uppercase text-sm px-9 py-4 tracking-widest hover:bg-white hover:text-black transition-all rounded-sm inline-flex items-center gap-3 shadow-[0_0_25px_rgba(255,42,59,0.5)] cursor-pointer"
               >
-                <span>Get Started</span>
+                <span>Join Now</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/about"
-                className="text-sm font-bold uppercase tracking-wider text-gray-400 hover:text-[#ff2a3b] transition-colors underline underline-offset-4 decoration-[#ff2a3b]/40 hover:decoration-[#ff2a3b]"
+                href="/pricing"
+                className="px-7 py-4 border border-white/20 bg-black/40 backdrop-blur-sm hover:border-[#ff2a3b] hover:text-[#ff2a3b] text-white font-oswald font-bold uppercase text-sm tracking-wider transition-all rounded-sm cursor-pointer"
               >
-                Our Story
+                View Plans
               </Link>
             </div>
 
-            {/* Mini stats - Open 24/7 Facility */}
-            <div className="flex gap-8 pt-8 border-t border-white/10">
-              <div className="text-center">
-                <span className="text-3xl font-oswald font-bold text-[#ff2a3b]">24-7</span>
-                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Biometric Access</p>
+            {/* Stats Bar */}
+            <div className="flex flex-wrap gap-6 sm:gap-10 pt-6 border-t border-white/15">
+              <div>
+                <span className="text-3xl sm:text-4xl font-oswald font-bold text-[#ff2a3b] drop-shadow">24/7</span>
+                <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Biometric Entry *</p>
               </div>
-              <div className="text-center">
-                <span className="text-3xl font-oswald font-bold text-white">250+</span>
-                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Active Members</p>
+              <div className="border-l border-white/10 pl-6 sm:pl-10">
+                <span className="text-3xl sm:text-4xl font-oswald font-bold text-white drop-shadow">250+</span>
+                <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Active Athletes</p>
               </div>
-              <div className="text-center">
-                <span className="text-3xl font-oswald font-bold text-white">8+</span>
-                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Certified Coaches</p>
+              <div className="border-l border-white/10 pl-6 sm:pl-10">
+                <span className="text-3xl sm:text-4xl font-oswald font-bold text-white drop-shadow">8+</span>
+                <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Certified Coaches</p>
               </div>
             </div>
 
           </div>
         </div>
-        {/* Right Image with Floating Glass Cards */}
-        <div className="relative hidden lg:block overflow-hidden">
-          <Image
-            src="/images/img_7854.webp"
-            alt="Armour 24-7 Gym Athlete"
-            fill
-            priority
-            sizes="50vw"
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0a0a0a] to-transparent h-36" />
 
-          {/* Floating Glass Card */}
-          <div className="absolute bottom-16 left-8 glass p-5 rounded-lg max-w-xs shadow-2xl">
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 bg-[#ff2a3b] rounded-lg flex items-center justify-center text-white shadow-md">
-                <TrendingUp className="w-5 h-5" />
-              </div>
-              <div>
-                <p className="text-sm font-oswald font-bold uppercase text-white">Today&apos;s Progress</p>
-                <p className="text-[10px] text-gray-400">8,450 calories burned</p>
-              </div>
+        {/* Floating Glass Stats Badge on Desktop */}
+        <div className="hidden xl:block absolute bottom-16 right-16 z-10 glass p-5 rounded-xl max-w-xs shadow-2xl border border-white/15 backdrop-blur-md">
+          <div className="flex items-center gap-3.5 mb-2">
+            <div className="w-11 h-11 bg-[#ff2a3b] rounded-lg flex items-center justify-center text-white shadow-md">
+              <TrendingUp className="w-6 h-6" />
             </div>
-            <div className="w-full bg-white/10 rounded-full h-1.5 mt-2">
-              <div className="bg-[#ff2a3b] h-1.5 rounded-full" style={{ width: "78%" }} />
+            <div>
+              <p className="text-sm font-oswald font-bold uppercase text-white">Imported Machinery</p>
+              <p className="text-[11px] text-gray-300">Biomechanically Calibrated</p>
             </div>
           </div>
-
-          {/* Floating Rating Badge */}
-          <div className="absolute top-32 right-8 glass p-4 rounded-lg text-center shadow-2xl">
-            <span className="text-3xl font-oswald font-bold text-[#ff2a3b] block leading-none">4.9</span>
-            <div className="flex text-[#ff2a3b] justify-center my-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-3 h-3 fill-current" />
-              ))}
-            </div>
-            <p className="text-[9px] text-gray-400 uppercase">Rating</p>
-          </div>
+          <p className="text-[11px] text-gray-400 pt-1 border-t border-white/10 mt-2">
+            Hammer Strength &amp; Heavy Iron setup in Ahmedabad
+          </p>
         </div>
       </section>
 
