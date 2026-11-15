@@ -1,14 +1,20 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useId } from "react";
 import { Send, CheckCircle2, AlertCircle, Loader2, MessageSquare, Phone } from "lucide-react";
 
 export default function LeadForm() {
+  const nameId = useId();
+  const phoneId = useId();
+  const programId = useId();
+  const emailId = useId();
+  const messageId = useId();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    program: "Standard Gym Membership",
+    program: "Demo Workout Session (₹500)",
     message: "",
   });
 
@@ -29,7 +35,7 @@ export default function LeadForm() {
 
       if (!res.ok) {
         const errorData = await res.json().catch(() => ({}));
-        throw new Error(errorData.message || "Failed to submit. Please try again.");
+        throw new Error(errorData.message || "Unable to submit your enquiry. Please call us directly.");
       }
 
       setStatus("success");
@@ -38,7 +44,7 @@ export default function LeadForm() {
       if (err instanceof Error) {
         setErrorMessage(err.message);
       } else {
-        setErrorMessage("Something went wrong. Please try again.");
+        setErrorMessage("Something went wrong. Please call or WhatsApp our front desk.");
       }
     }
   };
@@ -49,37 +55,34 @@ export default function LeadForm() {
       name: "",
       email: "",
       phone: "",
-      program: "Standard Gym Membership",
+      program: "Demo Workout Session (₹500)",
       message: "",
     });
   };
 
   const whatsappUrl = `https://wa.me/918160697163?text=${encodeURIComponent(
-    `Hello Armour 24-7 Gym, I have submitted an enquiry on your website.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nProgram: ${formData.program}`
+    `Hello Armour 24-7 Gym, I have submitted an enquiry on your website.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nPlan/Program: ${formData.program}`
   )}`;
 
   return (
-    <div className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-xl relative shadow-2xl">
-      {/* Decorative Header Accent */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-[#ff2a3b] rounded-t-xl" />
-
+    <div className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm relative">
       <div className="mb-6">
-        <h3 className="font-heading text-2xl sm:text-3xl font-bold uppercase tracking-wider text-white">
-          SEND QUICK <span className="text-[#ff2a3b]">MEMBERSHIP ENQUIRY</span>
+        <h3 className="font-oswald text-2xl sm:text-3xl font-bold uppercase tracking-wide text-white">
+          MEMBERSHIP <span className="text-[#ff2a3b]">ENQUIRY</span>
         </h3>
-        <p className="text-xs text-gray-400 mt-1 font-body">
-          Experience Ahmedabad’s premier 24/7 strength facility. Our team will contact you within 15 minutes.
+        <p className="text-xs sm:text-sm text-gray-400 mt-1 font-body">
+          Visit our facility in Hathijan Circle or request plan details. Our front desk will get in touch with you shortly.
         </p>
       </div>
 
       {status === "success" ? (
-        <div className="p-6 bg-[#ff2a3b]/10 border border-[#ff2a3b] rounded-lg text-center space-y-4 animate-in fade-in">
-          <CheckCircle2 className="w-12 h-12 text-[#ff2a3b] mx-auto" />
-          <h4 className="font-heading text-2xl font-bold uppercase text-white">
-            ENQUIRY SUBMITTED SUCCESSFULLY!
+        <div className="p-6 bg-[#1a1a1a] border border-[#ff2a3b]/40 rounded-sm text-center space-y-4">
+          <CheckCircle2 className="w-10 h-10 text-[#ff2a3b] mx-auto" />
+          <h4 className="font-oswald text-xl font-bold uppercase text-white">
+            ENQUIRY RECEIVED
           </h4>
           <p className="text-xs text-gray-300 leading-relaxed font-body">
-            Thank you, <strong className="text-white">{formData.name}</strong>! Your enquiry for <strong className="text-[#ff2a3b]">{formData.program}</strong> has been received. Our team will contact you shortly within 15 minutes.
+            Thank you, <strong className="text-white">{formData.name}</strong>. We have received your interest for <strong className="text-[#ff2a3b]">{formData.program}</strong>. Our team will contact you shortly on {formData.phone}.
           </p>
 
           <div className="pt-2 flex flex-col gap-2.5">
@@ -87,15 +90,16 @@ export default function LeadForm() {
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="w-full py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-heading text-sm font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg"
+              className="w-full py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-oswald text-sm font-bold uppercase tracking-wider rounded-sm transition-colors flex items-center justify-center gap-2"
             >
               <MessageSquare className="w-4 h-4 fill-current" />
-              <span>Connect on WhatsApp Instantly</span>
+              <span>Connect on WhatsApp Now</span>
             </a>
 
             <button
+              type="button"
               onClick={handleReset}
-              className="w-full py-2.5 text-xs font-heading font-bold uppercase tracking-wider bg-transparent border border-white/20 text-gray-300 hover:text-white hover:border-white transition-colors rounded-lg"
+              className="w-full py-2.5 text-xs font-oswald font-bold uppercase tracking-wider bg-transparent border border-white/20 text-gray-300 hover:text-white hover:border-white transition-colors rounded-sm"
             >
               Submit Another Enquiry
             </button>
@@ -104,7 +108,7 @@ export default function LeadForm() {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
           {status === "error" && (
-            <div className="p-3 bg-red-950/50 border border-red-500 text-red-300 text-xs flex items-center gap-2 rounded-lg">
+            <div className="p-3 bg-red-950/40 border border-red-500/60 text-red-300 text-xs flex items-center gap-2 rounded-sm" role="alert">
               <AlertCircle className="w-4 h-4 shrink-0" />
               <span>{errorMessage || "Submission failed. Please check your details."}</span>
             </div>
@@ -113,49 +117,63 @@ export default function LeadForm() {
           {/* Full Name & Phone Number */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-heading uppercase tracking-wider font-semibold text-gray-300 mb-1.5">
-                Full Name *
+              <label
+                htmlFor={nameId}
+                className="block text-xs font-oswald uppercase tracking-wider font-semibold text-gray-300 mb-1"
+              >
+                Full Name <span className="text-[#ff2a3b]">*</span>
               </label>
               <input
+                id={nameId}
                 type="text"
                 required
-                placeholder="Your Name"
+                autoComplete="name"
+                placeholder="Rahul Sharma"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#ff2a3b] focus:ring-1 focus:ring-[#ff2a3b] transition-colors"
+                className="w-full bg-[#0a0a0a] border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#ff2a3b] focus:ring-1 focus:ring-[#ff2a3b] transition-colors"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-heading uppercase tracking-wider font-semibold text-gray-300 mb-1.5">
-                Phone Number *
+              <label
+                htmlFor={phoneId}
+                className="block text-xs font-oswald uppercase tracking-wider font-semibold text-gray-300 mb-1"
+              >
+                Phone Number <span className="text-[#ff2a3b]">*</span>
               </label>
               <input
+                id={phoneId}
                 type="tel"
                 required
+                autoComplete="tel"
                 placeholder="+91 98765 43210"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#ff2a3b] focus:ring-1 focus:ring-[#ff2a3b] transition-colors"
+                className="w-full bg-[#0a0a0a] border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#ff2a3b] focus:ring-1 focus:ring-[#ff2a3b] transition-colors"
               />
             </div>
           </div>
 
-          {/* Program / Service Interest Dropdown */}
+          {/* Program / Plan Selection */}
           <div>
-            <label className="block text-xs font-heading uppercase tracking-wider font-semibold text-gray-300 mb-1.5">
-              Program / Service Interest
+            <label
+              htmlFor={programId}
+              className="block text-xs font-oswald uppercase tracking-wider font-semibold text-gray-300 mb-1"
+            >
+              Select Plan / Interest
             </label>
             <select
+              id={programId}
               value={formData.program}
               onChange={(e) => setFormData({ ...formData, program: e.target.value })}
-              className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#ff2a3b] focus:ring-1 focus:ring-[#ff2a3b] transition-colors cursor-pointer"
+              className="w-full bg-[#0a0a0a] border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-[#ff2a3b] focus:ring-1 focus:ring-[#ff2a3b] transition-colors cursor-pointer"
             >
-              <option value="Demo Workout Session (₹500)">Demo Workout Session (₹500)</option>
-              <option value="1 Month Membership (₹3,500)">1 Month Membership (₹3,500)</option>
-              <option value="3 Months Membership (₹6,500)">3 Months Membership (₹6,500)</option>
-              <option value="6 Months Membership (₹9,000)">6 Months Membership (₹9,000)</option>
-              <option value="12 Months Membership (₹15,000)">12 Months Membership (₹15,000)</option>
+              <option value="Demo Workout Session (₹500)">Demo Workout Session — ₹500</option>
+              <option value="1 Month Membership (₹3,500)">1 Month Membership — ₹3,500</option>
+              <option value="3 Months Membership (₹6,500)">3 Months Membership — ₹6,500</option>
+              <option value="6 Months Membership (₹9,000)">6 Months Membership — ₹9,000</option>
+              <option value="12 Months Membership (₹15,000)">12 Months Membership — ₹15,000</option>
               <option value="1-on-1 Personal Training Enquiry">1-on-1 Personal Training Enquiry</option>
               <option value="Ladies Fitness Program">Ladies Fitness Program</option>
             </select>
@@ -163,29 +181,38 @@ export default function LeadForm() {
 
           {/* Email Address */}
           <div>
-            <label className="block text-xs font-heading uppercase tracking-wider font-semibold text-gray-300 mb-1.5">
-              Email Address (Optional)
+            <label
+              htmlFor={emailId}
+              className="block text-xs font-oswald uppercase tracking-wider font-semibold text-gray-300 mb-1"
+            >
+              Email Address <span className="text-gray-500 font-normal lowercase">(optional)</span>
             </label>
             <input
+              id={emailId}
               type="email"
+              autoComplete="email"
               placeholder="rahul@example.com"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#ff2a3b] focus:ring-1 focus:ring-[#ff2a3b] transition-colors"
+              className="w-full bg-[#0a0a0a] border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#ff2a3b] focus:ring-1 focus:ring-[#ff2a3b] transition-colors"
             />
           </div>
 
-          {/* Additional Notes */}
+          {/* Message / Timing */}
           <div>
-            <label className="block text-xs font-heading uppercase tracking-wider font-semibold text-gray-300 mb-1.5">
-              Additional Notes (Optional)
+            <label
+              htmlFor={messageId}
+              className="block text-xs font-oswald uppercase tracking-wider font-semibold text-gray-300 mb-1"
+            >
+              Notes or Questions <span className="text-gray-500 font-normal lowercase">(optional)</span>
             </label>
             <textarea
+              id={messageId}
               rows={2}
-              placeholder="Preferred workout timing or questions..."
+              placeholder="Preferred visit time or fitness goals..."
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#ff2a3b] focus:ring-1 focus:ring-[#ff2a3b] transition-colors resize-none"
+              className="w-full bg-[#0a0a0a] border border-white/15 rounded-sm px-3.5 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#ff2a3b] focus:ring-1 focus:ring-[#ff2a3b] transition-colors resize-none"
             />
           </div>
 
@@ -193,17 +220,17 @@ export default function LeadForm() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="w-full py-3.5 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-heading text-lg font-bold uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer shadow-[0_0_25px_rgba(255,42,59,0.45)] rounded-lg"
+            className="w-full py-3 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-sm font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer rounded-sm"
           >
             {status === "loading" ? (
               <>
-                <Loader2 className="w-5 h-5 animate-spin" />
-                <span>SUBMITTING ENQUIRY...</span>
+                <Loader2 className="w-4 h-4 animate-spin" />
+                <span>Submitting...</span>
               </>
             ) : (
               <>
-                <Send className="w-4 h-4 fill-current" />
-                <span>SUBMIT ENQUIRY NOW</span>
+                <Send className="w-4 h-4" />
+                <span>Submit Enquiry</span>
               </>
             )}
           </button>

@@ -7,19 +7,21 @@ import Footer from "@/components/Footer";
 const oswald = Oswald({ 
   subsets: ["latin"], 
   weight: ["400", "500", "600", "700"], 
-  variable: "--font-oswald" 
+  variable: "--font-oswald",
+  display: "swap",
 });
 
 const montserrat = Montserrat({ 
   subsets: ["latin"], 
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-montserrat" 
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-montserrat",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Armour 24-7 Gym | Ahmedabad’s Hardcore Strength & Performance Hub",
-  description: "Experience 24/7 biometric gym access, elite Hammer Strength & Eleiko equipment, certified strength coaches, and recovery zones in Ahmedabad 382445.",
-  keywords: ["Armour 24-7 Gym", "Gym in Ahmedabad", "24/7 Gym Ahmedabad", "Bodybuilding gym", "Powerlifting Ahmedabad", "Fitness center 382445"],
+  title: "Armour 24-7 Gym | Hathijan Circle, Ahmedabad",
+  description: "24/7 gym access, imported strength machinery, dedicated free weights, and certified coaches in Hathijan Circle, Ahmedabad 382445.",
+  keywords: ["Armour 24-7 Gym", "Gym in Hathijan Circle", "24/7 Gym Ahmedabad", "Fitness center 382445", "Weight training Ahmedabad"],
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -37,13 +39,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
       <body
         suppressHydrationWarning
         className={`${oswald.variable} ${montserrat.variable} bg-[#0a0a0a] text-white font-body antialiased min-h-screen flex flex-col selection:bg-[#ff2a3b] selection:text-white`}
       >
         <Navbar />
-        <main className="flex-1 pt-20">
+        <main className="flex-1">
           {children}
         </main>
         <Footer />

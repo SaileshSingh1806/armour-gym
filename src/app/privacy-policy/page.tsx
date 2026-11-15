@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#0a0a0a] text-white min-h-screen pt-28 md:pt-36 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         
         {/* Breadcrumb Back Link */}
@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
         {/* Content Body */}
         <div className="space-y-10 text-sm text-gray-300 leading-relaxed font-body">
           
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">1.</span> Overview
             </h2>
@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
             </p>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">2.</span> Information We Collect
             </h2>
@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
             </ul>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">3.</span> How We Use Your Information
             </h2>
@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
             </ul>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">4.</span> Payment Processing &amp; Security
             </h2>
@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
             </p>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">5.</span> Third-Party Disclosures
             </h2>
@@ -91,7 +91,7 @@ export default function PrivacyPolicyPage() {
             </p>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">6.</span> Data Retention &amp; Rights
             </h2>
@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* Grievance Officer */}
-          <div className="bg-[#181818] border border-[#ff2a3b]/40 p-6 rounded-2xl">
+          <div className="bg-[#181818] border border-[#ff2a3b]/40 p-6 rounded-sm">
             <h3 className="text-lg font-oswald font-bold uppercase text-white mb-2">
               Privacy Grievance Officer
             </h3>

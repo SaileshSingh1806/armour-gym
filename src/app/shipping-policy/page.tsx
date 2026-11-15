@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function ShippingPolicyPage() {
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#0a0a0a] text-white min-h-screen pt-28 md:pt-36 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         
         {/* Breadcrumb Back Link */}
@@ -37,7 +37,7 @@ export default function ShippingPolicyPage() {
         {/* Content Body */}
         <div className="space-y-10 text-sm text-gray-300 leading-relaxed font-body">
           
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">1.</span> Nature of Services &amp; Products
             </h2>
@@ -46,7 +46,7 @@ export default function ShippingPolicyPage() {
             </p>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-4">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">2.</span> Digital Delivery Timeline
             </h2>
@@ -77,7 +77,7 @@ export default function ShippingPolicyPage() {
             </div>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">3.</span> Physical Merchandise &amp; Starter Kit Delivery
             </h2>
@@ -91,7 +91,7 @@ export default function ShippingPolicyPage() {
             </ul>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">4.</span> Non-Receipt of Digital Order Confirmation
             </h2>

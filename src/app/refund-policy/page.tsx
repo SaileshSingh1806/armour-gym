@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function RefundPolicyPage() {
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#0a0a0a] text-white min-h-screen pt-28 md:pt-36 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         
         {/* Breadcrumb Back Link */}
@@ -38,7 +38,7 @@ export default function RefundPolicyPage() {
         <div className="space-y-10 text-sm text-gray-300 leading-relaxed font-body">
           
           {/* Highlight Card: 100% Pre-Launch Guarantee */}
-          <div className="bg-gradient-to-r from-[#1c1414] to-[#141414] border-2 border-[#ff2a3b]/60 p-6 sm:p-8 rounded-2xl space-y-3">
+          <div className="bg-gradient-to-r from-[#1c1414] to-[#141414] border-2 border-[#ff2a3b]/60 p-6 sm:p-8 rounded-sm space-y-3">
             <div className="flex items-center gap-2 text-[#ff2a3b]">
               <ShieldCheck className="w-6 h-6 shrink-0" />
               <h2 className="text-xl sm:text-2xl font-oswald font-bold uppercase text-white tracking-wider">
@@ -50,7 +50,7 @@ export default function RefundPolicyPage() {
             </p>
           </div>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-4">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">1.</span> Strict No-Refund Policy (Post-Registration / Once Paid)
             </h2>
@@ -69,7 +69,7 @@ export default function RefundPolicyPage() {
             </ul>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">2.</span> Absolute Zero Membership Freeze Policy
             </h2>
@@ -88,7 +88,7 @@ export default function RefundPolicyPage() {
             </div>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">3.</span> Duplicate Transactions &amp; Billing Errors
             </h2>
@@ -111,7 +111,7 @@ export default function RefundPolicyPage() {
           </section>
 
           {/* Support Box */}
-          <div className="bg-[#181818] border border-[#ff2a3b]/40 p-6 rounded-2xl">
+          <div className="bg-[#181818] border border-[#ff2a3b]/40 p-6 rounded-sm">
             <h3 className="text-lg font-oswald font-bold uppercase text-white mb-2">
               Need Help with a Refund or Billing?
             </h3>
