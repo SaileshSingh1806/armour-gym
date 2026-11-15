@@ -283,7 +283,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-gray-300 leading-relaxed mb-8 max-w-lg text-sm sm:text-base font-body drop-shadow">
-              Ahmedabad’s premier 24/7 strength sanctuary. Built with imported biomechanical equipment, certified coaches, and an unyielding iron community that fuels your transformation.
+              Train anytime day or night in Hathijan Circle, Ahmedabad. Loaded with heavy iron, imported machines, certified trainers, and full biometric keycard access 24 hours a day.
             </p>
 
             {/* CTAs */}
@@ -678,7 +678,7 @@ export default function HomePage() {
                 <span className="text-[#ff2a3b]">TRANSFORM WITH CONFIDENCE</span>
               </h2>
               <p className="text-sm text-gray-300 leading-relaxed mt-4 font-body">
-                At Armour 24-7 Gym, we provide a safe, respectful, and motivating sanctuary for women of all fitness backgrounds. Whether you want to lose postpartum weight, tone your waistline, or build athletic strength, our dedicated female fitness programs provide expert instruction every step of the way.
+                A safe, respectful, and motivating environment for women at every fitness level. Whether your goal is fat loss, toning, core strength, or building stamina, our certified trainers guide your workouts and form directly on the floor.
               </p>
             </div>
 

@@ -26,7 +26,7 @@ export default function Footer() {
             />
           </div>
           <p className="text-gray-400 text-sm leading-relaxed mb-4">
-            Ahmedabad’s premier 24/7 bodybuilding and athletic training sanctuary.<br />
+            Ahmedabad’s premier 24/7 bodybuilding and athletic strength training facility.<br />
             C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445.
           </p>
           <div className="mb-6">

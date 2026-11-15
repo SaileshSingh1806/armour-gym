@@ -100,10 +100,10 @@ export default function AboutPage() {
             THE ARMOUR PHILOSOPHY
           </div>
           <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl font-bold uppercase tracking-tight text-white leading-none">
-            BUILT FOR THE <span className="text-[#ff2a3b]">UNCOMPROMISING</span>
+            BUILT FOR SERIOUS <span className="text-[#ff2a3b]">TRAINING</span>
           </h1>
           <p className="mt-6 text-sm sm:text-base text-gray-300 font-body leading-relaxed">
-            Armour 24-7 Gym was founded in Ahmedabad with a singular, relentless mission: to eliminate the distractions, poor equipment, and restrictive hours of standard commercial fitness clubs and create an uncompromising sanctuary for true athletic performance.
+            Armour 24-7 Gym was built in Hathijan Circle, Ahmedabad with a clear focus: provide real heavy-duty equipment, zero crowd gimmicks, certified coaching on the floor, and 24/7 unrestricted entry for lifters who take their workouts seriously.
           </p>
         </div>
 
