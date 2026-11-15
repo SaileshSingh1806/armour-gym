@@ -307,12 +307,12 @@ export default function HomePage() {
         {/* Right Image with Floating Glass Cards */}
         <div className="relative hidden lg:block overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1200&q=80"
+            src="/images/img_7854.webp"
             alt="Armour 24-7 Gym Athlete"
             fill
             priority
             sizes="50vw"
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0a0a0a] to-transparent h-36" />
@@ -516,15 +516,15 @@ export default function HomePage() {
             {/* Big tile */}
             <div className="col-span-2 row-span-2 relative group overflow-hidden rounded-sm min-h-[400px]">
               <Image
-                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=80"
-                alt="Main Floor"
+                src="/images/img_7842.webp"
+                alt="Armour 24-7 Gym Main Floor"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
                 <span className="font-oswald font-bold uppercase text-2xl opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 text-white">
-                  Main Floor
+                  Main Arena
                 </span>
               </div>
             </div>
@@ -532,60 +532,60 @@ export default function HomePage() {
             {/* Small tiles */}
             <div className="relative group overflow-hidden rounded-sm h-48">
               <Image
-                src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=80"
-                alt="Weight Room"
+                src="/images/img_7843.webp"
+                alt="Strength Zone"
                 fill
                 sizes="25vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
                 <span className="font-oswald font-bold uppercase text-sm opacity-0 group-hover:opacity-100 transition-opacity text-white">
-                  Weight Room
+                  Strength Zone
                 </span>
               </div>
             </div>
 
             <div className="relative group overflow-hidden rounded-sm h-48">
               <Image
-                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80"
-                alt="Yoga Studio"
+                src="/images/img_7844.webp"
+                alt="Cardio & Conditioning"
                 fill
                 sizes="25vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
                 <span className="font-oswald font-bold uppercase text-sm opacity-0 group-hover:opacity-100 transition-opacity text-white">
-                  Yoga Studio
+                  Cardio Setup
                 </span>
               </div>
             </div>
 
             <div className="relative group overflow-hidden rounded-sm h-48">
               <Image
-                src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80"
-                alt="Cardio Zone"
+                src="/images/img_7845.webp"
+                alt="Dumbbell & Free Weights"
                 fill
                 sizes="25vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
                 <span className="font-oswald font-bold uppercase text-sm opacity-0 group-hover:opacity-100 transition-opacity text-white">
-                  Cardio Zone
+                  Free Weights
                 </span>
               </div>
             </div>
 
             <div className="relative group overflow-hidden rounded-sm h-48">
               <Image
-                src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=600&q=80"
-                alt="Boxing Ring"
+                src="/images/img_7848.webp"
+                alt="Imported Rigs & Machines"
                 fill
                 sizes="25vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
                 <span className="font-oswald font-bold uppercase text-sm opacity-0 group-hover:opacity-100 transition-opacity text-white">
-                  Boxing Ring
+                  Heavy Iron Rigs
                 </span>
               </div>
             </div>
@@ -599,11 +599,11 @@ export default function HomePage() {
       <section className="relative py-24 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80"
-            alt="Gym background"
+            src="/images/img_7851.webp"
+            alt="Armour 24-7 Gym Interior Atmosphere"
             fill
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/85" />
         </div>

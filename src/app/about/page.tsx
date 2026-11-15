@@ -31,25 +31,25 @@ const pillars = [
     icon: Clock,
     title: "24/7 BIOMETRIC UNRESTRICTED ACCESS",
     desc: "Your training schedule shouldn't be dictated by arbitrary closing times. Tap in with facial recognition or RFID keycard at 3:00 PM or 3:00 AM. Total freedom with round-the-clock secure entry and high-definition surveillance.",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
+    image: "/images/img_7854.webp",
   },
   {
     icon: Dumbbell,
     title: "WORLD-CLASS HEAVY IRON & MACHINES",
-    desc: "Curated with precision for serious lifters: calibrated Eleiko competition plates, Rogue power cages, custom dumbbell sets up to 70kg, Hammer Strength plate-loaded iso-lateral machines, and dedicated deadlift platforms.",
-    image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80",
+    desc: "Curated with precision for serious lifters: calibrated competition plates, custom dumbbell sets, Hammer Strength plate-loaded iso-lateral machines, and dedicated deadlift platforms.",
+    image: "/images/img_7848.webp",
   },
   {
     icon: Trophy,
     title: "CHAMPIONSHIP-GRADE COACHING",
-    desc: "No inexperienced gym floor helpers. Our coaching staff consists of competitive powerlifters, national physique athletes, and CSCS-certified strength coaches who create individualized periodization programs.",
-    image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
+    desc: "Our coaching staff consists of competitive lifters, physique athletes, and certified strength coaches who create individualized workout periodization.",
+    image: "/images/img_7849.webp",
   },
   {
     icon: Music,
     title: "HIGH-ENERGY ZUMBA & DANCE STUDIO",
-    desc: "Experience calorie-torching, rhythm-driven workouts in our dedicated air-conditioned studio. Led by certified Zumba instructors, our high-energy sessions combine Latin beats, cardio fitness, and full-body toning in a vibrant, motivating atmosphere.",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
+    desc: "Experience calorie-torching, rhythm-driven workouts in our dedicated air-conditioned studio. Led by certified instructors, combining cardio fitness and motivating atmosphere.",
+    image: "/images/img_7850.webp",
   },
 ];
 
