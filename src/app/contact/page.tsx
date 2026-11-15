@@ -57,6 +57,15 @@ export default function ContactPage() {
                       Armour 24-7 Gym, C-601, 602 Shalin Square, Hathijan Circle,<br />
                       <strong className="text-white">Ahmedabad, Gujarat — 382445, India</strong>
                     </p>
+                    <a
+                      href="https://maps.app.goo.gl/aymeRAXBE2BrvW5J6?g_st=ac"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#ff2a3b] hover:underline mt-2 cursor-pointer"
+                    >
+                      <MapPin className="w-3.5 h-3.5" />
+                      <span>Open in Google Maps / Read Reviews ↗</span>
+                    </a>
                   </div>
                 </div>
 
@@ -164,7 +173,15 @@ export default function ContactPage() {
                   <MapPin className="w-4 h-4 text-[#ff2a3b]" />
                   LOCATION MAP • AHMEDABAD 382445
                 </span>
-                <span className="text-[10px] text-gray-400 uppercase">Hathijan Circle</span>
+                <a
+                  href="https://maps.app.goo.gl/aymeRAXBE2BrvW5J6?g_st=ac"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs font-bold text-[#ff2a3b] hover:underline flex items-center gap-1 cursor-pointer"
+                >
+                  <span>Google Maps &amp; Reviews</span>
+                  <span>↗</span>
+                </a>
               </div>
               <div className="relative w-full h-[320px] bg-[#0d0d0d] overflow-hidden">
                 <iframe

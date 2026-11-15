@@ -25,10 +25,21 @@ export default function Footer() {
               className="object-contain object-left"
             />
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed mb-6">
+          <p className="text-gray-400 text-sm leading-relaxed mb-4">
             Ahmedabad’s premier 24/7 bodybuilding and athletic training sanctuary.<br />
             C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445.
           </p>
+          <div className="mb-6">
+            <a
+              href="https://maps.app.goo.gl/aymeRAXBE2BrvW5J6?g_st=ac"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs text-[#ff2a3b] hover:text-white font-bold transition-colors"
+            >
+              <MapPin className="w-3.5 h-3.5" />
+              <span>Google Maps &amp; Reviews ↗</span>
+            </a>
+          </div>
           <div className="flex gap-3">
             <a
               href="https://twitter.com"

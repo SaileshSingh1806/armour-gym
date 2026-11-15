@@ -834,12 +834,12 @@ export default function HomePage() {
                 </div>
                 <p className="text-xs text-gray-300 font-medium">88+ Verified 5-Star Reviews</p>
                 <a
-                  href="https://maps.google.com"
+                  href="https://maps.app.goo.gl/aymeRAXBE2BrvW5J6?g_st=ac"
                   target="_blank"
                   rel="noreferrer"
                   className="text-xs font-bold text-[#ff2a3b] hover:underline flex items-center gap-1 mt-1 cursor-pointer"
                 >
-                  <span>View on Google Maps</span>
+                  <span>View &amp; Write Review on Google Maps</span>
                   <span>↗</span>
                 </a>
               </div>
