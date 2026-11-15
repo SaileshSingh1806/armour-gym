@@ -303,10 +303,10 @@ export default function SchedulePage() {
             </div>
             <div>
               <h4 className="font-heading text-2xl font-bold uppercase tracking-wider text-white">
-                TRAIN ANYTIME 24/7/365 IN AHMEDABAD
+                TRAIN ANYTIME 24/7 IN AHMEDABAD *
               </h4>
               <p className="text-xs sm:text-sm text-gray-400">
-                Group classes are included free with Pro &amp; VIP memberships. Prefer solo lifting at 2 AM? Our biometric doors never close.
+                Group classes are included free with Pro &amp; VIP memberships. 24/7 round-the-clock biometric training is available subject to facility safety &amp; management terms.
               </p>
             </div>
           </div>

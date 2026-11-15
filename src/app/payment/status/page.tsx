@@ -75,7 +75,7 @@ export default async function PaymentStatusPage({
             </h4>
             <ul className="text-xs text-gray-300 space-y-1.5 list-disc list-inside">
               <li>A digital confirmation &amp; tax invoice has been sent to your WhatsApp and Email.</li>
-              <li>Your 365-day access validity starts on Grand Opening day or your 1st workout.</li>
+              <li>Your annual access validity starts on Grand Opening day or your 1st workout.</li>
               <li>Collect your free Armour Gym Starter Kit &amp; RFID access key at the front desk.</li>
             </ul>
           </div>

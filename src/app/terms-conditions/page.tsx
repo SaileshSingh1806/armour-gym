@@ -51,28 +51,38 @@ export default function TermsConditionsPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">2.</span> Membership &amp; Facility Access Rules
+              <span className="text-[#ff2a3b]">2.</span> 24/7 Facility Access &amp; Management Rights
             </h2>
             <ul className="list-disc list-inside space-y-2 text-gray-300 pl-2">
               <li><strong>24/7 Access Privileges:</strong> Valid membership entitles the registered holder to round-the-clock facility access using biometric recognition or assigned RFID credentials.</li>
-              <li><strong>Non-Transferability:</strong> Memberships are issued to individual persons and cannot be transferred, shared, or assigned to another individual without written administrative authorization.</li>
-              <li><strong>Tailgating Prohibition:</strong> Allowing non-members or unverified guests into the facility using your access credentials is strictly forbidden and subject to instant membership revocation without refund.</li>
+              <li><strong>Sole Discretion of Management:</strong> Provision of 24/7 round-the-clock facility access is strictly subject to the operational decisions, safety protocols, and management rights of Armour 24-7 Gym. Management reserves the absolute right to alter, modify, restrict, temporarily suspend, or revoke 24/7 operating hours or individual access at any time for scheduled maintenance, sanitization, security audits, emergencies, legal/government regulations, or safety compliance without any prior notice or financial liability.</li>
+              <li><strong>Right of Admission Reserved:</strong> Gym management reserves the absolute right of admission. Management holds the unconditional right to suspend, terminate, or revoke any member&apos;s access or membership permanently, without refund or compensation, if the member engages in misconduct, inappropriate behavior, property damage, rule violation, or creates a nuisance.</li>
+              <li><strong>Strict Non-Transferability:</strong> Memberships are strictly personal, non-transferable, and non-assignable under any circumstances.</li>
+              <li><strong>Tailgating &amp; Unauthorized Entry:</strong> Allowing non-members or unverified guests into the facility using your access credentials is strictly forbidden. Any violation will result in immediate termination of membership and biometric access, forfeiture of all fees, and possible legal action for trespassing.</li>
               <li><strong>Minimum Age:</strong> Members must be at least 16 years of age. Minors between 16 and 18 require signed parental or legal guardian consent.</li>
             </ul>
           </section>
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">3.</span> Pre-Launch Offer Terms &amp; Conditions
+              <span className="text-[#ff2a3b]">3.</span> Fees Non-Refundable &amp; No Membership Freeze Policy
             </h2>
-            <p>
-              The <strong>Pre-Launch Founder Pass (₹9,999)</strong> is a special promotional membership with limited availability (100 passes):
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-300 pl-2">
-              <li><strong>Membership Activation:</strong> The 365-day annual duration commences on the official facility opening date or the member&apos;s first physical check-in date, whichever is later.</li>
-              <li><strong>100% Pre-Launch Refund Guarantee:</strong> If a purchaser wishes to cancel before the official gym opening date, a 100% full refund will be processed back to the original payment source.</li>
-              <li><strong>Welcome Starter Kit:</strong> Starter kits (bag, shaker, towel) will be distributed at the front desk upon the member&apos;s first onboarding visit.</li>
-            </ul>
+            <div className="bg-[#1c1414] border border-[#ff2a3b]/40 p-4 rounded-xl space-y-2 text-white">
+              <p className="font-oswald text-base font-bold text-[#ff2a3b] uppercase tracking-wide">
+                STRICT NO-REFUND POLICY — FEES ONCE PAID WILL NOT BE REFUNDED UNDER ANY CIRCUMSTANCES
+              </p>
+              <p className="text-xs text-gray-300 leading-relaxed">
+                All membership fees, registration charges, advance dues, personal training fees, and ancillary service payments once paid are <strong>strictly non-refundable</strong> under any circumstances whatsoever (including but not limited to relocation, change of mind, lack of usage, personal schedules, dissatisfaction, illness, medical reasons, or unforeseen events).
+              </p>
+            </div>
+            <div className="bg-[#0a0a0a] border border-white/10 p-4 rounded-xl space-y-2 text-white">
+              <p className="font-oswald text-base font-bold text-white uppercase tracking-wide">
+                NO MEMBERSHIP FREEZE / PAUSE / HOLD
+              </p>
+              <p className="text-xs text-gray-300 leading-relaxed">
+                Armour 24-7 Gym maintains an absolute <strong>Zero-Freeze Policy</strong>. No membership can be frozen, paused, extended, put on hold, or carried forward under any circumstances, including travel, examination, medical conditions, or personal commitments. The membership period runs continuously from the date of activation until its scheduled expiry.
+              </p>
+            </div>
           </section>
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">

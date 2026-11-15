@@ -131,11 +131,14 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-gray-400">
             <li className="flex justify-between border-b border-white/5 pb-2">
               <span>Biometric Access</span>
-              <span className="text-[#ff2a3b] font-bold">24/7/365 Open</span>
+              <span className="text-[#ff2a3b] font-bold">24/7 Open *</span>
             </li>
             <li className="flex justify-between border-b border-white/5 pb-2">
               <span>Front Desk Hours</span>
               <span className="text-gray-300">06:00 AM – 10:00 PM</span>
+            </li>
+            <li className="text-[11px] text-gray-400 pt-1 leading-snug">
+              * 24/7 access is subject to management rights &amp; facility safety rules. <Link href="/terms-conditions" className="text-[#ff2a3b] underline font-semibold">T&amp;C Apply</Link>.
             </li>
             <li className="text-xs text-gray-300 pt-1 space-y-1">
               <p>

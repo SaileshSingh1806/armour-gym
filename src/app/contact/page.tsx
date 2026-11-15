@@ -1,3 +1,4 @@
+import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import {
   MapPin,
@@ -126,9 +127,12 @@ export default function ContactPage() {
                     </span>
                   </div>
                   <span className="text-xs font-bold text-[#ff2a3b] font-heading uppercase tracking-wider bg-[#ff2a3b]/10 px-2.5 py-1">
-                    24 HOURS / 7 DAYS / 365 DAYS
+                    24/7 OPEN *
                   </span>
                 </div>
+                <p className="text-[11px] text-gray-400 px-1">
+                  * 24/7 biometric facility access is subject to management discretion, facility maintenance, and gym safety regulations. <Link href="/terms-conditions" className="text-[#ff2a3b] underline font-semibold">Terms &amp; Conditions Apply</Link>.
+                </p>
 
                 <div className="flex items-center justify-between p-3 bg-[#0a0a0a] border border-white/5 text-xs text-gray-300">
                   <span>Front Desk Staff &amp; Tours</span>

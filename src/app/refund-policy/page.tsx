@@ -50,59 +50,63 @@ export default function RefundPolicyPage() {
             </p>
           </div>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-4">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">1.</span> Post-Opening Refund Policy
+              <span className="text-[#ff2a3b]">1.</span> Strict No-Refund Policy (Post-Registration / Once Paid)
             </h2>
-            <p>
-              Once the facility is officially open and a member has begun utilizing gym facilities (first biometric check-in), memberships are generally non-refundable except under the following circumstances:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-300 pl-2">
-              <li><strong>7-Day Trial Period for Annual Members:</strong> New annual members may request a cancellation within 7 days of their initial check-in date if dissatisfied with the training equipment, environment, or coaching. A pro-rata refund will be issued minus standard onboarding administrative fees (₹500).</li>
-              <li><strong>Medical Exemption:</strong> In case of debilitating medical illness or severe injury certified by a registered medical practitioner, members can apply for a medical pause or pro-rata refund for unused full months.</li>
-              <li><strong>Relocation:</strong> If a member relocates to a city outside Ahmedabad (more than 25 km from the gym), they may request a pro-rata refund upon submitting verified proof of residential relocation.</li>
+            <div className="bg-[#1c1414] border border-[#ff2a3b]/40 p-5 rounded-xl space-y-2">
+              <p className="font-oswald text-base font-bold text-[#ff2a3b] uppercase tracking-wide">
+                FEES ONCE PAID ARE STRICTLY NON-REFUNDABLE UNDER ANY CIRCUMSTANCES
+              </p>
+              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                All membership fees, subscription dues, personal training packages, guest fees, and administrative charges once paid through the website, online payment gateway, or at the front desk are <strong>100% NON-REFUNDABLE and NON-TRANSFERABLE</strong> under any circumstances whatsoever.
+              </p>
+            </div>
+            <ul className="list-disc list-inside space-y-2 text-gray-300 pl-2 text-xs sm:text-sm">
+              <li>No refunds, credits, or fee adjustments will be issued for non-usage of gym facilities, change of mind, lack of time, personal dissatisfaction, relocation, or schedule changes.</li>
+              <li>No refunds will be granted in the event of medical illness, bodily injury, medical advice, pregnancy, travel, job transfer, or personal emergency.</li>
+              <li>If a member is suspended, removed, or has their facility access revoked due to misconduct, misbehavior, rules violation, or breach of safety standards, all fees paid stand forfeited and no refund will be provided.</li>
             </ul>
           </section>
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">2.</span> How to Request a Refund or Cancellation
+              <span className="text-[#ff2a3b]">2.</span> Absolute Zero Membership Freeze Policy
             </h2>
-            <p>
-              To initiate a cancellation or refund request, please follow this straightforward process:
-            </p>
-            <ol className="list-decimal list-inside space-y-2 text-gray-300 pl-2">
-              <li>Send an email to <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] font-bold hover:underline">armour247gym@gmail.com</a> or WhatsApp message to <a href="https://wa.me/918160697163" className="text-white font-bold hover:underline">+91 81606 97163</a>.</li>
-              <li>Include your <strong>Order ID / Payment Reference ID</strong>, Full Name, and Registered Mobile Number.</li>
-              <li>State the reason for cancellation (for pre-launch refunds, no reason is required; simply mention &quot;Pre-Launch Refund Request&quot;).</li>
-            </ol>
+            <div className="bg-[#0a0a0a] border border-white/10 p-5 rounded-xl space-y-2">
+              <p className="font-oswald text-base font-bold text-white uppercase tracking-wide">
+                NO MEMBERSHIP FREEZE / PAUSE / EXTENSION UNDER ANY CIRCUMSTANCES
+              </p>
+              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                Armour 24-7 Gym does <strong>NOT</strong> offer any membership freeze, hold, pause, extension, or carryover facility under any circumstances.
+              </p>
+              <ul className="list-disc list-inside space-y-1.5 text-gray-400 text-xs pl-2 pt-1">
+                <li>Travel, business tours, vacations, examinations, and personal commitments do not qualify for a pause or tenure extension.</li>
+                <li>Medical illness, medical surgeries, injury recoveries, or fitness breaks do not qualify for membership freeze.</li>
+                <li>The membership validity runs consecutively from the date of activation until the exact expiry date.</li>
+              </ul>
+            </div>
           </section>
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
             <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">3.</span> Refund Processing Timeline &amp; Method
+              <span className="text-[#ff2a3b]">3.</span> Duplicate Transactions &amp; Billing Errors
             </h2>
+            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              In the rare event of a technical payment gateway failure, double charge, or duplicate transaction where the member&apos;s bank account or UPI was debited multiple times for a single order:
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div className="bg-[#0a0a0a] border border-white/10 p-4 rounded-xl">
-                <span className="text-xs font-mono text-gray-400 block uppercase">Review &amp; Approval</span>
-                <span className="font-oswald text-lg font-bold text-white">Within 24 to 48 Hours</span>
+                <span className="text-xs font-mono text-gray-400 block uppercase">Verification Desk</span>
+                <span className="font-oswald text-base font-bold text-white">Within 24 to 48 Hours</span>
               </div>
               <div className="bg-[#0a0a0a] border border-white/10 p-4 rounded-xl">
-                <span className="text-xs font-mono text-gray-400 block uppercase">Bank Credit Turnaround</span>
-                <span className="font-oswald text-lg font-bold text-green-400">5 to 7 Business Days</span>
+                <span className="text-xs font-mono text-gray-400 block uppercase">Duplicate Charge Reversal</span>
+                <span className="font-oswald text-base font-bold text-green-400">5 to 7 Business Days</span>
               </div>
             </div>
-            <p className="text-xs text-gray-400 pt-2">
-              * Approved refunds are credited directly back to the original source payment method (Bank Account, UPI, Debit/Credit Card) through the payment gateway. Cash refunds are not issued for online transactions.
-            </p>
-          </section>
-
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-2xl space-y-3">
-            <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">4.</span> Membership Freeze / Pause Policy
-            </h2>
-            <p>
-              If you are traveling for business, vacation, or temporary illness, you don&apos;t have to cancel your membership. Annual membership holders can freeze their membership for up to <strong>30 to 60 days per calendar year</strong> with 48 hours advance notice to the front desk.
+            <p className="text-xs text-gray-400 pt-1">
+              * Verified duplicate charges are credited directly back to the original source payment method (Bank Account, UPI, Debit/Credit Card) through the payment gateway.
             </p>
           </section>
 

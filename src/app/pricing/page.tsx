@@ -37,7 +37,7 @@ const pricingPlans = [
     highlight: true,
     badge: "MOST POPULAR",
     features: [
-      "UNLIMITED 24/7/365 biometric keycard access",
+      "UNLIMITED 24/7 biometric keycard access *",
       "Access to all 4 training zones & combat cage",
       "All Group HIIT, Boxing & Powerlifting classes",
       "1 Free 1-on-1 personal coaching assessment",
@@ -74,15 +74,15 @@ const pricingPlans = [
 const faqs = [
   {
     q: "How does 24/7 access work at Armour Gym Ahmedabad?",
-    a: "Once enrolled, you receive a secure biometric RFID keycard and facial scan profile. You can scan in anytime 24 hours a day, 7 days a week, 365 days a year—even on public holidays.",
+    a: "Once enrolled, members receive a secure biometric RFID keycard and facial scan profile to access the facility 24/7 during active operating periods. 24/7 access is subject to facility rules and management discretion (*Terms & Conditions Apply).",
   },
   {
-    q: "Are there any hidden joining or registration fees?",
-    a: "Zero hidden charges. All our prices are completely transparent. Taxes and your initial RFID setup are included with all memberships.",
+    q: "Are membership fees refundable?",
+    a: "No. All membership fees and dues once paid are strictly non-refundable and non-transferable under any circumstances.",
   },
   {
-    q: "Can I freeze or pause my membership if I travel?",
-    a: "Yes! Monthly and Annual members can pause their membership for up to 30 to 60 days per year with 48-hour advance notice to the front desk.",
+    q: "Can I freeze or pause my membership?",
+    a: "No. Armour 24-7 Gym does not offer any membership freeze, hold, or pause facility under any circumstances. Memberships run continuously for their purchased tenure.",
   },
   {
     q: "Where exactly is Armour 24-7 Gym located in Ahmedabad?",
