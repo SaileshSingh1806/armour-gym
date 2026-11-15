@@ -245,30 +245,30 @@ export default function HomePage() {
       {/* 1. HERO — Full Bleed Premium Arena (Mobile & Desktop) */}
       {/* ============================================================ */}
       <section className="min-h-screen relative flex items-center overflow-hidden">
-        {/* Full-width Immersive Gym Background with Cinematic Lighting Overlay */}
+        {/* Full-width Immersive Gym Background with Glowing ARMOUR Ceiling Sign */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/img_7854.webp"
-            alt="Armour 24-7 Gym Training Arena"
+            src="/images/hero_armour.webp"
+            alt="Armour 24-7 Gym Main Training Arena with Illuminated Ceiling Logo"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[70%_center] md:object-center"
+            className="object-cover object-[center_top] md:object-[center_35%]"
           />
-          {/* Multi-layered cinematic gradient: strong left dark vignette for pristine text readability, bottom fade into next section */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/90 md:via-[#0a0a0a]/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-black/40" />
-          {/* Subtle brand red ambient glow on top-left */}
-          <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#ff2a3b]/15 rounded-full blur-[120px] pointer-events-none" />
-          <div className="grid-pattern absolute inset-0 opacity-20 pointer-events-none" />
+          {/* Transparent Vignette: Top is kept completely open/transparent so the illuminated ARMOUR ceiling logo & lighting shine through */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/75 via-50% to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/90 via-[#0a0a0a]/60 md:via-[#0a0a0a]/40 to-transparent" />
+          {/* Subtle brand red ambient glow on bottom-left */}
+          <div className="absolute bottom-10 left-0 w-80 h-80 bg-[#ff2a3b]/15 rounded-full blur-[100px] pointer-events-none" />
+          <div className="grid-pattern absolute inset-0 opacity-15 pointer-events-none" />
         </div>
 
         {/* Hero Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 w-full pt-32 pb-20 md:pt-40 md:pb-28">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 w-full pt-28 pb-16 md:pt-36 md:pb-24">
           <div className="max-w-2xl">
             
             {/* Eyebrow Badge */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-[#141414]/80 border border-[#ff2a3b]/40 backdrop-blur-md rounded-full mb-6">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-[#141414]/70 border border-[#ff2a3b]/40 backdrop-blur-md rounded-full mb-6">
               <div className="w-2 h-2 bg-[#ff2a3b] rounded-full animate-pulse shadow-[0_0_8px_#ff2a3b]" />
               <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#ff2a3b] font-oswald">
                 Now Open • Hathijan Circle, Ahmedabad
@@ -276,13 +276,13 @@ export default function HomePage() {
             </div>
 
             {/* Title with Clean Non-Intersecting Solid & Red Outline Text */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-oswald font-bold uppercase leading-[0.92] tracking-tight mb-6 text-white drop-shadow-lg">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-oswald font-bold uppercase leading-[0.92] tracking-tight mb-6 text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]">
               Forge Your<br />
               <span className="text-outline-brand inline-block my-1 tracking-wider">STRONGEST</span><br />
               Self <span className="text-[#ff2a3b]">Today</span>
             </h1>
 
-            <p className="text-gray-300 leading-relaxed mb-8 max-w-lg text-sm sm:text-base font-body drop-shadow">
+            <p className="text-gray-200 leading-relaxed mb-8 max-w-lg text-sm sm:text-base font-body drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               Train anytime day or night in Hathijan Circle, Ahmedabad. Loaded with heavy iron, imported machines, certified trainers, and full biometric keycard access 24 hours a day.
             </p>
 
@@ -290,14 +290,14 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <Link
                 href="/contact"
-                className="bg-[#ff2a3b] text-white font-oswald font-bold uppercase text-sm px-9 py-4 tracking-widest hover:bg-white hover:text-black transition-all rounded-sm inline-flex items-center gap-3 shadow-[0_0_25px_rgba(255,42,59,0.5)] cursor-pointer"
+                className="bg-[#ff2a3b] text-white font-oswald font-bold uppercase text-sm px-9 py-4 tracking-widest hover:bg-white hover:text-black transition-all rounded-sm inline-flex items-center gap-3 shadow-[0_0_25px_rgba(255,42,59,0.55)] cursor-pointer"
               >
                 <span>Join Now</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/pricing"
-                className="px-7 py-4 border border-white/20 bg-black/40 backdrop-blur-sm hover:border-[#ff2a3b] hover:text-[#ff2a3b] text-white font-oswald font-bold uppercase text-sm tracking-wider transition-all rounded-sm cursor-pointer"
+                className="px-7 py-4 border border-white/25 bg-black/50 backdrop-blur-md hover:border-[#ff2a3b] hover:text-[#ff2a3b] text-white font-oswald font-bold uppercase text-sm tracking-wider transition-all rounded-sm cursor-pointer shadow-lg"
               >
                 View Plans
               </Link>
@@ -306,16 +306,16 @@ export default function HomePage() {
             {/* Stats Bar */}
             <div className="flex flex-wrap gap-6 sm:gap-10 pt-6 border-t border-white/15">
               <div>
-                <span className="text-3xl sm:text-4xl font-oswald font-bold text-[#ff2a3b] drop-shadow">24/7</span>
-                <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Biometric Entry *</p>
+                <span className="text-3xl sm:text-4xl font-oswald font-bold text-[#ff2a3b] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">24/7</span>
+                <p className="text-[10px] text-gray-300 uppercase tracking-widest mt-1 drop-shadow">Biometric Entry *</p>
               </div>
-              <div className="border-l border-white/10 pl-6 sm:pl-10">
-                <span className="text-3xl sm:text-4xl font-oswald font-bold text-white drop-shadow">250+</span>
-                <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Active Athletes</p>
+              <div className="border-l border-white/15 pl-6 sm:pl-10">
+                <span className="text-3xl sm:text-4xl font-oswald font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">250+</span>
+                <p className="text-[10px] text-gray-300 uppercase tracking-widest mt-1 drop-shadow">Active Athletes</p>
               </div>
-              <div className="border-l border-white/10 pl-6 sm:pl-10">
-                <span className="text-3xl sm:text-4xl font-oswald font-bold text-white drop-shadow">8+</span>
-                <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Certified Coaches</p>
+              <div className="border-l border-white/15 pl-6 sm:pl-10">
+                <span className="text-3xl sm:text-4xl font-oswald font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">8+</span>
+                <p className="text-[10px] text-gray-300 uppercase tracking-widest mt-1 drop-shadow">Certified Coaches</p>
               </div>
             </div>
 
