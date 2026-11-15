@@ -101,7 +101,7 @@ export default function ShippingPolicyPage() {
             <div className="bg-[#181818] border border-white/10 p-4 rounded-xl flex flex-wrap items-center justify-between gap-4">
               <div>
                 <span className="text-xs text-gray-400 block">DESK HELPLINE</span>
-                <span className="font-oswald text-base font-bold text-white">+91 97148 40999</span>
+                <span className="font-oswald text-base font-bold text-white">+91 81606 97163</span>
               </div>
               <div>
                 <span className="text-xs text-gray-400 block">EMAIL SUPPORT</span>

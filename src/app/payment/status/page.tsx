@@ -90,7 +90,7 @@ export default async function PaymentStatusPage({
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/919714840999?text=Hi%20Armour%20Gym%2C%20I%20have%20completed%20my%20payment%20for%20order%20"
+              href="https://wa.me/918160697163?text=Hi%20Armour%20Gym%2C%20I%20have%20completed%20my%20payment%20for%20order%20"
               target="_blank"
               rel="noreferrer"
               className="py-3.5 px-6 bg-[#181818] hover:bg-white/10 border border-white/15 text-white font-oswald text-sm font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2"
@@ -109,8 +109,8 @@ export default async function PaymentStatusPage({
               armour247gym@gmail.com
             </a>{" "}
             or call{" "}
-            <a href="tel:+919714840999" className="text-white hover:underline font-bold">
-              +91 97148 40999
+            <a href="tel:+918160697163" className="text-white hover:underline font-bold">
+              +91 81606 97163
             </a>.
           </p>
           <p>C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445</p>

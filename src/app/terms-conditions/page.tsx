@@ -132,7 +132,7 @@ export default function TermsConditionsPage() {
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#ff2a3b] shrink-0" />
-                <a href="tel:+919714840999" className="hover:text-white font-bold">+91 97148 40999</a>
+                <a href="tel:+918160697163" className="hover:text-white font-bold">+91 81606 97163</a>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#ff2a3b] shrink-0" />

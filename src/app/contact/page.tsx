@@ -67,10 +67,10 @@ export default function ContactPage() {
                         24/7 HELPLINE / FRONT DESK
                       </span>
                       <a
-                        href="tel:+919876543210"
+                        href="tel:+918160697163"
                         className="font-heading text-lg font-bold text-white hover:text-[#ff2a3b] transition-colors"
                       >
-                        +91 98765 43210
+                        +91 81606 97163
                       </a>
                     </div>
                   </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                         INSTANT WHATSAPP SUPPORT
                       </span>
                       <a
-                        href="https://wa.me/919876543210"
+                        href="https://wa.me/918160697163"
                         target="_blank"
                         rel="noreferrer"
                         className="font-heading text-lg font-bold text-white hover:text-[#ff2a3b] transition-colors"

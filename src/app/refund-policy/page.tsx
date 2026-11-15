@@ -72,7 +72,7 @@ export default function RefundPolicyPage() {
               To initiate a cancellation or refund request, please follow this straightforward process:
             </p>
             <ol className="list-decimal list-inside space-y-2 text-gray-300 pl-2">
-              <li>Send an email to <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] font-bold hover:underline">armour247gym@gmail.com</a> or WhatsApp message to <a href="https://wa.me/919714840999" className="text-white font-bold hover:underline">+91 97148 40999</a>.</li>
+              <li>Send an email to <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] font-bold hover:underline">armour247gym@gmail.com</a> or WhatsApp message to <a href="https://wa.me/918160697163" className="text-white font-bold hover:underline">+91 81606 97163</a>.</li>
               <li>Include your <strong>Order ID / Payment Reference ID</strong>, Full Name, and Registered Mobile Number.</li>
               <li>State the reason for cancellation (for pre-launch refunds, no reason is required; simply mention &quot;Pre-Launch Refund Request&quot;).</li>
             </ol>
@@ -116,7 +116,7 @@ export default function RefundPolicyPage() {
             </p>
             <div className="space-y-2 text-xs text-gray-300">
               <p><strong>Email:</strong> <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] font-bold hover:underline">armour247gym@gmail.com</a></p>
-              <p><strong>Phone / WhatsApp:</strong> <a href="tel:+919714840999" className="text-white font-bold hover:underline">+91 97148 40999</a></p>
+              <p><strong>Phone / WhatsApp:</strong> <a href="tel:+918160697163" className="text-white font-bold hover:underline">+91 81606 97163</a></p>
               <p><strong>Address:</strong> C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad 382445</p>
             </div>
           </div>

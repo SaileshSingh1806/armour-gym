@@ -112,7 +112,7 @@ export default function PrivacyPolicyPage() {
               <p><strong>Officer:</strong> Armour 24-7 Compliance Desk</p>
               <p><strong>Address:</strong> C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad 382445</p>
               <p><strong>Email:</strong> <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] font-bold hover:underline">armour247gym@gmail.com</a></p>
-              <p><strong>Phone:</strong> <a href="tel:+919714840999" className="text-white font-bold hover:underline">+91 97148 40999</a></p>
+              <p><strong>Phone:</strong> <a href="tel:+918160697163" className="text-white font-bold hover:underline">+91 81606 97163</a></p>
             </div>
           </div>
 

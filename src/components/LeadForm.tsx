@@ -54,7 +54,7 @@ export default function LeadForm() {
     });
   };
 
-  const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/918160697163?text=${encodeURIComponent(
     `Hello Armour 24-7 Gym, I have submitted an enquiry on your website.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nProgram: ${formData.program}`
   )}`;
 
