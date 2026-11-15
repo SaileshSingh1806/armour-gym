@@ -31,7 +31,7 @@ export default function Footer() {
           </p>
           <div className="mb-6">
             <a
-              href="https://maps.app.goo.gl/aymeRAXBE2BrvW5J6?g_st=ac"
+              href="https://maps.app.goo.gl/fdHFDqTDaHNvw5Pf6"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-[#ff2a3b] hover:text-white font-bold transition-colors"

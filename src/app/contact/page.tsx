@@ -58,7 +58,7 @@ export default function ContactPage() {
                       <strong className="text-white">Ahmedabad, Gujarat — 382445, India</strong>
                     </p>
                     <a
-                      href="https://maps.app.goo.gl/aymeRAXBE2BrvW5J6?g_st=ac"
+                      href="https://maps.app.goo.gl/fdHFDqTDaHNvw5Pf6"
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-bold text-[#ff2a3b] hover:underline mt-2 cursor-pointer"
@@ -174,7 +174,7 @@ export default function ContactPage() {
                   LOCATION MAP • AHMEDABAD 382445
                 </span>
                 <a
-                  href="https://maps.app.goo.gl/aymeRAXBE2BrvW5J6?g_st=ac"
+                  href="https://maps.app.goo.gl/fdHFDqTDaHNvw5Pf6"
                   target="_blank"
                   rel="noreferrer"
                   className="text-xs font-bold text-[#ff2a3b] hover:underline flex items-center gap-1 cursor-pointer"
