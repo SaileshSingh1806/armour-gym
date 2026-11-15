@@ -178,7 +178,7 @@ export default function Navbar() {
               onClick={closeMenu}
               className="block w-full py-3.5 text-center bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold text-sm uppercase tracking-wider rounded-lg shadow-[0_0_20px_rgba(255,42,59,0.4)] transition-colors"
             >
-              Claim Free Trial Pass
+              Get In Touch
             </Link>
 
             <div className="grid grid-cols-2 gap-3 pt-1">

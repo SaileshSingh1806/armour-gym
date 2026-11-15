@@ -93,7 +93,7 @@ const googleReviews = [
     name: "HARDIK TRIVEDI",
     time: "1 week ago",
     rating: 5,
-    text: "One of the best gyms around. Massive 15,000 sq ft setup with an incredible variety of imported machines. Highly recommended in Hathijan Circle!",
+    text: "One of the best gyms around. Massive world-class setup with an incredible variety of imported machines. Highly recommended in Hathijan Circle!",
   },
   {
     initial: "S",
@@ -286,19 +286,19 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Mini stats - New Grand Opening Facility */}
+            {/* Mini stats - Open 24/7 Facility */}
             <div className="flex gap-8 pt-8 border-t border-white/10">
               <div className="text-center">
                 <span className="text-3xl font-oswald font-bold text-[#ff2a3b]">24-7</span>
                 <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Biometric Access</p>
               </div>
               <div className="text-center">
-                <span className="text-3xl font-oswald font-bold text-white">15,000</span>
-                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Sq. Ft. Floor Space</p>
+                <span className="text-3xl font-oswald font-bold text-white">250+</span>
+                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Active Members</p>
               </div>
               <div className="text-center">
-                <span className="text-3xl font-oswald font-bold text-white">40+</span>
-                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Elite Machines &amp; Rigs</p>
+                <span className="text-3xl font-oswald font-bold text-white">8+</span>
+                <p className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">Certified Coaches</p>
               </div>
             </div>
 
@@ -616,9 +616,9 @@ export default function HomePage() {
           </div>
 
           <div>
-            <span className="text-5xl md:text-6xl font-oswald font-bold text-white block leading-none">15,000</span>
+            <span className="text-5xl md:text-6xl font-oswald font-bold text-white block leading-none">250+</span>
             <div className="w-8 h-[2px] bg-white/20 mx-auto my-3" />
-            <p className="text-xs text-gray-300 uppercase tracking-wider font-bold">Sq. Ft. Floor Space</p>
+            <p className="text-xs text-gray-300 uppercase tracking-wider font-bold">Active Members</p>
           </div>
 
           <div>
@@ -628,7 +628,7 @@ export default function HomePage() {
           </div>
 
           <div>
-            <span className="text-5xl md:text-6xl font-oswald font-bold text-[#ff2a3b] block leading-none">5+</span>
+            <span className="text-5xl md:text-6xl font-oswald font-bold text-[#ff2a3b] block leading-none">8+</span>
             <div className="w-8 h-[2px] bg-[#ff2a3b] mx-auto my-3" />
             <p className="text-xs text-gray-300 uppercase tracking-wider font-bold">Certified Coaches</p>
           </div>
@@ -1093,7 +1093,7 @@ export default function HomePage() {
                   onClick={() => setSelectedBlog(null)}
                   className="px-6 py-3 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold text-xs uppercase tracking-wider rounded-sm transition-all shadow-lg shrink-0"
                 >
-                  Claim Free Trial Pass
+                  Join Armour 24-7
                 </Link>
               </div>
             </div>
@@ -1253,7 +1253,7 @@ export default function HomePage() {
                     className="w-full py-3.5 px-4 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold text-sm sm:text-base uppercase tracking-wider rounded-lg shadow-[0_0_25px_rgba(255,42,59,0.45)] transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Flame className="w-4 h-4 fill-current" />
-                    <span>BOOK FREE TRIAL FOR THIS PLAN</span>
+                    <span>START YOUR CUSTOM PLAN</span>
                   </Link>
                 </div>
               </div>
@@ -1268,18 +1268,18 @@ export default function HomePage() {
       {/* ============================================================ */}
       <div className="bg-[#ff2a3b] py-4 border-y border-black/10 marquee-container shadow-2xl">
         <div className="marquee-content font-oswald font-bold uppercase tracking-wider text-sm flex gap-12 items-center text-white">
-          <span>• GRAND OPENING IN HATHIJAN CIRCLE</span>
-          <span>• 15,000 SQ. FT. PREMIUM ARENA</span>
+          <span>• NOW OPEN IN HATHIJAN CIRCLE</span>
+          <span>• 250+ ACTIVE MEMBERS</span>
           <span>• 24/7 BIOMETRIC MEMBER ACCESS</span>
           <span>• 40+ ELITE MACHINES &amp; RIGS</span>
-          <span>• 5+ CERTIFIED MASTER COACHES</span>
-          <span>• CLAIM FREE 1-DAY WORKOUT PASS</span>
-          <span>• GRAND OPENING IN HATHIJAN CIRCLE</span>
-          <span>• 15,000 SQ. FT. PREMIUM ARENA</span>
+          <span>• 8+ CERTIFIED MASTER COACHES</span>
+          <span>• BOOK YOUR DEMO SESSION TODAY</span>
+          <span>• NOW OPEN IN HATHIJAN CIRCLE</span>
+          <span>• 250+ ACTIVE MEMBERS</span>
           <span>• 24/7 BIOMETRIC MEMBER ACCESS</span>
           <span>• 40+ ELITE MACHINES &amp; RIGS</span>
-          <span>• 5+ CERTIFIED MASTER COACHES</span>
-          <span>• CLAIM FREE 1-DAY WORKOUT PASS</span>
+          <span>• 8+ CERTIFIED MASTER COACHES</span>
+          <span>• BOOK YOUR DEMO SESSION TODAY</span>
         </div>
       </div>
 
@@ -1296,11 +1296,11 @@ export default function HomePage() {
               </span>
             </div>
             <h2 className="text-4xl sm:text-6xl font-oswald font-bold uppercase leading-tight text-white">
-              Claim Your Free <br />
-              <span className="text-[#ff2a3b]">1-Day Workout Pass</span>
+              Join Ahmedabad&apos;s <br />
+              <span className="text-[#ff2a3b]">Premier 24/7 Gym</span>
             </h2>
             <p className="text-sm text-gray-300 leading-relaxed max-w-lg">
-              Experience the Armour 24-7 facility at C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad with zero obligation.
+              Experience the Armour 24-7 facility at C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad. Inquire now for membership plans &amp; demo slots.
             </p>
           </div>
           <div className="lg:col-span-6">

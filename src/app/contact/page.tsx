@@ -12,7 +12,7 @@ import {
 
 export const metadata = {
   title: "Contact & Location | Armour 24-7 Gym Ahmedabad 382445",
-  description: "Visit Armour 24-7 Gym on S.G. Highway, Ahmedabad, Gujarat 382445. Contact our coaches or claim your free 1-day workout trial.",
+  description: "Visit Armour 24-7 Gym in Hathijan Circle, Ahmedabad, Gujarat 382445. Inquire about membership plans or book a demo workout session.",
 };
 
 export default function ContactPage() {
@@ -28,7 +28,7 @@ export default function ContactPage() {
           VISIT <span className="text-[#ff2a3b]">ARMOUR 24-7</span>
         </h1>
         <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-400 font-body">
-          Ready to experience Gujarat’s most serious strength training arena? Walk in for a tour or claim your complimentary 1-day pass below.
+          Ready to experience Gujarat’s most serious strength training arena? Walk in to our facility or send your membership inquiry below.
         </p>
       </div>
 
@@ -186,7 +186,7 @@ export default function ContactPage() {
               <div className="relative w-full h-[320px] bg-[#0d0d0d] overflow-hidden">
                 <iframe
                   title="Armour 24-7 Gym Ahmedabad Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1298.88922210367!2d72.65593224313736!3d22.957085946512475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e888caf7b654d%3A0xf154cf2006f0e347!2sShalin%20Square!5e0!3m2!1sen!2sin!4v1788094321302!5m2!1sen!2sin"
+                  src="https://maps.google.com/maps?q=Armour+24-7+Gym,+C-601,+602+Shalin+Square,+Hathijan+Circle,+Ahmedabad,+Gujarat+382445&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0, filter: "grayscale(100%) invert(92%) contrast(85%)" }}

@@ -98,7 +98,7 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/contact" className="hover:text-[#ff2a3b] transition-colors">
-                Contact &amp; Free Trial Pass
+                Contact &amp; Location
               </Link>
             </li>
           </ul>

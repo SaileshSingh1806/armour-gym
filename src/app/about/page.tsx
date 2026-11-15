@@ -20,10 +20,10 @@ export const metadata = {
 };
 
 const stats = [
-  { value: "24-7", label: "ALWAYS OPEN ACCESS", sub: "No Holidays, No Shutdowns" },
-  { value: "15,000+", label: "SQUARE FEET FLOOR", sub: "4 Dedicated Training Sectors" },
-  { value: "40+", label: "ELITE MACHINES", sub: "Hammer Strength & Eleiko" },
-  { value: "5+", label: "CERTIFIED COACHES", sub: "IFBB, CSCS & ACSM Certified" },
+  { value: "24-7", label: "ALWAYS OPEN ACCESS", sub: "Biometric Keycard Entry" },
+  { value: "250+", label: "ACTIVE MEMBERS", sub: "Growing Fitness Community" },
+  { value: "40+", label: "ELITE MACHINES", sub: "Hammer Strength & Imported Setups" },
+  { value: "8+", label: "CERTIFIED COACHES", sub: "Experienced Fitness Mentors" },
 ];
 
 const pillars = [

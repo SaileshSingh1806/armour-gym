@@ -151,11 +151,13 @@ export default function LeadForm() {
               onChange={(e) => setFormData({ ...formData, program: e.target.value })}
               className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#ff2a3b] focus:ring-1 focus:ring-[#ff2a3b] transition-colors cursor-pointer"
             >
-              <option value="Standard Gym Membership">Standard Gym Membership</option>
-              <option value="3-Day Free VIP Trial Pass">3-Day Free VIP Trial Pass</option>
-              <option value="1-on-1 Personal Training">1-on-1 Personal Training</option>
+              <option value="Demo Workout Session (₹500)">Demo Workout Session (₹500)</option>
+              <option value="1 Month Membership (₹3,500)">1 Month Membership (₹3,500)</option>
+              <option value="3 Months Membership (₹6,500)">3 Months Membership (₹6,500)</option>
+              <option value="6 Months Membership (₹9,000)">6 Months Membership (₹9,000)</option>
+              <option value="12 Months Membership (₹15,000)">12 Months Membership (₹15,000)</option>
+              <option value="1-on-1 Personal Training Enquiry">1-on-1 Personal Training Enquiry</option>
               <option value="Ladies Fitness Program">Ladies Fitness Program</option>
-              <option value="Weight Loss Transformation">Weight Loss Transformation</option>
             </select>
           </div>
 

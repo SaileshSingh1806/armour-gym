@@ -2,87 +2,129 @@ import Link from "next/link";
 import { Check, Zap, Sparkles, Shield, HelpCircle, ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Membership Plans | Armour 24-7 Gym Ahmedabad",
-  description: "Flexible, transparent membership plans for Armour 24-7 Gym. Choose from Day Pass, Monthly Pro, or Annual Elite VIP memberships.",
+  title: "Membership Plans & Pricing | Armour 24-7 Gym Ahmedabad",
+  description: "Official membership pricing for Armour 24-7 Gym in Hathijan Circle, Ahmedabad. Demo Workout, 1 Month, 3 Months, 6 Months, and 12 Months plans.",
 };
 
 const pricingPlans = [
   {
-    id: "day-pass",
-    name: "1-DAY PASS",
-    tagline: "FULL 24-HOUR ACCESS",
-    price: "₹499",
-    period: "single entry",
-    description: "Ideal for travelers, drop-ins, and anyone wanting to test the Armour 24-7 experience before committing.",
+    id: "demo",
+    name: "DEMO WORKOUT",
+    tagline: "SINGLE SESSION EXPERIENCE",
+    price: "₹500",
+    period: "single session",
+    description: "Experience the facility, test out the imported equipment, and feel the high-energy training atmosphere.",
     highlight: false,
     badge: null,
     features: [
-      "24-Hour full facility access",
-      "Full access to Heavy Iron & Dumbbells (up to 70kg)",
-      "Olympic Powerlifting Platforms & Eleiko Plates",
-      "Locker room & high-pressure steam showers",
-      "Free high-speed WiFi & hydration station",
-      "No long-term commitment",
+      "1-Day full gym floor access",
+      "Access to all strength & cardio zones",
+      "Calibrated Olympic plates & dumbbells",
+      "Locker room & shower access",
+      "Front desk tour & assistance",
+      "Instant entry upon registration",
     ],
-    ctaText: "GET DAY PASS",
-    ctaLink: "/contact?plan=day-pass",
+    ctaText: "BOOK DEMO (₹500)",
+    ctaLink: "/contact?plan=demo",
   },
   {
-    id: "monthly-pro",
-    name: "PRO WARRIOR",
-    tagline: "MOST POPULAR FOR DEDICATED LIFTERS",
-    price: "₹2,499",
-    period: "per month",
-    description: "Our core membership for serious fitness enthusiasts demanding 24/7 round-the-clock training freedom.",
+    id: "1-month",
+    name: "1 MONTH",
+    tagline: "FLEXIBLE MONTHLY TRAINING",
+    price: "₹3,500",
+    period: "1 month",
+    description: "Ideal for short-term goals and lifters wanting monthly flexibility with full 24/7 round-the-clock freedom.",
+    highlight: false,
+    badge: null,
+    features: [
+      "UNLIMITED 24/7 biometric access *",
+      "Full access to Heavy Iron & Dumbbells area",
+      "Cardio zone & stamina training machines",
+      "Locker room & shower facilities",
+      "Free high-speed WiFi & parking",
+      "Clean, air-conditioned workout arena",
+    ],
+    ctaText: "JOIN 1 MONTH",
+    ctaLink: "/contact?plan=1-month",
+  },
+  {
+    id: "3-month",
+    name: "3 MONTHS",
+    tagline: "CONSISTENT HABIT BUILDER",
+    price: "₹6,500",
+    period: "3 months (₹2,166/mo)",
+    description: "Build serious discipline and see measurable physique changes over a solid 90-day training cycle.",
+    highlight: false,
+    badge: "POPULAR",
+    features: [
+      "UNLIMITED 24/7 biometric access *",
+      "Full access to all training zones",
+      "Access to Olympic powerlifting platforms",
+      "Locker room & high-pressure showers",
+      "Free high-speed WiFi & parking",
+      "Continuous progress & workout tracking",
+    ],
+    ctaText: "JOIN 3 MONTHS",
+    ctaLink: "/contact?plan=3-month",
+  },
+  {
+    id: "6-month",
+    name: "6 MONTHS",
+    tagline: "SERIOUS TRANSFORMATION",
+    price: "₹9,000",
+    period: "6 months (₹1,500/mo)",
+    description: "Our high-value half-yearly membership for dedicated athletes committed to long-term strength and muscle gains.",
     highlight: true,
-    badge: "MOST POPULAR",
+    badge: "BEST VALUE",
+    features: [
+      "UNLIMITED 24/7 biometric access *",
+      "Complete access to all strength & cardio equipment",
+      "Dedicated heavy dumbbell & barbell racks",
+      "Locker room & shower facilities",
+      "Dedicated vehicle parking & armed security",
+      "Great savings compared to monthly plan",
+    ],
+    ctaText: "JOIN 6 MONTHS",
+    ctaLink: "/contact?plan=6-month",
+  },
+  {
+    id: "12-month",
+    name: "12 MONTHS",
+    tagline: "FULL YEAR WARRIOR PASS",
+    price: "₹15,000",
+    period: "12 months (₹1,250/mo)",
+    description: "Maximum commitment and unbeatable value for athletes who make fitness and bodybuilding their permanent lifestyle.",
+    highlight: false,
+    badge: "SAVE BIG",
     features: [
       "UNLIMITED 24/7 biometric keycard access *",
-      "Access to all 4 training zones & combat cage",
-      "All Group HIIT, Boxing & Powerlifting classes",
-      "1 Free 1-on-1 personal coaching assessment",
-      "InBody 570 body composition scan per month",
-      "Free locker access & recovery steam sauna",
-      "Exclusive Armour 24-7 member app access",
+      "Full 365 days unrestricted gym floor training",
+      "Access to all imported machines & free weights",
+      "Permanent locker room access & showers",
+      "Free dedicated parking for two-wheelers & cars",
+      "Lowest per-month cost at just ₹1,250/mo",
     ],
-    ctaText: "JOIN PRO WARRIOR",
-    ctaLink: "/contact?plan=pro-warrior",
-  },
-  {
-    id: "annual-elite",
-    name: "ELITE VIP ANNUAL",
-    tagline: "MAXIMUM GAINS • BEST VALUE",
-    price: "₹21,999",
-    period: "per year (₹1,833/mo)",
-    description: "For elite athletes who make strength their lifestyle. Includes personal locker, recovery zone, and PT sessions.",
-    highlight: false,
-    badge: "SAVE 27%",
-    features: [
-      "All Pro Warrior 24/7 unlimited benefits",
-      "5 Free 1-on-1 Personal Training sessions",
-      "Unlimited Cold Plunge & Infrared Sauna sessions",
-      "Dedicated personalized VIP permanent locker",
-      "Monthly InBody 570 scans + nutritional plan",
-      "4 Free Guest passes per quarter for friends",
-      "Complimentary Armour 24-7 Custom Gym Bag & Shaker",
-    ],
-    ctaText: "CLAIM ELITE VIP",
-    ctaLink: "/contact?plan=elite-vip",
+    ctaText: "JOIN 12 MONTHS",
+    ctaLink: "/contact?plan=12-month",
   },
 ];
 
 const faqs = [
   {
     q: "How does 24/7 access work at Armour Gym Ahmedabad?",
-    a: "Once enrolled, members receive a secure biometric RFID keycard and facial scan profile to access the facility 24/7 during active operating periods. 24/7 access is subject to facility rules and management discretion (*Terms & Conditions Apply).",
+    a: "Once enrolled, members receive secure biometric access to enter the facility 24/7 during active operating periods. 24/7 access is subject to facility rules and management discretion (*Terms & Conditions Apply).",
   },
   {
     q: "Are membership fees refundable?",
     a: "No. All membership fees and dues once paid are strictly non-refundable and non-transferable under any circumstances.",
   },
   {
-    q: "Can I freeze or pause my membership?",
+    q: "Can I freeze or pause my membership if I travel?",
     a: "No. Armour 24-7 Gym does not offer any membership freeze, hold, or pause facility under any circumstances. Memberships run continuously for their purchased tenure.",
+  },
+  {
+    q: "Is Personal Training included in regular membership plans?",
+    a: "No. Regular membership plans cover full 24/7 facility, machine, and gym floor access. 1-on-1 Personal Training (PT) packages are available separately under dedicated certified coaches.",
   },
   {
     q: "Where exactly is Armour 24-7 Gym located in Ahmedabad?",
@@ -198,7 +240,7 @@ export default function PricingPage() {
         </div>
       </div>
 
-      {/* Value Guarantee Banner */}
+      {/* Facility & Dedication Banner */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
         <div className="bg-[#141414] border border-white/10 p-8 sm:p-12 rounded-sm flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
           <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-[#ff2a3b]/5 to-transparent pointer-events-none" />
@@ -209,19 +251,19 @@ export default function PricingPage() {
             </div>
             <div>
               <h3 className="font-heading text-2xl sm:text-3xl font-bold uppercase tracking-wider text-white">
-                ARMOUR 7-DAY ZERO-RISK GUARANTEE
+                ARMOUR 24-7 TRAINING STANDARDS
               </h3>
               <p className="text-xs sm:text-sm text-gray-400 mt-1 max-w-xl">
-                Try Armour 24-7 for 7 days. If the equipment, environment, or coaching doesn’t blow your expectations away, we will issue a full 100% refund, no questions asked.
+                Ready to experience Gujarat&apos;s most serious strength training arena? Walk in to our Hathijan Circle facility or book your ₹500 Demo session today.
               </p>
             </div>
           </div>
 
           <Link
-            href="/contact"
+            href="/contact?plan=demo"
             className="shrink-0 px-8 py-3.5 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-heading text-lg font-bold uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(255,42,59,0.3)]"
           >
-            CLAIM 1-DAY TRIAL
+            BOOK DEMO WORKOUT
           </Link>
         </div>
       </div>
