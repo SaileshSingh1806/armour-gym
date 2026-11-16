@@ -282,15 +282,15 @@ export default function HomePage() {
               </span>
             </div>
 
-            {/* Clear, Natural Headline with commanding mobile sizing */}
+            {/* Professional Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-oswald font-bold uppercase leading-[1.05] tracking-tight text-white mb-6">
-              Built For Serious Training.<br />
-              <span className="text-[#ff2a3b]">Open 24 Hours.</span>
+              Strength &amp; Performance.<br />
+              <span className="text-[#ff2a3b]">On Your Schedule.</span>
             </h1>
 
-            {/* Concise Supporting Copy */}
+            {/* Concise Professional Supporting Copy */}
             <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-8 max-w-xl font-body">
-              Armour 24-7 Gym gives you round-the-clock biometric keycard access, imported plate-loaded machines, heavy free weights, and certified floor coaches in Hathijan Circle, Ahmedabad.
+              Experience round-the-clock biometric gym access, advanced plate-loaded machinery, and certified coaching in Hathijan Circle, Ahmedabad. Built for fitness enthusiasts who value quality, consistency, and real results.
             </p>
 
             {/* Clear Primary & Secondary Actions with comfortable touch targets */}
