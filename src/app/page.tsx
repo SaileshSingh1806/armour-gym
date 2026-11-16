@@ -271,17 +271,8 @@ export default function HomePage() {
         />
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-14 md:pt-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16 md:pt-24">
           <div className="max-w-2xl">
-            
-            {/* Location Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-black/60 border border-white/15 rounded-full mb-6 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-[#ff2a3b]" />
-              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-gray-200 font-oswald">
-                Hathijan Circle • Ahmedabad 382445
-              </span>
-            </div>
-
             {/* Professional Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-oswald font-bold uppercase leading-[1.05] tracking-tight text-white mb-6">
               Strength &amp; Performance.<br />

@@ -66,11 +66,11 @@ export default function Navbar() {
       */}
       <header
         id="mainHeader"
-        className="fixed top-0 left-0 right-0 z-50 transition-colors duration-200 bg-gradient-to-b from-black/80 via-black/40 to-transparent py-3 sm:py-4"
+        className="fixed top-0 left-0 right-0 z-50 transition-colors duration-200 bg-gradient-to-b from-black/85 via-black/45 to-transparent py-4 sm:py-4.5 md:py-5"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           
-          {/* Brand Logo */}
+          {/* Brand Logo - Enlarged for mobile prominence */}
           <Link
             href="/"
             onClick={closeMenu}
@@ -83,7 +83,7 @@ export default function Navbar() {
               width={906}
               height={223}
               priority
-              className="h-9 sm:h-11 md:h-12 w-auto object-contain transition-opacity group-hover:opacity-90"
+              className="h-11 sm:h-12 md:h-14 w-auto object-contain transition-opacity group-hover:opacity-90"
             />
           </Link>
 
@@ -122,11 +122,11 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Right Controls */}
-          <div className="flex items-center lg:hidden gap-2.5">
+          <div className="flex items-center lg:hidden gap-3">
             <Link
               href="/contact"
               onClick={closeMenu}
-              className="bg-[#ff2a3b] text-white font-oswald font-bold px-3 py-1.5 text-xs uppercase tracking-wider rounded-sm"
+              className="bg-[#ff2a3b] text-white font-oswald font-bold px-4 py-2 text-xs uppercase tracking-wider rounded-sm shadow-md"
             >
               Join
             </Link>
@@ -135,15 +135,15 @@ export default function Navbar() {
               ref={toggleButtonRef}
               onClick={toggleMenu}
               type="button"
-              className="w-10 h-10 flex items-center justify-center rounded-sm bg-black/40 hover:bg-black/60 text-white border border-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff2a3b]"
+              className="w-11 h-11 flex items-center justify-center rounded-sm bg-black/50 hover:bg-black/70 text-white border border-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff2a3b]"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open navigation menu"}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-navigation-drawer"
             >
               {isMobileMenuOpen ? (
-                <X className="w-5 h-5 text-[#ff2a3b]" />
+                <X className="w-6 h-6 text-[#ff2a3b]" />
               ) : (
-                <Menu className="w-5 h-5 text-white" />
+                <Menu className="w-6 h-6 text-white" />
               )}
             </button>
           </div>
