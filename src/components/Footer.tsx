@@ -18,11 +18,11 @@ export default function Footer() {
               className="h-11 sm:h-12 w-auto object-contain"
             />
           </Link>
-          <p className="text-gray-300 text-sm leading-relaxed font-body">
+          <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-body">
             Armour 24-7 Gym provides round-the-clock strength training and fitness facilities at Hathijan Circle, Ahmedabad.
           </p>
           <div className="pt-1 space-y-1">
-            <p className="text-sm text-gray-300 font-body">
+            <p className="text-sm sm:text-base text-gray-300 font-body">
               C-601, 602 Shalin Square, Hathijan Circle,<br />
               Ahmedabad, Gujarat 382445
             </p>
@@ -31,7 +31,7 @@ export default function Footer() {
                 href="https://maps.app.goo.gl/fdHFDqTDaHNvw5Pf6"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-[#ff2a3b] hover:underline font-semibold"
+                className="inline-flex items-center gap-1.5 text-sm sm:text-base text-[#ff2a3b] hover:underline font-semibold"
               >
                 <MapPin className="w-4 h-4" />
                 <span>Google Maps Location ↗</span>
@@ -42,10 +42,10 @@ export default function Footer() {
 
         {/* Col 2: Navigation Links */}
         <div>
-          <h4 className="font-oswald font-bold uppercase text-base tracking-wider mb-5 text-white">
+          <h4 className="font-oswald font-bold uppercase text-lg tracking-wider mb-5 text-white">
             Navigation
           </h4>
-          <ul className="space-y-3 text-sm text-gray-300 font-body">
+          <ul className="space-y-3 text-sm sm:text-base text-gray-300 font-body">
             <li>
               <Link href="/" className="hover:text-[#ff2a3b] transition-colors inline-block">
                 Home
@@ -86,10 +86,10 @@ export default function Footer() {
 
         {/* Col 3: Policies & Compliance */}
         <div>
-          <h4 className="font-oswald font-bold uppercase text-base tracking-wider mb-5 text-white">
+          <h4 className="font-oswald font-bold uppercase text-lg tracking-wider mb-5 text-white">
             Policies &amp; Legal
           </h4>
-          <ul className="space-y-3 text-sm text-gray-300 font-body">
+          <ul className="space-y-3 text-sm sm:text-base text-gray-300 font-body">
             <li>
               <Link href="/terms-conditions" className="hover:text-[#ff2a3b] transition-colors inline-block">
                 Terms &amp; Conditions
@@ -120,10 +120,10 @@ export default function Footer() {
 
         {/* Col 4: Timings & Contact */}
         <div>
-          <h4 className="font-oswald font-bold uppercase text-base tracking-wider mb-5 text-white">
+          <h4 className="font-oswald font-bold uppercase text-lg tracking-wider mb-5 text-white">
             Hours &amp; Contact
           </h4>
-          <ul className="space-y-3.5 text-sm text-gray-300 font-body">
+          <ul className="space-y-3.5 text-sm sm:text-base text-gray-300 font-body">
             <li className="flex justify-between border-b border-white/10 pb-2.5">
               <span>Biometric Access</span>
               <span className="text-[#ff2a3b] font-bold">24/7 Open *</span>
@@ -146,7 +146,7 @@ export default function Footer() {
                 </a>
               </div>
             </li>
-            <li className="text-xs text-gray-400 pt-1 leading-snug">
+            <li className="text-xs sm:text-sm text-gray-400 pt-1 leading-snug">
               * 24/7 access is subject to management rights and facility safety guidelines.
             </li>
           </ul>
@@ -155,9 +155,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm text-gray-400 gap-3">
+      <div className="max-w-7xl mx-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400 gap-3">
         <p suppressHydrationWarning>© 2026 Armour 24-7 Gym Ahmedabad. All rights reserved.</p>
-        <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-gray-400">
+        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
           <Link href="/terms-conditions" className="hover:text-white transition-colors">Terms</Link>
           <span>•</span>
           <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy</Link>

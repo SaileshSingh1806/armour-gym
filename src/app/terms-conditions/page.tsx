@@ -14,31 +14,31 @@ export default function TermsConditionsPage() {
         {/* Breadcrumb Back Link */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-xs font-mono text-gray-400 hover:text-[#ff2a3b] transition-colors mb-8 uppercase tracking-wider"
+          className="inline-flex items-center gap-2 text-sm font-mono text-gray-400 hover:text-[#ff2a3b] transition-colors mb-8 uppercase tracking-wider"
         >
-          <ArrowLeft className="w-3.5 h-3.5" />
+          <ArrowLeft className="w-4 h-4" />
           <span>Back to Home</span>
         </Link>
 
         {/* Header */}
         <div className="border-b border-white/10 pb-8 mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ff2a3b]/10 border border-[#ff2a3b]/30 rounded-full text-[#ff2a3b] text-xs font-oswald font-bold uppercase tracking-wider mb-4">
-            <FileText className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#ff2a3b]/10 border border-[#ff2a3b]/30 rounded-full text-[#ff2a3b] text-xs sm:text-sm font-oswald font-bold uppercase tracking-wider mb-4">
+            <FileText className="w-4 h-4" />
             <span>LEGAL &amp; COMPLIANCE</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-oswald font-bold uppercase tracking-tight text-white">
             TERMS &amp; <span className="text-[#ff2a3b]">CONDITIONS</span>
           </h1>
-          <p className="text-xs font-mono text-gray-400 mt-2">
+          <p className="text-sm font-mono text-gray-400 mt-2">
             Effective Date: January 1, 2026 • Last Updated: October 2026
           </p>
         </div>
 
         {/* Content Body */}
-        <div className="space-y-10 text-sm text-gray-300 leading-relaxed font-body">
+        <div className="space-y-10 text-base text-gray-200 leading-relaxed font-body">
           
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
-            <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">1.</span> Introduction &amp; Acceptance of Terms
             </h2>
             <p>
@@ -49,11 +49,11 @@ export default function TermsConditionsPage() {
             </p>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
-            <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">2.</span> 24/7 Facility Access &amp; Management Rights
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-300 pl-2">
+            <ul className="list-disc list-inside space-y-3 text-gray-200 pl-2">
               <li><strong>24/7 Access Privileges:</strong> Valid membership entitles the registered holder to round-the-clock facility access using biometric recognition or assigned RFID credentials.</li>
               <li><strong>Sole Discretion of Management:</strong> Provision of 24/7 round-the-clock facility access is strictly subject to the operational decisions, safety protocols, and management rights of Armour 24-7 Gym. Management reserves the absolute right to alter, modify, restrict, temporarily suspend, or revoke 24/7 operating hours or individual access at any time for scheduled maintenance, sanitization, security audits, emergencies, legal/government regulations, or safety compliance without any prior notice or financial liability.</li>
               <li><strong>Right of Admission Reserved:</strong> Gym management reserves the absolute right of admission. Management holds the unconditional right to suspend, terminate, or revoke any member&apos;s access or membership permanently, without refund or compensation, if the member engages in misconduct, inappropriate behavior, property damage, rule violation, or creates a nuisance.</li>
@@ -63,30 +63,30 @@ export default function TermsConditionsPage() {
             </ul>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
-            <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">3.</span> Fees Non-Refundable &amp; No Membership Freeze Policy
             </h2>
-            <div className="bg-[#1c1414] border border-[#ff2a3b]/40 p-4 rounded-xl space-y-2 text-white">
-              <p className="font-oswald text-base font-bold text-[#ff2a3b] uppercase tracking-wide">
+            <div className="bg-[#1c1414] border border-[#ff2a3b]/40 p-5 rounded-sm space-y-2 text-white">
+              <p className="font-oswald text-lg font-bold text-[#ff2a3b] uppercase tracking-wide">
                 STRICT NO-REFUND POLICY — FEES ONCE PAID WILL NOT BE REFUNDED UNDER ANY CIRCUMSTANCES
               </p>
-              <p className="text-xs text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
                 All membership fees, registration charges, advance dues, personal training fees, and ancillary service payments once paid are <strong>strictly non-refundable</strong> under any circumstances whatsoever (including but not limited to relocation, change of mind, lack of usage, personal schedules, dissatisfaction, illness, medical reasons, or unforeseen events).
               </p>
             </div>
-            <div className="bg-[#0a0a0a] border border-white/10 p-4 rounded-xl space-y-2 text-white">
-              <p className="font-oswald text-base font-bold text-white uppercase tracking-wide">
+            <div className="bg-[#0a0a0a] border border-white/10 p-5 rounded-sm space-y-2 text-white">
+              <p className="font-oswald text-lg font-bold text-white uppercase tracking-wide">
                 NO MEMBERSHIP FREEZE / PAUSE / HOLD
               </p>
-              <p className="text-xs text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
                 Armour 24-7 Gym maintains an absolute <strong>Zero-Freeze Policy</strong>. No membership can be frozen, paused, extended, put on hold, or carried forward under any circumstances, including travel, examination, medical conditions, or personal commitments. The membership period runs continuously from the date of activation until its scheduled expiry.
               </p>
             </div>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
-            <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">4.</span> Payment Terms &amp; Digital Transactions
             </h2>
             <p>
@@ -97,8 +97,8 @@ export default function TermsConditionsPage() {
             </p>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
-            <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">5.</span> Health, Safety &amp; Assumption of Risk
             </h2>
             <p>
@@ -109,8 +109,8 @@ export default function TermsConditionsPage() {
             </p>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
-            <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">6.</span> Limitation of Liability
             </h2>
             <p>
@@ -118,8 +118,8 @@ export default function TermsConditionsPage() {
             </p>
           </section>
 
-          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-3">
-            <h2 className="text-xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
+          <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
               <span className="text-[#ff2a3b]">7.</span> Governing Law &amp; Jurisdiction
             </h2>
             <p>
@@ -128,24 +128,24 @@ export default function TermsConditionsPage() {
           </section>
 
           {/* Contact & Escalation */}
-          <div className="bg-[#181818] border border-[#ff2a3b]/40 p-6 rounded-sm">
-            <h3 className="text-lg font-oswald font-bold uppercase text-white mb-3">
+          <div className="bg-[#181818] border border-[#ff2a3b]/40 p-6 sm:p-8 rounded-sm">
+            <h3 className="text-xl font-oswald font-bold uppercase text-white mb-3">
               Questions or Grievances?
             </h3>
-            <p className="text-xs text-gray-400 mb-4">
+            <p className="text-sm text-gray-300 mb-4">
               For any clarification regarding these terms, contact our administrative desk:
             </p>
-            <div className="space-y-2 text-xs text-gray-300">
-              <p className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#ff2a3b] shrink-0" />
+            <div className="space-y-2.5 text-sm sm:text-base text-gray-200">
+              <p className="flex items-center gap-2.5">
+                <MapPin className="w-5 h-5 text-[#ff2a3b] shrink-0" />
                 <span>C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445</span>
               </p>
-              <p className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#ff2a3b] shrink-0" />
+              <p className="flex items-center gap-2.5">
+                <Phone className="w-5 h-5 text-[#ff2a3b] shrink-0" />
                 <a href="tel:+918160697163" className="hover:text-white font-bold">+91 81606 97163</a>
               </p>
-              <p className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#ff2a3b] shrink-0" />
+              <p className="flex items-center gap-2.5">
+                <Mail className="w-5 h-5 text-[#ff2a3b] shrink-0" />
                 <a href="mailto:armour247gym@gmail.com" className="hover:text-white font-bold text-[#ff2a3b]">armour247gym@gmail.com</a>
               </p>
             </div>

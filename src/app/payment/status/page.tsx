@@ -24,53 +24,53 @@ export default async function PaymentStatusPage({
         {/* Receipt Container */}
         <div className="bg-[#141414] border border-white/15 rounded-sm p-6 sm:p-8 text-center space-y-6">
           
-          <div className="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 rounded-full flex items-center justify-center text-emerald-400 mx-auto">
-            <CheckCircle2 className="w-6 h-6" />
+          <div className="w-14 h-14 bg-emerald-500/10 border border-emerald-500/30 rounded-full flex items-center justify-center text-emerald-400 mx-auto">
+            <CheckCircle2 className="w-8 h-8" />
           </div>
 
           <div>
-            <span className="text-[10px] font-oswald uppercase tracking-widest text-emerald-400 font-bold px-2.5 py-0.5 rounded-sm bg-emerald-950/30 border border-emerald-500/30">
+            <span className="text-xs font-oswald uppercase tracking-widest text-emerald-400 font-bold px-3 py-1 rounded-sm bg-emerald-950/30 border border-emerald-500/30 inline-block">
               Payment Confirmed
             </span>
-            <h1 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white mt-3">
+            <h1 className="text-2xl sm:text-4xl font-oswald font-bold uppercase text-white mt-3">
               Membership Registration Confirmed
             </h1>
-            <p className="text-xs sm:text-sm text-gray-400 font-body mt-1">
+            <p className="text-sm sm:text-base text-gray-300 font-body mt-1.5">
               Thank you for choosing Armour 24-7 Gym. Your transaction has been received.
             </p>
           </div>
 
           {/* Receipt Breakdown */}
-          <div className="bg-[#0a0a0a] border border-white/10 rounded-sm p-4 text-left space-y-2.5 font-mono text-xs text-gray-300">
-            <div className="flex justify-between border-b border-white/5 pb-2">
-              <span className="text-gray-500">Order / Reference:</span>
+          <div className="bg-[#0a0a0a] border border-white/10 rounded-sm p-5 text-left space-y-3 font-mono text-sm text-gray-200">
+            <div className="flex justify-between border-b border-white/5 pb-2.5">
+              <span className="text-gray-400">Order / Reference:</span>
               <span className="text-white font-bold">{orderId}</span>
             </div>
-            <div className="flex justify-between border-b border-white/5 pb-2">
-              <span className="text-gray-500">Member Name:</span>
-              <span className="text-white">{name}</span>
+            <div className="flex justify-between border-b border-white/5 pb-2.5">
+              <span className="text-gray-400">Member Name:</span>
+              <span className="text-white font-semibold">{name}</span>
             </div>
-            <div className="flex justify-between border-b border-white/5 pb-2">
-              <span className="text-gray-500">Registered Phone:</span>
-              <span className="text-white">{phone}</span>
+            <div className="flex justify-between border-b border-white/5 pb-2.5">
+              <span className="text-gray-400">Registered Phone:</span>
+              <span className="text-white font-semibold">{phone}</span>
             </div>
-            <div className="flex justify-between border-b border-white/5 pb-2">
-              <span className="text-gray-500">Plan:</span>
+            <div className="flex justify-between border-b border-white/5 pb-2.5">
+              <span className="text-gray-400">Plan:</span>
               <span className="text-white font-bold">{planName}</span>
             </div>
             <div className="flex justify-between pt-1">
-              <span className="text-gray-500">Status:</span>
+              <span className="text-gray-400">Status:</span>
               <span className="text-emerald-400 font-bold">PAID / CONFIRMED</span>
             </div>
           </div>
 
           {/* Next Steps */}
-          <div className="bg-[#181818] border border-white/10 rounded-sm p-4 text-left space-y-2">
-            <h4 className="font-oswald text-xs font-bold uppercase text-white tracking-wider flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#ff2a3b]" />
+          <div className="bg-[#181818] border border-white/10 rounded-sm p-5 text-left space-y-2.5">
+            <h4 className="font-oswald text-sm sm:text-base font-bold uppercase text-white tracking-wider flex items-center gap-2">
+              <ShieldCheck className="w-5 h-5 text-[#ff2a3b]" />
               <span>Next Steps:</span>
             </h4>
-            <ul className="text-xs text-gray-300 font-body space-y-1.5 list-disc list-inside">
+            <ul className="text-sm sm:text-base text-gray-200 font-body space-y-2 list-disc list-inside">
               <li>Visit our front desk to complete your biometric keycard registration.</li>
               <li>Please carry a valid photo ID (Aadhaar / Driving License) on your first visit.</li>
               <li>For any scheduling questions, connect with our support desk below.</li>
@@ -78,19 +78,19 @@ export default async function PaymentStatusPage({
           </div>
 
           {/* Action CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
             <Link
               href="/"
-              className="flex-1 py-3 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-xs font-bold uppercase tracking-wider rounded-sm transition-colors flex items-center justify-center gap-2"
+              className="flex-1 py-3.5 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-sm sm:text-base font-bold uppercase tracking-wider rounded-sm transition-colors flex items-center justify-center gap-2 shadow-md"
             >
               <span>Back to Homepage</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <a
               href="https://wa.me/918160697163?text=Hi%20Armour%20Gym%2C%20I%20have%20completed%20my%20payment%20for%20order%20"
               target="_blank"
               rel="noreferrer"
-              className="py-3 px-5 bg-white/10 hover:bg-white/20 text-white font-oswald text-xs font-bold uppercase tracking-wider rounded-sm transition-colors text-center"
+              className="py-3.5 px-6 bg-white/10 hover:bg-white/20 text-white font-oswald text-sm sm:text-base font-bold uppercase tracking-wider rounded-sm transition-colors text-center"
             >
               WhatsApp Desk
             </a>
@@ -99,9 +99,9 @@ export default async function PaymentStatusPage({
         </div>
 
         {/* Customer Support Info */}
-        <div className="mt-8 text-center text-xs text-gray-500 font-body space-y-1">
+        <div className="mt-8 text-center text-xs sm:text-sm text-gray-400 font-body space-y-1">
           <p>
-            Have a question? Call <a href="tel:+918160697163" className="text-white hover:underline">+91 81606 97163</a> or email <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] hover:underline">armour247gym@gmail.com</a>.
+            Have a question? Call <a href="tel:+918160697163" className="text-white hover:underline font-semibold">+91 81606 97163</a> or email <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] hover:underline font-semibold">armour247gym@gmail.com</a>.
           </p>
           <p>C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad 382445</p>
         </div>

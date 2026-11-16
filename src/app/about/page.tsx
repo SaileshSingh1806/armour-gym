@@ -81,13 +81,13 @@ export default function AboutPage() {
         
         {/* Header */}
         <div className="max-w-3xl mb-14">
-          <span className="text-xs font-oswald uppercase tracking-widest text-[#ff2a3b] font-bold block mb-2">
+          <span className="text-sm sm:text-base font-oswald uppercase tracking-widest text-[#ff2a3b] font-bold block mb-2">
             Hathijan Circle • Ahmedabad
           </span>
           <h1 className="text-4xl sm:text-6xl font-oswald font-bold uppercase tracking-tight text-white mb-4">
             About <span className="text-[#ff2a3b]">Armour 24-7 Gym</span>
           </h1>
-          <p className="text-sm sm:text-base text-gray-300 font-body leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-200 font-body leading-relaxed">
             Armour 24-7 Gym was established to bring serious, accessible, round-the-clock strength training to Hathijan Circle, Ahmedabad. We combine modern plate-loaded equipment, certified coaching, and flexible 24/7 access to give members a consistent space to pursue their fitness goals.
           </p>
         </div>
@@ -95,14 +95,14 @@ export default function AboutPage() {
         {/* Stats Row */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
           {stats.map((s, idx) => (
-            <div key={idx} className="bg-[#141414] border border-white/10 p-5 rounded-sm">
-              <span className="font-oswald text-3xl sm:text-4xl font-bold text-[#ff2a3b] block">
+            <div key={idx} className="bg-[#141414] border border-white/10 p-5 sm:p-6 rounded-sm">
+              <span className="font-oswald text-4xl sm:text-5xl font-bold text-[#ff2a3b] block">
                 {s.value}
               </span>
-              <p className="font-oswald font-bold uppercase text-xs sm:text-sm text-white mt-1">
+              <p className="font-oswald font-bold uppercase text-sm sm:text-base text-white mt-1.5">
                 {s.label}
               </p>
-              <p className="text-[11px] text-gray-400 font-body mt-0.5">
+              <p className="text-xs sm:text-sm text-gray-300 font-body mt-0.5">
                 {s.sub}
               </p>
             </div>
@@ -112,10 +112,10 @@ export default function AboutPage() {
         {/* Core Pillars */}
         <div className="space-y-12 mb-20">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-oswald uppercase tracking-widest text-[#ff2a3b] font-bold block mb-1">
+            <span className="text-sm sm:text-base font-oswald uppercase tracking-widest text-[#ff2a3b] font-bold block mb-1">
               Facility Standards
             </span>
-            <h2 className="text-3xl sm:text-4xl font-oswald font-bold uppercase text-white">
+            <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white">
               What Sets <span className="text-[#ff2a3b]">Armour</span> Apart
             </h2>
           </div>
@@ -125,7 +125,7 @@ export default function AboutPage() {
               const Icon = pillar.icon;
               return (
                 <div key={idx} className="bg-[#141414] border border-white/10 rounded-sm overflow-hidden flex flex-col justify-between">
-                  <div className="relative h-60 w-full">
+                  <div className="relative h-64 sm:h-72 w-full">
                     <Image
                       src={pillar.image}
                       alt={pillar.title}
@@ -135,16 +135,16 @@ export default function AboutPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
                   </div>
-                  <div className="p-6 space-y-3">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center shrink-0">
-                        <Icon className="w-4 h-4" />
+                  <div className="p-6 sm:p-7 space-y-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center shrink-0">
+                        <Icon className="w-5 h-5" />
                       </div>
-                      <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white">
+                      <h3 className="font-oswald font-bold uppercase text-xl sm:text-2xl text-white">
                         {pillar.title}
                       </h3>
                     </div>
-                    <p className="text-sm text-gray-300 leading-relaxed font-body">
+                    <p className="text-sm sm:text-base text-gray-200 leading-relaxed font-body">
                       {pillar.desc}
                     </p>
                   </div>
@@ -157,13 +157,13 @@ export default function AboutPage() {
         {/* Floor Coaches Section */}
         <div className="mb-20">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs sm:text-sm font-oswald uppercase tracking-widest text-[#ff2a3b] font-bold block mb-1">
+            <span className="text-sm sm:text-base font-oswald uppercase tracking-widest text-[#ff2a3b] font-bold block mb-1">
               Certified Mentors
             </span>
             <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white leading-tight">
               Our Coaching <span className="text-[#ff2a3b]">Staff</span>
             </h2>
-            <p className="text-sm sm:text-base text-gray-300 mt-2 font-body">
+            <p className="text-base sm:text-lg text-gray-200 mt-2 font-body">
               Floor coaches available to support your form and workout structure.
             </p>
           </div>
@@ -181,21 +181,21 @@ export default function AboutPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/30 to-transparent" />
                   <div className="absolute bottom-3 left-4 right-4">
-                    <span className="text-[10px] sm:text-xs font-oswald font-bold uppercase tracking-widest text-[#ff2a3b] bg-black/60 px-2 py-0.5 rounded-sm backdrop-blur-sm border border-white/10 inline-block mb-1">
+                    <span className="text-xs font-oswald font-bold uppercase tracking-widest text-[#ff2a3b] bg-black/70 px-2.5 py-1 rounded-sm backdrop-blur-sm border border-white/10 inline-block mb-1">
                       {c.role}
                     </span>
-                    <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white">
+                    <h3 className="font-oswald font-bold uppercase text-xl sm:text-2xl text-white">
                       {c.name}
                     </h3>
                   </div>
                 </div>
-                <div className="p-5 sm:p-6 space-y-3">
-                  <p className="text-sm text-gray-300 leading-relaxed font-body">
+                <div className="p-6 space-y-3.5">
+                  <p className="text-sm sm:text-base text-gray-200 leading-relaxed font-body">
                     {c.experience}
                   </p>
-                  <div className="flex flex-wrap gap-1.5 pt-1">
+                  <div className="flex flex-wrap gap-2 pt-1">
                     {c.specialties.map((spec, sIdx) => (
-                      <span key={sIdx} className="text-xs bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-sm">
+                      <span key={sIdx} className="text-xs sm:text-sm font-semibold bg-white/5 border border-white/10 text-gray-200 px-3 py-1 rounded-sm">
                         {spec}
                       </span>
                     ))}
@@ -207,23 +207,23 @@ export default function AboutPage() {
         </div>
 
         {/* Visit CTA */}
-        <div className="bg-[#141414] border border-white/10 p-8 rounded-sm text-center max-w-3xl mx-auto space-y-4">
-          <h2 className="font-oswald text-2xl sm:text-3xl font-bold uppercase text-white">
+        <div className="bg-[#141414] border border-white/10 p-8 sm:p-10 rounded-sm text-center max-w-3xl mx-auto space-y-4">
+          <h2 className="font-oswald text-3xl sm:text-4xl font-bold uppercase text-white">
             Visit Our Facility In Hathijan Circle
           </h2>
-          <p className="text-sm sm:text-base text-gray-300 font-body max-w-xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-200 font-body max-w-xl mx-auto leading-relaxed">
             Walk in during front desk hours (06:00 AM – 10:00 PM) to inspect the equipment or take a trial workout session (₹500).
           </p>
-          <div className="flex flex-wrap justify-center gap-3 pt-2">
+          <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link
               href="/pricing"
-              className="bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold uppercase text-xs sm:text-sm px-7 py-3 rounded-sm transition-colors"
+              className="bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold uppercase text-sm sm:text-base px-8 py-3.5 rounded-sm transition-colors"
             >
               View Membership Rates
             </Link>
             <Link
               href="/contact"
-              className="bg-white/10 hover:bg-white/20 text-white font-oswald font-bold uppercase text-xs sm:text-sm px-7 py-3 rounded-sm transition-colors"
+              className="bg-white/10 hover:bg-white/20 text-white font-oswald font-bold uppercase text-sm sm:text-base px-8 py-3.5 rounded-sm transition-colors"
             >
               Contact Front Desk
             </Link>

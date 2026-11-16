@@ -302,22 +302,22 @@ export default function HomePage() {
             </div>
 
             {/* Compact Fact Metrics */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 pt-8 border-t border-white/15">
               <div>
-                <span className="text-3xl sm:text-4xl font-oswald font-bold text-[#ff2a3b] block">24/7</span>
-                <p className="text-xs text-gray-300 uppercase tracking-wider mt-1 font-semibold">Biometric Entry *</p>
+                <span className="text-4xl sm:text-5xl font-oswald font-bold text-[#ff2a3b] block">24/7</span>
+                <p className="text-sm uppercase tracking-wider mt-1.5 font-bold text-gray-200">Biometric Entry *</p>
               </div>
               <div>
-                <span className="text-3xl sm:text-4xl font-oswald font-bold text-white block">250+</span>
-                <p className="text-xs text-gray-300 uppercase tracking-wider mt-1 font-semibold">Active Members</p>
+                <span className="text-4xl sm:text-5xl font-oswald font-bold text-white block">250+</span>
+                <p className="text-sm uppercase tracking-wider mt-1.5 font-bold text-gray-200">Active Members</p>
               </div>
               <div>
-                <span className="text-3xl sm:text-4xl font-oswald font-bold text-white block">40+</span>
-                <p className="text-xs text-gray-300 uppercase tracking-wider mt-1 font-semibold">Machines &amp; Racks</p>
+                <span className="text-4xl sm:text-5xl font-oswald font-bold text-white block">40+</span>
+                <p className="text-sm uppercase tracking-wider mt-1.5 font-bold text-gray-200">Machines &amp; Racks</p>
               </div>
               <div>
-                <span className="text-3xl sm:text-4xl font-oswald font-bold text-[#ff2a3b] block">8+</span>
-                <p className="text-xs text-gray-300 uppercase tracking-wider mt-1 font-semibold">Certified Coaches</p>
+                <span className="text-4xl sm:text-5xl font-oswald font-bold text-[#ff2a3b] block">8+</span>
+                <p className="text-sm uppercase tracking-wider mt-1.5 font-bold text-gray-200">Certified Coaches</p>
               </div>
             </div>
 
@@ -331,13 +331,13 @@ export default function HomePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0e0e0e] border-y border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="eyebrow text-xs sm:text-sm text-[#ff2a3b] font-bold block mb-2">
+            <span className="eyebrow text-sm sm:text-base text-[#ff2a3b] font-bold block mb-2 tracking-widest">
               WHY TRAIN WITH US
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-oswald font-bold uppercase text-white leading-tight">
               The Armour 24-7 <span className="text-[#ff2a3b]">Standard</span>
             </h2>
-            <p className="text-sm sm:text-base text-gray-300 mt-2 font-body leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-200 mt-3 font-body leading-relaxed">
               Everything required for consistent strength progression under one roof.
             </p>
           </div>
@@ -347,10 +347,10 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-5">
                 <Clock className="w-6 h-6" />
               </div>
-              <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white mb-2">
+              <h3 className="font-oswald font-bold uppercase text-xl sm:text-2xl text-white mb-2.5">
                 24/7 Biometric Access
               </h3>
-              <p className="text-sm text-gray-300 leading-relaxed font-body">
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-body">
                 Train early morning, afternoon, or late night. Registered members enter seamlessly via fingerprint and facial recognition.
               </p>
             </div>
@@ -359,10 +359,10 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-5">
                 <Dumbbell className="w-6 h-6" />
               </div>
-              <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white mb-2">
+              <h3 className="font-oswald font-bold uppercase text-xl sm:text-2xl text-white mb-2.5">
                 Heavy Iron &amp; Machines
               </h3>
-              <p className="text-sm text-gray-300 leading-relaxed font-body">
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-body">
                 Full setup of plate-loaded machines, Olympic barbells, heavy dumbbells, squat racks, and dedicated cable stations.
               </p>
             </div>
@@ -371,10 +371,10 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-5">
                 <Users className="w-6 h-6" />
               </div>
-              <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white mb-2">
+              <h3 className="font-oswald font-bold uppercase text-xl sm:text-2xl text-white mb-2.5">
                 Certified Floor Trainers
               </h3>
-              <p className="text-sm text-gray-300 leading-relaxed font-body">
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-body">
                 Experienced trainers on the floor to correct your form, answer questions, and offer guidance on workout structure.
               </p>
             </div>
@@ -383,10 +383,10 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-5">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white mb-2">
+              <h3 className="font-oswald font-bold uppercase text-xl sm:text-2xl text-white mb-2.5">
                 Clean, Monitored Facility
               </h3>
-              <p className="text-sm text-gray-300 leading-relaxed font-body">
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-body">
                 High-capacity air conditioning, sanitized workout areas, secure lockers, changing rooms, and 24/7 CCTV surveillance.
               </p>
             </div>
@@ -402,20 +402,20 @@ export default function HomePage() {
           
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
             <div>
-              <span className="eyebrow text-xs sm:text-sm text-[#ff2a3b] font-bold block mb-1">
+              <span className="eyebrow text-sm sm:text-base text-[#ff2a3b] font-bold block mb-1 tracking-widest">
                 WORKOUT OPTIONS
               </span>
               <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white leading-tight">
                 Training <span className="text-[#ff2a3b]">Programs</span>
               </h2>
             </div>
-            <p className="text-sm sm:text-base text-gray-300 max-w-md leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-200 max-w-md leading-relaxed font-body">
               Whether your goal is building muscle, increasing stamina, or working 1-on-1 with a personal trainer, our floor setup supports every level.
             </p>
           </div>
 
           {/* Program Tabs */}
-          <div className="flex flex-wrap gap-2 mb-8 border-b border-white/10 pb-4" role="tablist">
+          <div className="flex flex-wrap gap-2.5 mb-8 border-b border-white/10 pb-4" role="tablist">
             {(Object.keys(programsData) as Array<keyof typeof programsData>).map((key) => {
               const item = programsData[key];
               const isSelected = activeTab === key;
@@ -425,10 +425,10 @@ export default function HomePage() {
                   role="tab"
                   aria-selected={isSelected}
                   onClick={() => setActiveTab(key)}
-                  className={`px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-oswald uppercase font-bold tracking-wider rounded-sm transition-colors cursor-pointer ${
+                  className={`px-5 sm:px-6 py-3 text-sm sm:text-base font-oswald uppercase font-bold tracking-wider rounded-sm transition-colors cursor-pointer ${
                     isSelected
                       ? "bg-[#ff2a3b] text-white shadow-md"
-                      : "bg-[#141414] text-gray-300 hover:text-white"
+                      : "bg-[#141414] text-gray-200 hover:text-white"
                   }`}
                 >
                   {item.title}
@@ -447,27 +447,27 @@ export default function HomePage() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
-              <span className="absolute top-3 left-3 bg-[#ff2a3b] text-white text-[10px] font-oswald font-bold uppercase px-2.5 py-1 rounded-sm shadow-md">
+              <span className="absolute top-3 left-3 bg-[#ff2a3b] text-white text-xs font-oswald font-bold uppercase px-3 py-1 rounded-sm shadow-md">
                 {currentProgram.badge}
               </span>
             </div>
 
             <div className="lg:col-span-7 space-y-5">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-oswald font-bold uppercase text-white leading-tight">
+              <h3 className="text-3xl sm:text-4xl font-oswald font-bold uppercase text-white leading-tight">
                 {currentProgram.title}
               </h3>
-              <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-body">
+              <p className="text-base sm:text-lg text-gray-200 leading-relaxed font-body">
                 {currentProgram.desc}
               </p>
 
-              <div className="space-y-2.5 pt-1">
-                <h4 className="text-xs sm:text-sm font-oswald font-bold uppercase tracking-wider text-gray-400">
+              <div className="space-y-3 pt-1">
+                <h4 className="text-sm sm:text-base font-oswald font-bold uppercase tracking-wider text-gray-300">
                   Program Inclusions:
                 </h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-gray-200">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base text-gray-200 font-body">
                   {currentProgram.highlights.map((h, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#ff2a3b] shrink-0 mt-0.5" />
+                    <li key={i} className="flex items-start gap-2.5">
+                      <CheckCircle2 className="w-5 h-5 text-[#ff2a3b] shrink-0 mt-0.5" />
                       <span>{h}</span>
                     </li>
                   ))}
@@ -477,7 +477,7 @@ export default function HomePage() {
               <div className="pt-3">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-xs sm:text-sm uppercase font-bold tracking-wider px-7 py-3.5 rounded-sm transition-colors shadow-md"
+                  className="inline-flex items-center gap-2 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-sm sm:text-base uppercase font-bold tracking-wider px-8 py-4 rounded-sm transition-colors shadow-md"
                 >
                   <span>Enquire About This Program</span>
                   <ArrowRight className="w-4 h-4" />
@@ -496,19 +496,19 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
             <div>
-              <span className="eyebrow text-xs sm:text-sm text-[#ff2a3b] font-bold block mb-1">
+              <span className="eyebrow text-sm sm:text-base text-[#ff2a3b] font-bold block mb-1 tracking-widest">
                 FACILITY SHOWCASE
               </span>
               <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white leading-tight">
                 The Gym <span className="text-[#ff2a3b]">Floor</span>
               </h2>
             </div>
-            <p className="text-sm sm:text-base text-gray-300 max-w-md leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-200 max-w-md leading-relaxed font-body">
               Equipped with dedicated strength zones, Olympic lifting stations, cardio lines, and locker facilities in Hathijan Circle.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             <div className="relative h-64 sm:h-72 rounded-sm overflow-hidden group bg-black/40">
               <Image
                 src="/images/dummy-gallery-1.webp"
@@ -517,8 +517,8 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-4">
-                <span className="text-sm font-oswald uppercase tracking-wider text-white font-bold">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-5">
+                <span className="text-base sm:text-lg font-oswald uppercase tracking-wider text-white font-bold">
                   Main Training Floor &amp; Power Racks
                 </span>
               </div>
@@ -532,8 +532,8 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-4">
-                <span className="text-sm font-oswald uppercase tracking-wider text-white font-bold">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-5">
+                <span className="text-base sm:text-lg font-oswald uppercase tracking-wider text-white font-bold">
                   Plate-Loaded Strength Machines
                 </span>
               </div>
@@ -547,8 +547,8 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-4">
-                <span className="text-sm font-oswald uppercase tracking-wider text-white font-bold">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-5">
+                <span className="text-base sm:text-lg font-oswald uppercase tracking-wider text-white font-bold">
                   Cardio &amp; Stamina Line
                 </span>
               </div>
@@ -562,8 +562,8 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-4">
-                <span className="text-sm font-oswald uppercase tracking-wider text-white font-bold">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-5">
+                <span className="text-base sm:text-lg font-oswald uppercase tracking-wider text-white font-bold">
                   Heavy Dumbbells &amp; Free Weights
                 </span>
               </div>
@@ -577,8 +577,8 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-4">
-                <span className="text-sm font-oswald uppercase tracking-wider text-white font-bold">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-5">
+                <span className="text-base sm:text-lg font-oswald uppercase tracking-wider text-white font-bold">
                   Dual-Cable Towers &amp; Upper Body Rigs
                 </span>
               </div>
@@ -592,8 +592,8 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-4">
-                <span className="text-sm font-oswald uppercase tracking-wider text-white font-bold">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-5">
+                <span className="text-base sm:text-lg font-oswald uppercase tracking-wider text-white font-bold">
                   Air-Conditioned Workout Space
                 </span>
               </div>
@@ -604,7 +604,6 @@ export default function HomePage() {
 
       {/* ============================================================ */}
       {/* 5. PARALLAX MOMENTUM BREAK — Unique Facility Pillars         */}
-      {/* (Fixed: Removed duplicate hero stats numbers)                */}
       {/* ============================================================ */}
       <section className="relative py-28 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
         {/* Parallax Background with Dummy Gym Visual */}
@@ -634,66 +633,66 @@ export default function HomePage() {
 
         {/* Parallax Foreground Content — Non-repetitive, High-impact Value */}
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/5 border border-white/15 rounded-full text-gray-200 text-xs sm:text-sm font-oswald uppercase tracking-widest backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/15 rounded-full text-gray-200 text-sm font-oswald uppercase tracking-widest backdrop-blur-sm font-bold">
             <span className="w-2 h-2 rounded-full bg-[#ff2a3b]" />
             EXPERIENCE THE ARMOUR ADVANTAGE
           </div>
 
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-oswald font-bold uppercase text-white leading-tight tracking-tight">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-oswald font-bold uppercase text-white leading-tight tracking-tight">
             Engineered For Serious Lifting.<br />
             <span className="text-[#ff2a3b]">Zero Distractions.</span>
           </h2>
 
-          <p className="text-sm sm:text-lg text-gray-200 font-body max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-gray-100 font-body max-w-2xl mx-auto leading-relaxed">
             Step onto a gym floor built for raw, measurable progress. From calibrated barbell platforms to smooth plate-loaded isolation machines, everything is curated for consistent training.
           </p>
 
-          {/* 4 Concrete Facility Highlights (Replaced the duplicate 24/7, 250+, 40+, 8+ stats) */}
+          {/* 4 Concrete Facility Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6 max-w-5xl mx-auto border-t border-white/10 text-left">
-            <div className="bg-black/60 border border-white/10 p-5 rounded-sm backdrop-blur-sm">
-              <div className="w-8 h-8 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-3">
-                <Dumbbell className="w-4 h-4" />
+            <div className="bg-black/70 border border-white/10 p-5 sm:p-6 rounded-sm backdrop-blur-sm">
+              <div className="w-9 h-9 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-3.5">
+                <Dumbbell className="w-5 h-5" />
               </div>
-              <h3 className="font-oswald font-bold uppercase text-base text-white mb-1">
+              <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white mb-1.5">
                 Olympic Calibrated Gear
               </h3>
-              <p className="text-xs sm:text-sm text-gray-300 font-body leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-300 font-body leading-relaxed">
                 Dedicated deadlift platforms and competition-grade barbell setups.
               </p>
             </div>
 
-            <div className="bg-black/60 border border-white/10 p-5 rounded-sm backdrop-blur-sm">
-              <div className="w-8 h-8 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-3">
-                <Zap className="w-4 h-4" />
+            <div className="bg-black/70 border border-white/10 p-5 sm:p-6 rounded-sm backdrop-blur-sm">
+              <div className="w-9 h-9 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-3.5">
+                <Zap className="w-5 h-5" />
               </div>
-              <h3 className="font-oswald font-bold uppercase text-base text-white mb-1">
+              <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white mb-1.5">
                 Plate-Loaded Isolation
               </h3>
-              <p className="text-xs sm:text-sm text-gray-300 font-body leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-300 font-body leading-relaxed">
                 Iso-lateral machines supporting natural human movement mechanics.
               </p>
             </div>
 
-            <div className="bg-black/60 border border-white/10 p-5 rounded-sm backdrop-blur-sm">
-              <div className="w-8 h-8 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-3">
-                <ShieldCheck className="w-4 h-4" />
+            <div className="bg-black/70 border border-white/10 p-5 sm:p-6 rounded-sm backdrop-blur-sm">
+              <div className="w-9 h-9 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-3.5">
+                <ShieldCheck className="w-5 h-5" />
               </div>
-              <h3 className="font-oswald font-bold uppercase text-base text-white mb-1">
+              <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white mb-1.5">
                 Biometric Turnstile
               </h3>
-              <p className="text-xs sm:text-sm text-gray-300 font-body leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-300 font-body leading-relaxed">
                 Seamless fingerprint and facial recognition entry around the clock.
               </p>
             </div>
 
-            <div className="bg-black/60 border border-white/10 p-5 rounded-sm backdrop-blur-sm">
-              <div className="w-8 h-8 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-3">
-                <Sparkles className="w-4 h-4" />
+            <div className="bg-black/70 border border-white/10 p-5 sm:p-6 rounded-sm backdrop-blur-sm">
+              <div className="w-9 h-9 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center mb-3.5">
+                <Sparkles className="w-5 h-5" />
               </div>
-              <h3 className="font-oswald font-bold uppercase text-base text-white mb-1">
+              <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white mb-1.5">
                 Hygienic Climate Arena
               </h3>
-              <p className="text-xs sm:text-sm text-gray-300 font-body leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-300 font-body leading-relaxed">
                 High-capacity air conditioning, sanitized floors, lockers, and showers.
               </p>
             </div>
@@ -702,14 +701,14 @@ export default function HomePage() {
           <div className="pt-4 flex flex-wrap justify-center gap-4">
             <Link
               href="/pricing"
-              className="bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold uppercase text-xs sm:text-sm px-8 py-3.5 tracking-wider transition-colors rounded-sm inline-flex items-center gap-2 shadow-lg"
+              className="bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold uppercase text-sm sm:text-base px-9 py-4 tracking-wider transition-colors rounded-sm inline-flex items-center gap-2 shadow-lg"
             >
               <span>Explore Membership Rates</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/contact?plan=demo"
-              className="bg-white/10 hover:bg-white/20 text-white font-oswald font-bold uppercase text-xs sm:text-sm px-7 py-3.5 tracking-wider transition-colors rounded-sm"
+              className="bg-white/10 hover:bg-white/20 text-white font-oswald font-bold uppercase text-sm sm:text-base px-8 py-4 tracking-wider transition-colors rounded-sm"
             >
               Book Demo Session (₹500)
             </Link>
@@ -725,7 +724,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             {/* Visual Column */}
-            <div className="lg:col-span-5 relative h-80 sm:h-[450px] rounded-sm overflow-hidden border border-white/10 bg-black/40">
+            <div className="lg:col-span-5 relative h-80 sm:h-[480px] rounded-sm overflow-hidden border border-white/10 bg-black/40">
               <Image
                 src="/images/dummy-gallery-5.webp"
                 alt="Ladies Fitness Training Area at Armour 24-7 Gym"
@@ -734,11 +733,11 @@ export default function HomePage() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 bg-black/80 p-4 rounded-sm border border-white/10">
-                <p className="text-sm font-oswald font-bold uppercase text-white">
+              <div className="absolute bottom-4 left-4 right-4 bg-black/80 p-5 rounded-sm border border-white/10">
+                <p className="text-base font-oswald font-bold uppercase text-white">
                   Safe &amp; Welcoming Workout Environment
                 </p>
-                <p className="text-xs text-gray-300 font-body mt-0.5">
+                <p className="text-sm text-gray-300 font-body mt-1">
                   Comfortable, clean, and guided directly on the floor.
                 </p>
               </div>
@@ -747,51 +746,51 @@ export default function HomePage() {
             {/* Content Column */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <span className="eyebrow text-xs sm:text-sm text-[#ff2a3b] font-bold block mb-1">
+                <span className="eyebrow text-sm sm:text-base text-[#ff2a3b] font-bold block mb-1 tracking-widest">
                   DEDICATED GUIDANCE
                 </span>
                 <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white leading-tight">
                   Ladies Fitness <span className="text-[#ff2a3b]">Program</span>
                 </h2>
-                <p className="text-sm sm:text-base text-gray-300 leading-relaxed mt-3 font-body">
+                <p className="text-base sm:text-lg text-gray-200 leading-relaxed mt-3 font-body">
                   A comfortable and motivating training environment for women of all fitness levels. Whether your priority is fat loss, toning, core stability, or functional stamina, our certified coaches ensure you feel confident using every machine.
                 </p>
               </div>
 
               {/* 4 Clear Feature Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                <div className="bg-[#141414] border border-white/10 p-4 sm:p-5 rounded-sm">
-                  <h3 className="text-sm sm:text-base font-oswald font-bold uppercase text-white mb-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-[#141414] border border-white/10 p-5 rounded-sm">
+                  <h3 className="text-base sm:text-lg font-oswald font-bold uppercase text-white mb-1.5">
                     Structured Fat Loss &amp; Toning
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-body">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-body">
                     Workouts designed to combine moderate weights and cardio intervals for steady calorie burn.
                   </p>
                 </div>
 
-                <div className="bg-[#141414] border border-white/10 p-4 sm:p-5 rounded-sm">
-                  <h3 className="text-sm sm:text-base font-oswald font-bold uppercase text-white mb-1">
+                <div className="bg-[#141414] border border-white/10 p-5 rounded-sm">
+                  <h3 className="text-base sm:text-lg font-oswald font-bold uppercase text-white mb-1.5">
                     Beginner-Friendly Coaching
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-body">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-body">
                     Step-by-step instruction on posture, machine setup, and weights without intimidation.
                   </p>
                 </div>
 
-                <div className="bg-[#141414] border border-white/10 p-4 sm:p-5 rounded-sm">
-                  <h3 className="text-sm sm:text-base font-oswald font-bold uppercase text-white mb-1">
+                <div className="bg-[#141414] border border-white/10 p-5 rounded-sm">
+                  <h3 className="text-base sm:text-lg font-oswald font-bold uppercase text-white mb-1.5">
                     Female Trainer Availability
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-body">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-body">
                     Option to train with certified female fitness coaches for customized personal guidance.
                   </p>
                 </div>
 
-                <div className="bg-[#141414] border border-white/10 p-4 sm:p-5 rounded-sm">
-                  <h3 className="text-sm sm:text-base font-oswald font-bold uppercase text-white mb-1">
+                <div className="bg-[#141414] border border-white/10 p-5 rounded-sm">
+                  <h3 className="text-base sm:text-lg font-oswald font-bold uppercase text-white mb-1.5">
                     Comfort &amp; Hygiene First
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-body">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-body">
                     Well-maintained changing areas, secure lockers, and a respectful atmosphere on the floor.
                   </p>
                 </div>
@@ -800,7 +799,7 @@ export default function HomePage() {
               <div>
                 <Link
                   href="/contact?program=ladies-program"
-                  className="inline-flex items-center gap-2 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-xs sm:text-sm uppercase font-bold tracking-wider px-7 py-3.5 rounded-sm transition-colors shadow-md"
+                  className="inline-flex items-center gap-2 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-sm sm:text-base uppercase font-bold tracking-wider px-8 py-4 rounded-sm transition-colors shadow-md"
                 >
                   <span>Enquire For Ladies Program</span>
                   <ArrowRight className="w-4 h-4" />
@@ -821,7 +820,7 @@ export default function HomePage() {
           
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-12">
             <div>
-              <span className="eyebrow text-xs sm:text-sm text-[#ff2a3b] font-bold block mb-1">
+              <span className="eyebrow text-sm sm:text-base text-[#ff2a3b] font-bold block mb-1 tracking-widest">
                 VERIFIED MEMBER FEEDBACK
               </span>
               <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white leading-tight">
@@ -830,21 +829,21 @@ export default function HomePage() {
             </div>
 
             {/* Google Rating Card */}
-            <div className="flex items-center gap-4 bg-[#141414] border border-white/10 px-5 py-3.5 rounded-sm">
-              <div className="font-oswald text-3xl sm:text-4xl font-bold text-white leading-none">
+            <div className="flex items-center gap-4 bg-[#141414] border border-white/10 px-6 py-4 rounded-sm">
+              <div className="font-oswald text-4xl sm:text-5xl font-bold text-white leading-none">
                 4.9
               </div>
               <div className="text-left border-l border-white/10 pl-4">
-                <div className="flex text-amber-400 gap-0.5">
+                <div className="flex text-amber-400 gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                    <Star key={i} className="w-4 h-4 fill-current" />
                   ))}
                 </div>
                 <a
                   href="https://maps.app.goo.gl/fdHFDqTDaHNvw5Pf6"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-xs text-[#ff2a3b] hover:underline font-semibold block mt-1"
+                  className="text-sm text-[#ff2a3b] hover:underline font-semibold block mt-1"
                 >
                   Google Maps Reviews ↗
                 </a>
@@ -857,28 +856,28 @@ export default function HomePage() {
             {googleReviews.map((rev, idx) => (
               <div
                 key={idx}
-                className="bg-[#141414] border border-white/10 p-6 sm:p-7 rounded-sm flex flex-col justify-between"
+                className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm flex flex-col justify-between"
               >
-                <div className="space-y-3.5">
+                <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-full bg-[#ff2a3b] text-white flex items-center justify-center font-oswald font-bold text-base shadow-sm">
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-11 h-11 rounded-full bg-[#ff2a3b] text-white flex items-center justify-center font-oswald font-bold text-lg shadow-sm">
                         {rev.initial}
                       </div>
                       <div>
-                        <h3 className="font-oswald font-bold uppercase text-base text-white">
+                        <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white">
                           {rev.name}
                         </h3>
-                        <span className="text-xs text-gray-400 font-body block">{rev.time}</span>
+                        <span className="text-xs sm:text-sm text-gray-400 font-body block">{rev.time}</span>
                       </div>
                     </div>
                     <div className="flex text-amber-400 gap-0.5">
                       {[...Array(rev.rating)].map((_, r) => (
-                        <Star key={r} className="w-3.5 h-3.5 fill-current" />
+                        <Star key={r} className="w-4 h-4 fill-current" />
                       ))}
                     </div>
                   </div>
-                  <p className="text-sm sm:text-base text-gray-200 leading-relaxed font-body">
+                  <p className="text-base sm:text-lg text-gray-200 leading-relaxed font-body">
                     &ldquo;{rev.text}&rdquo;
                   </p>
                 </div>
@@ -888,37 +887,37 @@ export default function HomePage() {
 
           {/* Mobile Slider */}
           <div className="md:hidden">
-            <div className="bg-[#141414] border border-white/10 p-6 rounded-sm space-y-4">
+            <div className="bg-[#141414] border border-white/10 p-6 sm:p-7 rounded-sm space-y-4">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#ff2a3b] text-white flex items-center justify-center font-oswald font-bold text-base">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-10 h-10 rounded-full bg-[#ff2a3b] text-white flex items-center justify-center font-oswald font-bold text-base">
                     {googleReviews[activeReview].initial}
                   </div>
                   <div>
-                    <h3 className="font-oswald font-bold uppercase text-base text-white">
+                    <h3 className="font-oswald font-bold uppercase text-lg text-white">
                       {googleReviews[activeReview].name}
                     </h3>
-                    <span className="text-xs text-gray-400 font-body block">{googleReviews[activeReview].time}</span>
+                    <span className="text-xs sm:text-sm text-gray-400 font-body block">{googleReviews[activeReview].time}</span>
                   </div>
                 </div>
                 <div className="flex text-amber-400 gap-0.5">
                   {[...Array(googleReviews[activeReview].rating)].map((_, r) => (
-                    <Star key={r} className="w-3.5 h-3.5 fill-current" />
+                    <Star key={r} className="w-4 h-4 fill-current" />
                   ))}
                 </div>
               </div>
-              <p className="text-sm text-gray-200 leading-relaxed font-body min-h-[70px]">
+              <p className="text-base text-gray-200 leading-relaxed font-body min-h-[70px]">
                 &ldquo;{googleReviews[activeReview].text}&rdquo;
               </p>
-              <div className="flex items-center justify-between pt-3 border-t border-white/10">
+              <div className="flex items-center justify-between pt-4 border-t border-white/10">
                 <div className="flex gap-1.5">
                   {googleReviews.map((_, i) => (
                     <button
                       key={i}
                       type="button"
                       onClick={() => setActiveReview(i)}
-                      className={`h-2 rounded-full transition-all ${
-                        activeReview === i ? "w-6 bg-[#ff2a3b]" : "w-2 bg-white/20"
+                      className={`h-2.5 rounded-full transition-all ${
+                        activeReview === i ? "w-7 bg-[#ff2a3b]" : "w-2.5 bg-white/20"
                       }`}
                       aria-label={`View review ${i + 1}`}
                     />
@@ -928,18 +927,18 @@ export default function HomePage() {
                   <button
                     type="button"
                     onClick={() => setActiveReview((prev) => (prev === 0 ? googleReviews.length - 1 : prev - 1))}
-                    className="p-2 rounded-sm border border-white/20 text-gray-200 hover:text-white"
+                    className="p-2.5 rounded-sm border border-white/20 text-gray-200 hover:text-white"
                     aria-label="Previous review"
                   >
-                    <ChevronLeft className="w-4 h-4" />
+                    <ChevronLeft className="w-5 h-5" />
                   </button>
                   <button
                     type="button"
                     onClick={() => setActiveReview((prev) => (prev + 1) % googleReviews.length)}
-                    className="p-2 rounded-sm border border-white/20 text-gray-200 hover:text-white"
+                    className="p-2.5 rounded-sm border border-white/20 text-gray-200 hover:text-white"
                     aria-label="Next review"
                   >
-                    <ChevronRight className="w-4 h-4" />
+                    <ChevronRight className="w-5 h-5" />
                   </button>
                 </div>
               </div>
@@ -956,14 +955,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4">
             <div>
-              <span className="eyebrow text-xs sm:text-sm text-[#ff2a3b] font-bold block mb-1">
+              <span className="eyebrow text-sm sm:text-base text-[#ff2a3b] font-bold block mb-1 tracking-widest">
                 GUIDES &amp; RESOURCES
               </span>
               <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white leading-tight">
                 Practical Training <span className="text-[#ff2a3b]">Tips</span>
               </h2>
             </div>
-            <p className="text-sm text-gray-400 font-body">
+            <p className="text-sm sm:text-base text-gray-300 font-body">
               Click any article to read the full guide.
             </p>
           </div>
@@ -976,7 +975,7 @@ export default function HomePage() {
                 className="bg-[#141414] border border-white/10 rounded-sm overflow-hidden group cursor-pointer hover:border-[#ff2a3b]/40 transition-colors flex flex-col justify-between"
               >
                 <div>
-                  <div className="relative h-48 w-full overflow-hidden bg-black/40">
+                  <div className="relative h-52 w-full overflow-hidden bg-black/40">
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -984,27 +983,27 @@ export default function HomePage() {
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <span className="absolute top-3 left-3 bg-[#ff2a3b] text-white text-[10px] font-oswald font-bold uppercase px-2 py-0.5 rounded-sm">
+                    <span className="absolute top-3 left-3 bg-[#ff2a3b] text-white text-xs font-oswald font-bold uppercase px-2.5 py-1 rounded-sm">
                       {post.category}
                     </span>
                   </div>
-                  <div className="p-5 sm:p-6">
-                    <span className="text-xs text-gray-400 font-body block mb-1.5">
+                  <div className="p-6">
+                    <span className="text-xs sm:text-sm text-gray-400 font-body block mb-2">
                       {post.readTime}
                     </span>
-                    <h3 className="font-oswald font-bold uppercase text-lg text-white group-hover:text-[#ff2a3b] transition-colors leading-snug mb-2">
+                    <h3 className="font-oswald font-bold uppercase text-xl text-white group-hover:text-[#ff2a3b] transition-colors leading-snug mb-2.5">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-gray-300 leading-relaxed font-body line-clamp-2">
+                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-body line-clamp-2">
                       {post.desc}
                     </p>
                   </div>
                 </div>
 
-                <div className="px-5 sm:px-6 pb-5 pt-2 border-t border-white/5 flex items-center justify-between">
-                  <span className="text-xs font-oswald font-bold uppercase tracking-wider text-[#ff2a3b] flex items-center gap-1">
+                <div className="px-6 pb-6 pt-2 border-t border-white/5 flex items-center justify-between">
+                  <span className="text-sm font-oswald font-bold uppercase tracking-wider text-[#ff2a3b] flex items-center gap-1.5">
                     <span>Read Guide</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-4 h-4" />
                   </span>
                 </div>
               </div>
@@ -1025,13 +1024,13 @@ export default function HomePage() {
             <button
               type="button"
               onClick={() => setSelectedBlog(null)}
-              className="absolute top-3 right-3 z-20 w-8 h-8 bg-black/70 hover:bg-[#ff2a3b] text-white rounded-sm flex items-center justify-center transition-colors"
+              className="absolute top-3 right-3 z-20 w-9 h-9 bg-black/70 hover:bg-[#ff2a3b] text-white rounded-sm flex items-center justify-center transition-colors"
               aria-label="Close article modal"
             >
-              <X className="w-4 h-4" />
+              <X className="w-5 h-5" />
             </button>
 
-            <div className="relative h-56 w-full">
+            <div className="relative h-60 w-full">
               <Image
                 src={selectedBlog.image}
                 alt={selectedBlog.title}
@@ -1040,32 +1039,32 @@ export default function HomePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
               <div className="absolute bottom-3 left-4">
-                <span className="bg-[#ff2a3b] text-white text-[10px] font-oswald font-bold uppercase px-2 py-0.5 rounded-sm mr-2">
+                <span className="bg-[#ff2a3b] text-white text-xs font-oswald font-bold uppercase px-2.5 py-1 rounded-sm mr-2.5">
                   {selectedBlog.category}
                 </span>
-                <span className="text-xs text-gray-300 font-body">{selectedBlog.readTime}</span>
+                <span className="text-sm text-gray-300 font-body">{selectedBlog.readTime}</span>
               </div>
             </div>
 
-            <div className="p-6 sm:p-8 space-y-4">
-              <h2 className="font-oswald text-2xl sm:text-3xl font-bold uppercase text-white leading-tight">
+            <div className="p-6 sm:p-8 space-y-5">
+              <h2 className="font-oswald text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-white leading-tight">
                 {selectedBlog.title}
               </h2>
-              <div className="space-y-3 text-sm text-gray-200 leading-relaxed font-body">
+              <div className="space-y-3.5 text-base text-gray-200 leading-relaxed font-body">
                 {selectedBlog.content.map((p, idx) => (
-                  <p key={idx} className={p.match(/^[1-5]\./) ? "font-semibold text-white pt-1" : ""}>
+                  <p key={idx} className={p.match(/^[1-5]\./) ? "font-semibold text-white pt-1 text-lg" : ""}>
                     {p}
                   </p>
                 ))}
               </div>
               <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                <p className="text-xs text-gray-400 font-body">
+                <p className="text-sm text-gray-400 font-body">
                   Questions? Speak with a coach on the floor.
                 </p>
                 <Link
                   href="/contact"
                   onClick={() => setSelectedBlog(null)}
-                  className="bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-xs uppercase font-bold px-4 py-2.5 rounded-sm transition-colors"
+                  className="bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-sm uppercase font-bold px-5 py-3 rounded-sm transition-colors"
                 >
                   Visit Gym
                 </Link>
@@ -1082,19 +1081,19 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto">
           
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="eyebrow text-xs sm:text-sm text-[#ff2a3b] font-bold block mb-1">
+            <span className="eyebrow text-sm sm:text-base text-[#ff2a3b] font-bold block mb-1 tracking-widest">
               GENERAL SCREENING
             </span>
             <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white leading-tight">
               BMI <span className="text-[#ff2a3b]">Calculator</span>
             </h2>
-            <p className="text-sm sm:text-base text-gray-300 mt-2 font-body">
+            <p className="text-base sm:text-lg text-gray-200 mt-2 font-body">
               Estimate your Body Mass Index as a basic starting benchmark.
             </p>
           </div>
 
           {/* Educational Disclaimer Box */}
-          <div className="bg-[#181818] border border-white/10 p-4 rounded-sm flex items-start gap-3 mb-8 text-xs sm:text-sm text-gray-300">
+          <div className="bg-[#181818] border border-white/10 p-5 rounded-sm flex items-start gap-3.5 mb-8 text-sm sm:text-base text-gray-300">
             <Info className="w-5 h-5 text-[#ff2a3b] shrink-0 mt-0.5" />
             <p className="leading-relaxed">
               <strong>Please Note:</strong> Body Mass Index (BMI) is a general ratio calculated purely from weight and height. It does not measure body fat percentage or muscle mass and is not a medical diagnosis or training prescription. Speak with our coaches for a personalized fitness assessment.
@@ -1108,17 +1107,17 @@ export default function HomePage() {
               
               {/* Gender Selection */}
               <div>
-                <label className="text-xs sm:text-sm font-oswald uppercase tracking-wider text-gray-300 font-bold block mb-2">
+                <label className="text-sm sm:text-base font-oswald uppercase tracking-wider text-gray-300 font-bold block mb-2.5">
                   Select Gender
                 </label>
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     type="button"
                     onClick={() => setBmiGender("male")}
-                    className={`py-2.5 px-3 text-xs sm:text-sm font-oswald uppercase font-bold tracking-wider rounded-sm transition-colors ${
+                    className={`py-3 px-4 text-sm sm:text-base font-oswald uppercase font-bold tracking-wider rounded-sm transition-colors ${
                       bmiGender === "male"
                         ? "bg-[#ff2a3b] text-white shadow-md"
-                        : "bg-[#1c1c1c] text-gray-300 hover:text-white"
+                        : "bg-[#1c1c1c] text-gray-200 hover:text-white"
                     }`}
                   >
                     Male
@@ -1126,10 +1125,10 @@ export default function HomePage() {
                   <button
                     type="button"
                     onClick={() => setBmiGender("female")}
-                    className={`py-2.5 px-3 text-xs sm:text-sm font-oswald uppercase font-bold tracking-wider rounded-sm transition-colors ${
+                    className={`py-3 px-4 text-sm sm:text-base font-oswald uppercase font-bold tracking-wider rounded-sm transition-colors ${
                       bmiGender === "female"
                         ? "bg-[#ff2a3b] text-white shadow-md"
-                        : "bg-[#1c1c1c] text-gray-300 hover:text-white"
+                        : "bg-[#1c1c1c] text-gray-200 hover:text-white"
                     }`}
                   >
                     Female
@@ -1139,12 +1138,12 @@ export default function HomePage() {
 
               {/* Height Slider */}
               <div>
-                <div className="flex justify-between items-center mb-1">
-                  <label htmlFor="heightRange" className="text-xs sm:text-sm font-oswald uppercase tracking-wider text-gray-300 font-bold">
+                <div className="flex justify-between items-center mb-1.5">
+                  <label htmlFor="heightRange" className="text-sm sm:text-base font-oswald uppercase tracking-wider text-gray-300 font-bold">
                     Height
                   </label>
-                  <span className="font-oswald text-lg font-bold text-white">
-                    {bmiHeight} <span className="text-xs text-gray-400 font-normal">cm</span>
+                  <span className="font-oswald text-xl sm:text-2xl font-bold text-white">
+                    {bmiHeight} <span className="text-sm text-gray-400 font-normal">cm</span>
                   </span>
                 </div>
                 <input
@@ -1154,9 +1153,9 @@ export default function HomePage() {
                   max="220"
                   value={bmiHeight}
                   onChange={(e) => setBmiHeight(Number(e.target.value))}
-                  className="w-full h-2 bg-[#222] rounded-sm appearance-none cursor-pointer accent-[#ff2a3b]"
+                  className="w-full h-2.5 bg-[#222] rounded-sm appearance-none cursor-pointer accent-[#ff2a3b]"
                 />
-                <div className="flex justify-between text-xs text-gray-400 font-body mt-1">
+                <div className="flex justify-between text-xs sm:text-sm text-gray-400 font-body mt-1">
                   <span>130 cm</span>
                   <span>175 cm</span>
                   <span>220 cm</span>
@@ -1165,12 +1164,12 @@ export default function HomePage() {
 
               {/* Weight Slider */}
               <div>
-                <div className="flex justify-between items-center mb-1">
-                  <label htmlFor="weightRange" className="text-xs sm:text-sm font-oswald uppercase tracking-wider text-gray-300 font-bold">
+                <div className="flex justify-between items-center mb-1.5">
+                  <label htmlFor="weightRange" className="text-sm sm:text-base font-oswald uppercase tracking-wider text-gray-300 font-bold">
                     Weight
                   </label>
-                  <span className="font-oswald text-lg font-bold text-white">
-                    {bmiWeight} <span className="text-xs text-gray-400 font-normal">kg</span>
+                  <span className="font-oswald text-xl sm:text-2xl font-bold text-white">
+                    {bmiWeight} <span className="text-sm text-gray-400 font-normal">kg</span>
                   </span>
                 </div>
                 <input
@@ -1180,9 +1179,9 @@ export default function HomePage() {
                   max="150"
                   value={bmiWeight}
                   onChange={(e) => setBmiWeight(Number(e.target.value))}
-                  className="w-full h-2 bg-[#222] rounded-sm appearance-none cursor-pointer accent-[#ff2a3b]"
+                  className="w-full h-2.5 bg-[#222] rounded-sm appearance-none cursor-pointer accent-[#ff2a3b]"
                 />
-                <div className="flex justify-between text-xs text-gray-400 font-body mt-1">
+                <div className="flex justify-between text-xs sm:text-sm text-gray-400 font-body mt-1">
                   <span>40 kg</span>
                   <span>95 kg</span>
                   <span>150 kg</span>
@@ -1192,25 +1191,25 @@ export default function HomePage() {
             </div>
 
             {/* Calculated Output */}
-            <div className="lg:col-span-5 bg-[#0a0a0a] border border-white/10 p-6 rounded-sm text-center space-y-4">
-              <span className="text-xs font-oswald uppercase tracking-widest text-gray-400 font-bold block">
+            <div className="lg:col-span-5 bg-[#0a0a0a] border border-white/10 p-6 sm:p-7 rounded-sm text-center space-y-4">
+              <span className="text-xs sm:text-sm font-oswald uppercase tracking-widest text-gray-400 font-bold block">
                 Calculated BMI
               </span>
-              <div className="font-oswald text-5xl sm:text-6xl font-bold text-white leading-none">
+              <div className="font-oswald text-6xl sm:text-7xl font-bold text-white leading-none">
                 {bmiValue}
               </div>
               <div>
-                <span className={`inline-block px-3.5 py-1 text-xs font-oswald font-bold uppercase rounded-sm border ${bmiDetails.colorClass}`}>
+                <span className={`inline-block px-4 py-1.5 text-xs sm:text-sm font-oswald font-bold uppercase rounded-sm border ${bmiDetails.colorClass}`}>
                   {bmiDetails.category}
                 </span>
               </div>
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-body">
+              <p className="text-sm sm:text-base text-gray-200 leading-relaxed font-body">
                 {bmiDetails.advice}
               </p>
               <div className="pt-2 border-t border-white/10">
                 <Link
                   href="/contact"
-                  className="block w-full py-3 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-xs sm:text-sm uppercase font-bold tracking-wider rounded-sm transition-colors text-center shadow-md"
+                  className="block w-full py-3.5 bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald text-sm sm:text-base uppercase font-bold tracking-wider rounded-sm transition-colors text-center shadow-md"
                 >
                   Discuss Workout Routine
                 </Link>
@@ -1224,7 +1223,7 @@ export default function HomePage() {
       {/* ============================================================ */}
       {/* 10. MARQUEE STRIP — Verified Business Facts                  */}
       {/* ============================================================ */}
-      <div className="bg-[#ff2a3b] py-3 text-white font-oswald font-bold uppercase text-xs sm:text-sm tracking-wider marquee-container">
+      <div className="bg-[#ff2a3b] py-3.5 text-white font-oswald font-bold uppercase text-sm sm:text-base tracking-wider marquee-container">
         <div className="marquee-content flex gap-8 items-center">
           <span>• OPEN 24/7 IN HATHIJAN CIRCLE</span>
           <span>• 250+ ACTIVE MEMBERS</span>
@@ -1246,27 +1245,27 @@ export default function HomePage() {
       {/* ============================================================ */}
       <section id="enquiry" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          <div className="lg:col-span-5 space-y-5">
+          <div className="lg:col-span-5 space-y-6">
             <div>
-              <span className="eyebrow text-xs sm:text-sm text-[#ff2a3b] font-bold block mb-1">
+              <span className="eyebrow text-sm sm:text-base text-[#ff2a3b] font-bold block mb-1 tracking-widest">
                 HATHIJAN CIRCLE • AHMEDABAD
               </span>
               <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white leading-tight">
                 Visit Armour <span className="text-[#ff2a3b]">24-7 Gym</span>
               </h2>
-              <p className="text-sm sm:text-base text-gray-300 leading-relaxed mt-3 font-body">
+              <p className="text-base sm:text-lg text-gray-200 leading-relaxed mt-3 font-body">
                 Located at C-601, 602 Shalin Square, Hathijan Circle. Walk in to inspect the machines or submit an inquiry for membership plans.
               </p>
             </div>
 
-            <div className="bg-[#141414] border border-white/10 p-6 rounded-sm space-y-3.5 text-xs sm:text-sm text-gray-300 font-body">
-              <div className="flex items-start gap-3">
+            <div className="bg-[#141414] border border-white/10 p-6 sm:p-7 rounded-sm space-y-4 text-sm sm:text-base text-gray-200 font-body">
+              <div className="flex items-start gap-3.5">
                 <MapPin className="w-5 h-5 text-[#ff2a3b] shrink-0 mt-0.5" />
                 <p>
                   C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445
                 </p>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3.5">
                 <Clock className="w-5 h-5 text-[#ff2a3b] shrink-0" />
                 <p>Biometric Access: 24/7 • Front Desk: 06:00 AM – 10:00 PM</p>
               </div>
@@ -1275,7 +1274,7 @@ export default function HomePage() {
                   href="https://maps.app.goo.gl/fdHFDqTDaHNvw5Pf6"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-[#ff2a3b] font-semibold hover:underline"
+                  className="inline-flex items-center gap-1.5 text-sm sm:text-base text-[#ff2a3b] font-semibold hover:underline"
                 >
                   <MapPin className="w-4 h-4" />
                   <span>Open Directions on Google Maps ↗</span>
