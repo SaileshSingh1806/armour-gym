@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
+import AntigravityAnimation from "@/components/AntigravityAnimation";
 import {
   ArrowRight,
   Star,
@@ -256,6 +257,16 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/65 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/90 via-[#0a0a0a]/50 to-transparent" />
         </div>
+
+        {/* Antigravity Particle Animation Layer */}
+        <AntigravityAnimation
+          count={28}
+          speed={0.6}
+          colors={["#ff2a3b", "#ffffff", "#e5e5e5", "#b91c1c"]}
+          shape="mixed"
+          gravity={-0.03}
+          opacity={0.65}
+        />
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-12 md:pt-20">
@@ -613,6 +624,16 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-black/85 backdrop-blur-[2px]" />
         </div>
+
+        {/* Antigravity floating shapes */}
+        <AntigravityAnimation
+          count={20}
+          speed={0.5}
+          colors={["#ff2a3b", "#ffffff", "#888888"]}
+          shape="triangle"
+          gravity={-0.02}
+          opacity={0.5}
+        />
 
         {/* Parallax Foreground Content */}
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-7">
