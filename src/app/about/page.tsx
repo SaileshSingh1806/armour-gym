@@ -27,25 +27,25 @@ const pillars = [
     icon: Clock,
     title: "Round-The-Clock Biometric Entry",
     desc: "Your workout schedule shouldn't be limited by early closing hours. Registered members can enter the facility at any hour of the day or night through automated biometric access.",
-    image: "/images/img_7854.webp",
+    image: "/images/dummy-hero.webp",
   },
   {
     icon: Dumbbell,
     title: "Imported Plate-Loaded Strength Equipment",
     desc: "Equipped with heavy dumbbells, Olympic barbells, squat platforms, and plate-loaded machines selected for natural biomechanics and progressive overload training.",
-    image: "/images/img_7848.webp",
+    image: "/images/dummy-gallery-1.webp",
   },
   {
     icon: Award,
     title: "Coaching & Form Assistance",
     desc: "Certified trainers are on the gym floor during peak hours to guide beginners through equipment operation, correct lifting posture, and prevent training injuries.",
-    image: "/images/img_7849.webp",
+    image: "/images/dummy-gallery-4.webp",
   },
   {
     icon: Users,
     title: "Dedicated Fitness & Studio Zones",
     desc: "Spacious air-conditioned floors with separate areas for heavy barbell work, machine circuits, cardiovascular endurance, and guided group fitness sessions.",
-    image: "/images/img_7850.webp",
+    image: "/images/dummy-gallery-6.webp",
   },
 ];
 
@@ -140,11 +140,11 @@ export default function AboutPage() {
                       <div className="w-8 h-8 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center shrink-0">
                         <Icon className="w-4 h-4" />
                       </div>
-                      <h3 className="font-oswald font-bold uppercase text-lg text-white">
+                      <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white">
                         {pillar.title}
                       </h3>
                     </div>
-                    <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-body">
+                    <p className="text-sm text-gray-300 leading-relaxed font-body">
                       {pillar.desc}
                     </p>
                   </div>
@@ -157,13 +157,13 @@ export default function AboutPage() {
         {/* Floor Coaches Section */}
         <div className="mb-20">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-oswald uppercase tracking-widest text-[#ff2a3b] font-bold block mb-1">
+            <span className="text-xs sm:text-sm font-oswald uppercase tracking-widest text-[#ff2a3b] font-bold block mb-1">
               Certified Mentors
             </span>
-            <h2 className="text-3xl sm:text-4xl font-oswald font-bold uppercase text-white">
+            <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white leading-tight">
               Our Coaching <span className="text-[#ff2a3b]">Staff</span>
             </h2>
-            <p className="text-xs sm:text-sm text-gray-400 mt-2 font-body">
+            <p className="text-sm sm:text-base text-gray-300 mt-2 font-body">
               Floor coaches available to support your form and workout structure.
             </p>
           </div>
@@ -181,7 +181,7 @@ export default function AboutPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/30 to-transparent" />
                   <div className="absolute bottom-3 left-4 right-4">
-                    <span className="text-[10px] font-oswald font-bold uppercase tracking-widest text-[#ff2a3b] bg-black/60 px-2 py-0.5 rounded-sm backdrop-blur-sm border border-white/10 inline-block mb-1">
+                    <span className="text-[10px] sm:text-xs font-oswald font-bold uppercase tracking-widest text-[#ff2a3b] bg-black/60 px-2 py-0.5 rounded-sm backdrop-blur-sm border border-white/10 inline-block mb-1">
                       {c.role}
                     </span>
                     <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white">
@@ -189,13 +189,13 @@ export default function AboutPage() {
                     </h3>
                   </div>
                 </div>
-                <div className="p-5 space-y-3">
-                  <p className="text-xs text-gray-300 leading-relaxed font-body">
+                <div className="p-5 sm:p-6 space-y-3">
+                  <p className="text-sm text-gray-300 leading-relaxed font-body">
                     {c.experience}
                   </p>
                   <div className="flex flex-wrap gap-1.5 pt-1">
                     {c.specialties.map((spec, sIdx) => (
-                      <span key={sIdx} className="text-[10px] bg-white/5 border border-white/10 text-gray-300 px-2 py-0.5 rounded-sm">
+                      <span key={sIdx} className="text-xs bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-sm">
                         {spec}
                       </span>
                     ))}
@@ -211,19 +211,19 @@ export default function AboutPage() {
           <h2 className="font-oswald text-2xl sm:text-3xl font-bold uppercase text-white">
             Visit Our Facility In Hathijan Circle
           </h2>
-          <p className="text-xs sm:text-sm text-gray-300 font-body max-w-xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-300 font-body max-w-xl mx-auto leading-relaxed">
             Walk in during front desk hours (06:00 AM – 10:00 PM) to inspect the equipment or take a trial workout session (₹500).
           </p>
           <div className="flex flex-wrap justify-center gap-3 pt-2">
             <Link
               href="/pricing"
-              className="bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold uppercase text-xs px-6 py-3 rounded-sm transition-colors"
+              className="bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold uppercase text-xs sm:text-sm px-7 py-3 rounded-sm transition-colors"
             >
               View Membership Rates
             </Link>
             <Link
               href="/contact"
-              className="bg-white/10 hover:bg-white/20 text-white font-oswald font-bold uppercase text-xs px-6 py-3 rounded-sm transition-colors"
+              className="bg-white/10 hover:bg-white/20 text-white font-oswald font-bold uppercase text-xs sm:text-sm px-7 py-3 rounded-sm transition-colors"
             >
               Contact Front Desk
             </Link>
