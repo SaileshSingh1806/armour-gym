@@ -49,28 +49,28 @@ const pillars = [
   },
 ];
 
-// Coaching team representation with grounded realistic descriptions
+// Coaching team representation with human trainer portraits
 const coaches = [
   {
     name: "Strength & Conditioning Coach",
     role: "Barbell & Heavy Resistance Coach",
-    experience: "Experienced in barbell mechanics, powerlifting, and hypertrophy periodization.",
+    experience: "Experienced in barbell mechanics, powerlifting form, and hypertrophy periodization.",
     specialties: ["Compound Movements", "Strength Progression", "Form Correction"],
-    image: "/images/img_7848.webp",
+    image: "/images/coach-1.webp",
   },
   {
     name: "Functional Fitness & Cardio Trainer",
-    role: "Endurance & HIIT Specialist",
-    experience: "Guides high-energy circuit training, cardiovascular endurance, and body conditioning.",
-    specialties: ["HIIT & Circuit", "Agility Drills", "Weight Loss Conditioning"],
-    image: "/images/img_7844.webp",
+    role: "Endurance & Conditioning Specialist",
+    experience: "Guides high-energy circuit training, cardiovascular endurance, and fat loss conditioning.",
+    specialties: ["HIIT & Circuit", "Agility Drills", "Cardio Conditioning"],
+    image: "/images/coach-2.webp",
   },
   {
     name: "Personal Trainer & Nutrition Consultant",
-    role: "Personal Coaching & Lifestyle Guide",
+    role: "Personal Coaching & Body Composition",
     experience: "Works 1-on-1 with members needing customized exercise splits and daily diet structure.",
     specialties: ["1-on-1 PT", "Macro Guidance", "Beginner Fundamentals"],
-    image: "/images/img_7843.webp",
+    image: "/images/coach-3.webp",
   },
 ];
 
@@ -170,26 +170,26 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {coaches.map((c, i) => (
-              <div key={i} className="bg-[#141414] border border-white/10 rounded-sm overflow-hidden flex flex-col justify-between">
-                <div className="relative h-56 w-full">
+              <div key={i} className="bg-[#141414] border border-white/10 rounded-sm overflow-hidden flex flex-col justify-between group hover:border-[#ff2a3b]/40 transition-colors">
+                <div className="relative h-72 sm:h-80 md:h-96 w-full overflow-hidden bg-black/40">
                   <Image
                     src={c.image}
                     alt={c.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
-                </div>
-                <div className="p-5 space-y-3">
-                  <div>
-                    <h3 className="font-oswald font-bold uppercase text-base text-white">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/30 to-transparent" />
+                  <div className="absolute bottom-3 left-4 right-4">
+                    <span className="text-[10px] font-oswald font-bold uppercase tracking-widest text-[#ff2a3b] bg-black/60 px-2 py-0.5 rounded-sm backdrop-blur-sm border border-white/10 inline-block mb-1">
+                      {c.role}
+                    </span>
+                    <h3 className="font-oswald font-bold uppercase text-lg sm:text-xl text-white">
                       {c.name}
                     </h3>
-                    <p className="text-xs text-[#ff2a3b] font-oswald font-bold uppercase tracking-wider">
-                      {c.role}
-                    </p>
                   </div>
+                </div>
+                <div className="p-5 space-y-3">
                   <p className="text-xs text-gray-300 leading-relaxed font-body">
                     {c.experience}
                   </p>

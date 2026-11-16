@@ -161,6 +161,23 @@ export default function HomePage() {
   const [activeTab, setActiveTab] = useState<keyof typeof programsData>("strength");
   const [selectedBlog, setSelectedBlog] = useState<(typeof blogPosts)[0] | null>(null);
   const [activeReview, setActiveReview] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
+
+  // Parallax Scroll Tracking (Optimized with requestAnimationFrame)
+  useEffect(() => {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrollY(window.scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Auto-advance mobile reviews
   useEffect(() => {
@@ -222,8 +239,11 @@ export default function HomePage() {
       {/* 1. HERO — Full Bleed Real Gym Photo with Header Overlaid     */}
       {/* ============================================================ */}
       <section className="min-h-screen relative flex items-center justify-start overflow-hidden pt-20 pb-12">
-        {/* Real Gym Photo as Background */}
-        <div className="absolute inset-0 z-0">
+        {/* Real Gym Photo as Background with Smooth Parallax */}
+        <div
+          className="absolute inset-0 -top-16 -bottom-16 z-0 will-change-transform"
+          style={{ transform: `translate3d(0, ${scrollY * 0.28}px, 0)` }}
+        >
           <Image
             src="/images/hero_armour.webp"
             alt="Armour 24-7 Gym Floor in Hathijan Circle, Ahmedabad"
@@ -576,7 +596,64 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 5. LADIES FITNESS PROGRAM — Welcoming & Respectful Tone       */}
+      {/* 5. PARALLAX ATHLETIC MOMENTUM BREAK                          */}
+      {/* ============================================================ */}
+      <section className="relative py-28 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
+        {/* Parallax Background */}
+        <div
+          className="absolute inset-0 -top-32 -bottom-32 z-0 will-change-transform"
+          style={{ transform: `translate3d(0, ${(scrollY - 2000) * 0.16}px, 0)` }}
+        >
+          <Image
+            src="/images/img_7854.webp"
+            alt="Armour 24-7 Gym Floor"
+            fill
+            sizes="100vw"
+            className="object-cover object-center scale-110"
+          />
+          <div className="absolute inset-0 bg-black/85 backdrop-blur-[2px]" />
+        </div>
+
+        {/* Parallax Foreground Content */}
+        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-7">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-white/5 border border-white/15 rounded-full text-gray-300 text-xs font-oswald uppercase tracking-widest">
+            <span className="w-2 h-2 rounded-full bg-[#ff2a3b]" />
+            AHMEDABAD’S COMMITTED LIFTING HUB
+          </div>
+
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-oswald font-bold uppercase text-white leading-tight tracking-tight">
+            Discipline Beats Motivation.<br />
+            <span className="text-[#ff2a3b]">Every Repetition Matters.</span>
+          </h2>
+
+          <p className="text-xs sm:text-base text-gray-300 font-body max-w-2xl mx-auto leading-relaxed">
+            Whether training at 5:30 AM before your shift or 11:00 PM to unwind, Armour 24-7 gives you the floor, equipment, and environment to make progress.
+          </p>
+
+          {/* Key Counter Metrics in Parallax Banner */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 max-w-3xl mx-auto border-t border-white/10">
+            <div>
+              <span className="font-oswald text-4xl sm:text-5xl font-bold text-white block">24/7</span>
+              <p className="text-[11px] text-[#ff2a3b] font-oswald uppercase font-bold tracking-wider mt-1">Biometric Access</p>
+            </div>
+            <div>
+              <span className="font-oswald text-4xl sm:text-5xl font-bold text-white block">250+</span>
+              <p className="text-[11px] text-[#ff2a3b] font-oswald uppercase font-bold tracking-wider mt-1">Active Athletes</p>
+            </div>
+            <div>
+              <span className="font-oswald text-4xl sm:text-5xl font-bold text-white block">40+</span>
+              <p className="text-[11px] text-[#ff2a3b] font-oswald uppercase font-bold tracking-wider mt-1">Strength Rigs</p>
+            </div>
+            <div>
+              <span className="font-oswald text-4xl sm:text-5xl font-bold text-white block">8+</span>
+              <p className="text-[11px] text-[#ff2a3b] font-oswald uppercase font-bold tracking-wider mt-1">Floor Coaches</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 6. LADIES FITNESS PROGRAM — Welcoming & Respectful Tone       */}
       {/* ============================================================ */}
       <section id="ladies-program" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

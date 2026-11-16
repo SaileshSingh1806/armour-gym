@@ -75,11 +75,6 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/schedule" className="hover:text-white transition-colors">
-                Class Schedule
-              </Link>
-            </li>
-            <li>
               <Link href="/contact" className="hover:text-white transition-colors">
                 Contact &amp; Location
               </Link>
