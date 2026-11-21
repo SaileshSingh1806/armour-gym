@@ -42,9 +42,9 @@ const moments = [
 ] as const;
 
 /**
- * Sticky editorial storytelling instead of scroll hijacking.
- * The left narrative remains in view on large screens while the actual
- * gym imagery moves at a different scroll rate inside its frame.
+ * Sticky editorial storytelling.
+ * The left narrative remains in view on large screens while the 3 story cards
+ * are displayed with identical uniform sizing and consistent parallax motion.
  */
 export default function CinematicStory({ images }: { images: SiteImages }) {
   const sectionRef = useRef<HTMLElement>(null);
@@ -84,7 +84,7 @@ export default function CinematicStory({ images }: { images: SiteImages }) {
               <br />
               <span className="text-[#C8010A]">MOVEMENT.</span>
             </h2>
-            <p className="mt-8 max-w-md text-base leading-relaxed text-white/65 sm:text-lg">
+            <p className="mt-8 max-w-md font-body text-base leading-relaxed text-white/65 sm:text-lg">
               A place to show up, find your strength and keep moving forward — together.
             </p>
             <Link
@@ -109,16 +109,16 @@ export default function CinematicStory({ images }: { images: SiteImages }) {
           </div>
         </div>
 
-        <div className="space-y-10 sm:space-y-20">
+        <div className="space-y-10 sm:space-y-16">
           {moments.map((moment, index) => (
-            <Reveal key={moment.number} delay={0.06} y={28}>
-              <article className={`group overflow-hidden border border-white/10 bg-[#111317] transition-colors duration-500 hover:border-white/25 ${index === 1 ? "lg:-translate-x-8" : ""}`}>
+            <Reveal key={moment.number} delay={0.06 * index} y={28}>
+              <article className="group overflow-hidden rounded-sm border border-white/10 bg-[#111317] transition-colors duration-500 hover:border-white/25">
                 <ParallaxFrame
-                  speed={[13, 19, 15][index]}
-                  className="relative h-[21rem] overflow-hidden sm:h-[31rem] lg:h-[37rem]"
+                  speed={10}
+                  className="relative aspect-[16/10] w-full overflow-hidden"
                   overlay={
-                    <div className="pointer-events-none absolute inset-0 flex items-start justify-between bg-gradient-to-t from-black/65 via-transparent to-black/30 p-6 sm:p-8">
-                      <span className="border border-white/40 bg-black/40 px-3 py-2 font-body text-xs font-semibold text-white backdrop-blur-md">
+                    <div className="pointer-events-none absolute inset-0 flex items-start justify-between bg-gradient-to-t from-black/60 via-transparent to-black/25 p-5 sm:p-6">
+                      <span className="rounded-sm border border-white/30 bg-black/60 px-3 py-1.5 font-oswald text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">
                         {moment.label}
                       </span>
                     </div>
@@ -126,18 +126,18 @@ export default function CinematicStory({ images }: { images: SiteImages }) {
                 >
                   <Image
                     src={images[moment.slot].src}
-                    alt={images[moment.slot].src.startsWith("/images/dummy-") ? `Decorative image for ${moment.label.toLowerCase()}` : `ARMOUR 24-7 Gym – ${moment.label.toLowerCase()}`}
+                    alt={images[moment.slot].src.startsWith("/images/dummy-") ? `ARMOUR 24-7 Gym – ${moment.label.toLowerCase()}` : `ARMOUR 24-7 Gym – ${moment.label.toLowerCase()}`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 54vw"
-                    className="object-cover transition-[filter] duration-700 group-hover:brightness-110"
+                    className="object-cover object-center transition-[filter] duration-700 group-hover:brightness-110"
                     style={{ objectPosition: images[moment.slot].src === moment.image ? moment.position : images[moment.slot].position }}
                   />
                 </ParallaxFrame>
                 <div className="grid gap-3 p-6 sm:p-8">
-                  <h3 className="font-oswald text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+                  <h3 className="font-oswald text-2xl font-bold uppercase leading-tight tracking-tight sm:text-3xl lg:text-4xl">
                     {moment.title}
                   </h3>
-                  <p className="max-w-lg text-sm leading-relaxed text-white/60 sm:text-base">
+                  <p className="max-w-lg font-body text-sm leading-relaxed text-white/70 sm:text-base">
                     {moment.description}
                   </p>
                 </div>
