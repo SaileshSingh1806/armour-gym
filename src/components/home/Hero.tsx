@@ -46,13 +46,6 @@ export default function Hero({ images }: { images: SiteImages }) {
           animate="show"
           className="max-w-6xl"
         >
-          <motion.div variants={rise} className="mb-5 sm:mb-7">
-            <span className="inline-flex items-center gap-2.5 bg-black/50 border border-white/20 px-4 py-2 rounded-full text-xs sm:text-sm font-oswald font-bold uppercase tracking-[0.2em] text-white backdrop-blur-sm shadow-md">
-              <span className="size-2 rounded-full bg-[#C8010A] animate-pulse" />
-              ARMOUR 24-7 GYM • 24/7 BIOMETRIC ACCESS
-            </span>
-          </motion.div>
-
           <motion.h1
             variants={rise}
             className="font-oswald text-[clamp(3.9rem,10.2vw,11rem)] font-bold uppercase leading-[0.83] tracking-[-0.045em] text-white"
