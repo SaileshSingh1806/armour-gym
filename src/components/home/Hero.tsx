@@ -49,7 +49,7 @@ export default function Hero({ images }: { images: SiteImages }) {
           <motion.div variants={rise} className="mb-5 sm:mb-7">
             <span className="inline-flex items-center gap-2.5 bg-black/50 border border-white/20 px-4 py-2 rounded-full text-xs sm:text-sm font-oswald font-bold uppercase tracking-[0.2em] text-white backdrop-blur-sm shadow-md">
               <span className="size-2 rounded-full bg-[#C8010A] animate-pulse" />
-              ARMOUR 24-7 GYM • HATHIJAN CIRCLE, AHMEDABAD
+              ARMOUR 24-7 GYM • 24/7 BIOMETRIC ACCESS
             </span>
           </motion.div>
 
