@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     title: "Membership Plans & Fees | Armour 24-7 Gym Hathijan, Ahmedabad",
     description: "Transparent gym membership pricing with 24/7 biometric access in Hathijan Circle, Ahmedabad.",
-    url: "https://armour-gym-pi.vercel.app/pricing",
+    url: "https://armour247gym.com/pricing",
   },
 };
 

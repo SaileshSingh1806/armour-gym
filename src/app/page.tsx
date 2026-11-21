@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://armour-gym-pi.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://armour247gym.com";
 
 const localBusinessSchema = {
   "@context": "https://schema.org",

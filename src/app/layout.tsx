@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://armour-gym-pi.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://armour247gym.com"),
   title: {
     default: "Armour 24-7 Gym | Best 24-Hour Gym in Hathijan Circle, Ahmedabad",
     template: "%s | Armour 24-7 Gym Ahmedabad",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "Armour 24-7 Gym | Best 24-Hour Gym in Hathijan Circle, Ahmedabad",
     description:
       "Ahmedabad's leading 24/7 gym at Hathijan Circle. Imported strength equipment, certified trainers, cardio line, studio workouts and round-the-clock biometric keycard entry.",
-    url: "https://armour-gym-pi.vercel.app",
+    url: "https://armour247gym.com",
     images: [
       {
         url: "/images/dummy-hero.webp",

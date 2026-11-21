@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: "About Armour 24-7 Gym | Hathijan Circle, Ahmedabad",
     description: "Premier 24-hour training floor with imported machines, certified coaches, and round-the-clock access.",
-    url: "https://armour-gym-pi.vercel.app/about",
+    url: "https://armour247gym.com/about",
   },
 };
 

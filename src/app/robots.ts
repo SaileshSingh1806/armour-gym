@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const site = process.env.NEXT_PUBLIC_SITE_URL || "https://armour-gym-pi.vercel.app";
+const site = process.env.NEXT_PUBLIC_SITE_URL || "https://armour247gym.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {

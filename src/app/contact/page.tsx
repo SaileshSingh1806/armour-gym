@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: "Contact & Location | Armour 24-7 Gym Hathijan Circle, Ahmedabad",
     description: "C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad. Open 24 Hours / 7 Days.",
-    url: "https://armour-gym-pi.vercel.app/contact",
+    url: "https://armour247gym.com/contact",
   },
 };
 

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const site = process.env.NEXT_PUBLIC_SITE_URL || "https://armour-gym-pi.vercel.app";
+const site = process.env.NEXT_PUBLIC_SITE_URL || "https://armour247gym.com";
 const paths = [
   { path: "/", priority: 1.0, changeFrequency: "daily" as const },
   { path: "/pricing", priority: 0.9, changeFrequency: "weekly" as const },
