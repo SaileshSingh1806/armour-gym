@@ -2,13 +2,22 @@ import { randomBytes, scryptSync } from "node:crypto";
 import process from "node:process";
 
 /**
- * Run locally with Node 22: node scripts/setup-media-admin.mjs
- * Password is entered without echo and never stored in project files.
+ * Run locally with Node 22:
+ * Interactive: node scripts/setup-media-admin.mjs
+ * Or with argument: node scripts/setup-media-admin.mjs "YourStrongPassword123"
+ *
+ * Password is never committed or stored in git.
  * Paste ONLY the generated hash and session secret into Vercel env settings.
  */
 async function hiddenPassword() {
+  if (process.argv[2]) {
+    const password = process.argv[2];
+    if (password.length < 12) throw new Error("Password must be at least 12 characters long.");
+    return password;
+  }
+
   if (!process.stdin.isTTY || !process.stdin.setRawMode) {
-    throw new Error("Run this command in an interactive local terminal.");
+    throw new Error("Run this command in an interactive local terminal, or pass the password as an argument: node scripts/setup-media-admin.mjs \"YourPassword123\"");
   }
   process.stdout.write("Choose a strong admin password (12+ characters): ");
   process.stdin.setRawMode(true);
