@@ -5,9 +5,22 @@ import LeadForm from "@/components/LeadForm";
 import { getPublishedImages } from "@/lib/cloudinary-media";
 
 export const metadata = {
-  title: "Contact & Location | ARMOUR 24-7 Gym Ahmedabad",
-  description: "Visit ARMOUR 24-7 Gym in Hathijan Circle, Ahmedabad, or enquire about memberships and demo sessions.",
+  title: "Contact & Location | Armour 24-7 Gym Hathijan Circle, Ahmedabad 382445",
+  description:
+    "Visit Armour 24-7 Gym at C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad 382445. Call +91 81606 97163 for 24/7 membership passes and demo sessions.",
+  keywords: [
+    "Armour gym address",
+    "Armour gym phone number",
+    "Gym in Hathijan Circle address",
+    "Gym near Hathijan 382445",
+    "Gym contact Ahmedabad",
+  ],
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact & Location | Armour 24-7 Gym Hathijan Circle, Ahmedabad",
+    description: "C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad. Open 24 Hours / 7 Days.",
+    url: "https://armour-gym-pi.vercel.app/contact",
+  },
 };
 
 export const dynamic = "force-dynamic";

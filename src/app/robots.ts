@@ -5,7 +5,11 @@ const site = process.env.NEXT_PUBLIC_SITE_URL || "https://armour-gym-pi.vercel.a
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/", disallow: ["/api/", "/payment/"] },
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/", "/payment/", "/admin/"],
+      },
     ],
     sitemap: new URL("/sitemap.xml", site).toString(),
   };

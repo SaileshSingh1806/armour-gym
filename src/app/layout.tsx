@@ -20,17 +20,78 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://armour-gym-pi.vercel.app"),
+  title: {
+    default: "Armour 24-7 Gym | Best 24-Hour Gym in Hathijan Circle, Ahmedabad",
+    template: "%s | Armour 24-7 Gym Ahmedabad",
+  },
+  description:
+    "Armour 24-7 Gym is premier 24-hour fitness center & strength gym in Hathijan Circle, Ahmedabad. Features imported machinery, Olympic weights, cardio zones, certified personal trainers & ladies fitness with round-the-clock biometric access.",
+  keywords: [
+    "Armour Gym",
+    "Armour 24-7 Gym",
+    "Armour 24/7 Gym Ahmedabad",
+    "Armour Gym Hathijan",
+    "Gym in Hathijan",
+    "Gym in Hathijan Circle",
+    "Best gym in Hathijan",
+    "Gym in Ahmedabad",
+    "Best gym in Ahmedabad",
+    "Top gym in Ahmedabad",
+    "24 hour gym Ahmedabad",
+    "24/7 gym Ahmedabad",
+    "Gyms near Hathijan Circle 382445",
+    "Fitness center Hathijan Ahmedabad",
+    "Personal trainer Ahmedabad",
+    "Ladies gym Hathijan",
+    "Imported gym equipment Ahmedabad",
+    "Powerlifting gym Ahmedabad",
+  ],
+  authors: [{ name: "Armour 24-7 Gym Management" }],
+  creator: "Armour 24-7 Gym",
+  publisher: "Armour 24-7 Gym Ahmedabad",
+  formatDetection: {
+    email: false,
+    address: true,
+    telephone: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
-    siteName: "ARMOUR 24-7 GYM",
-    title: "ARMOUR 24-7 GYM | Hathijan, Ahmedabad",
-    description: "More than a gym. It's a movement. Discover imported equipment, training and 24/7 member access.",
+    locale: "en_IN",
+    siteName: "Armour 24-7 Gym",
+    title: "Armour 24-7 Gym | Best 24-Hour Gym in Hathijan Circle, Ahmedabad",
+    description:
+      "Ahmedabad's leading 24/7 gym at Hathijan Circle. Imported strength equipment, certified trainers, cardio line, studio workouts and round-the-clock biometric keycard entry.",
+    url: "https://armour-gym-pi.vercel.app",
+    images: [
+      {
+        url: "/images/dummy-hero.webp",
+        width: 1200,
+        height: 630,
+        alt: "Armour 24-7 Gym Training Floor in Hathijan Circle, Ahmedabad",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Armour 24-7 Gym | Best Gym in Hathijan, Ahmedabad",
+    description:
+      "24/7 biometric gym access, imported strength equipment, Olympic lifting platforms, and certified coaching in Hathijan Circle, Ahmedabad.",
     images: ["/images/dummy-hero.webp"],
   },
-  twitter: { card: "summary_large_image" },
-  title: "Armour 24-7 Gym | Hathijan Circle, Ahmedabad",
-  description: "24/7 gym access, imported strength machinery, dedicated free weights, and certified coaches in Hathijan Circle, Ahmedabad 382445.",
-  keywords: ["Armour 24-7 Gym", "Gym in Hathijan Circle", "24/7 Gym Ahmedabad", "Fitness center 382445", "Weight training Ahmedabad"],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -40,6 +101,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/apple-icon.png",
   },
+  category: "fitness",
 };
 
 export default function RootLayout({
@@ -49,6 +111,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+      <head>
+        <meta name="geo.region" content="IN-GJ" />
+        <meta name="geo.placename" content="Ahmedabad, Hathijan Circle" />
+        <meta name="geo.position" content="22.9515;72.6450" />
+        <meta name="ICBM" content="22.9515, 72.6450" />
+      </head>
       <body
         suppressHydrationWarning
         className={`${oswald.variable} ${montserrat.variable} bg-[#0a0a0a] text-white font-body antialiased min-h-screen flex flex-col selection:bg-[#C8010A] selection:text-white`}

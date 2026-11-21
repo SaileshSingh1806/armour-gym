@@ -2,8 +2,31 @@ import Link from "next/link";
 import { Check, ArrowRight, Info, ShieldCheck, Clock, Zap, Star } from "lucide-react";
 
 export const metadata = {
-  title: "Membership Plans & Pricing | Armour 24-7 Gym Ahmedabad",
-  description: "Official membership pricing for Armour 24-7 Gym in Hathijan Circle, Ahmedabad. Demo session (₹500), 1 Month (₹3,500), 3 Months (₹6,500), 6 Months (₹9,000), and 12 Months (₹15,000).",
+  title: "Gym Membership Fees & Pricing | Armour 24-7 Gym Hathijan, Ahmedabad",
+  description:
+    "Official membership pricing for Armour 24-7 Gym in Hathijan Circle, Ahmedabad. Demo session (₹500), 1 Month (₹3,500), 3 Months (₹6,500), 6 Months (₹9,000), and 12 Months (₹15,000). 24/7 access included.",
+  keywords: [
+    "Armour gym fees",
+    "Gym fees in Ahmedabad",
+    "Gym membership price Hathijan",
+    "24 hour gym membership price Ahmedabad",
+    "Armour 24-7 gym pricing",
+    "Best gym in Hathijan price",
+  ],
+  alternates: { canonical: "/pricing" },
+  openGraph: {
+    title: "Membership Plans & Fees | Armour 24-7 Gym Hathijan, Ahmedabad",
+    description: "Transparent gym membership pricing with 24/7 biometric access in Hathijan Circle, Ahmedabad.",
+    url: "https://armour-gym-pi.vercel.app/pricing",
+  },
+};
+
+const pricingSchema = {
+  "@context": "https://schema.org",
+  "@type": "PriceSpecification",
+  priceCurrency: "INR",
+  minPrice: "500",
+  maxPrice: "15000",
 };
 
 const corePlans = [

@@ -46,6 +46,13 @@ export default function Hero({ images }: { images: SiteImages }) {
           animate="show"
           className="max-w-6xl"
         >
+          <motion.div variants={rise} className="mb-5 sm:mb-7">
+            <span className="inline-flex items-center gap-2.5 bg-black/50 border border-white/20 px-4 py-2 rounded-full text-xs sm:text-sm font-oswald font-bold uppercase tracking-[0.2em] text-white backdrop-blur-sm shadow-md">
+              <span className="size-2 rounded-full bg-[#C8010A] animate-pulse" />
+              ARMOUR 24-7 GYM • HATHIJAN CIRCLE, AHMEDABAD
+            </span>
+          </motion.div>
+
           <motion.h1
             variants={rise}
             className="font-oswald text-[clamp(3.9rem,10.2vw,11rem)] font-bold uppercase leading-[0.83] tracking-[-0.045em] text-white"
@@ -60,8 +67,8 @@ export default function Hero({ images }: { images: SiteImages }) {
             variants={rise}
             className="mt-9 flex flex-col gap-7 border-l-2 border-[#C8010A] pl-5 sm:flex-row sm:items-end sm:justify-between sm:gap-10 sm:pl-7"
           >
-            <p className="max-w-md text-base leading-relaxed text-white/85 sm:text-lg">
-              Imported equipment. Uncompromising energy. Your goals, your pace — on your time.
+            <p className="max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">
+              Ahmedabad&apos;s premier 24-hour gym at Hathijan Circle. Imported Hammer Strength machines, Olympic lifting platforms, cardio zones, and round-the-clock biometric access.
             </p>
             <div className="flex shrink-0 flex-wrap gap-3">
               <ButtonLink href="/pricing" arrow>Explore memberships</ButtonLink>

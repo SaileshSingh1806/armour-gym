@@ -4,10 +4,23 @@ import { getPublishedImages } from "@/lib/cloudinary-media";
 import { ArrowUpRight, Clock3, Dumbbell, MapPin, Users } from "lucide-react";
 
 export const metadata = {
-  title: "About ARMOUR 24-7 Gym | Hathijan, Ahmedabad",
+  title: "About Armour 24-7 Gym | Premier Fitness Facility in Hathijan, Ahmedabad",
   description:
-    "Explore ARMOUR 24-7 Gym in Hathijan, Ahmedabad. Discover our training floor, imported strength equipment and member access.",
+    "Learn about Armour 24-7 Gym in Hathijan Circle, Ahmedabad. Features imported heavy-duty strength equipment, Olympic lifting platforms, certified floor coaches & 24/7 access.",
+  keywords: [
+    "About Armour Gym",
+    "Armour gym story",
+    "Best gym in Hathijan Circle",
+    "Top gym in Ahmedabad",
+    "24/7 fitness center Ahmedabad",
+    "Gym trainers in Hathijan",
+  ],
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Armour 24-7 Gym | Hathijan Circle, Ahmedabad",
+    description: "Premier 24-hour training floor with imported machines, certified coaches, and round-the-clock access.",
+    url: "https://armour-gym-pi.vercel.app/about",
+  },
 };
 
 const strengths = [
