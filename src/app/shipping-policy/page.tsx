@@ -14,7 +14,7 @@ export default function ShippingPolicyPage() {
         {/* Breadcrumb Back Link */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-mono text-gray-400 hover:text-[#ff2a3b] transition-colors mb-8 uppercase tracking-wider"
+          className="inline-flex items-center gap-2 text-sm font-mono text-gray-400 hover:text-[#C8010A] transition-colors mb-8 uppercase tracking-wider"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Home</span>
@@ -22,12 +22,12 @@ export default function ShippingPolicyPage() {
 
         {/* Header */}
         <div className="border-b border-white/10 pb-8 mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#ff2a3b]/10 border border-[#ff2a3b]/30 rounded-full text-[#ff2a3b] text-xs sm:text-sm font-oswald font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#C8010A]/10 border border-[#C8010A]/30 rounded-full text-[#C8010A] text-xs sm:text-sm font-oswald font-bold uppercase tracking-wider mb-4">
             <Package className="w-4 h-4" />
             <span>FULFILLMENT &amp; SERVICE ACCESS</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-oswald font-bold uppercase tracking-tight text-white">
-            SHIPPING &amp; <span className="text-[#ff2a3b]">DELIVERY POLICY</span>
+            SHIPPING &amp; <span className="text-[#C8010A]">DELIVERY POLICY</span>
           </h1>
           <p className="text-sm font-mono text-gray-400 mt-2">
             Effective Date: January 1, 2026 • Last Updated: October 2026
@@ -39,7 +39,7 @@ export default function ShippingPolicyPage() {
           
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">1.</span> Nature of Services &amp; Products
+              <span className="text-[#C8010A]">1.</span> Nature of Services &amp; Products
             </h2>
             <p>
               <strong>Armour 24-7 Gym</strong> operates a premier physical fitness training center and bodybuilding gym facility. Services sold online through this website primarily consist of <strong>Digital Membership Passes, Gym Subscriptions, Pre-Launch Passes, and Personal Coaching Programs</strong>.
@@ -48,28 +48,28 @@ export default function ShippingPolicyPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">2.</span> Digital Delivery Timeline
+              <span className="text-[#C8010A]">2.</span> Digital Delivery Timeline
             </h2>
             <p>
               Upon successful online payment processing:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
               <div className="bg-[#0a0a0a] border border-white/10 p-5 rounded-sm">
-                <Clock className="w-6 h-6 text-[#ff2a3b] mb-2" />
+                <Clock className="w-6 h-6 text-[#C8010A] mb-2" />
                 <span className="text-xs font-mono text-gray-400 block uppercase">Instant Confirmation</span>
                 <span className="font-oswald text-lg sm:text-xl font-bold text-white">5 to 15 Minutes</span>
                 <p className="text-xs sm:text-sm text-gray-300 mt-1">Order receipt &amp; invoice delivered via Email &amp; WhatsApp.</p>
               </div>
 
               <div className="bg-[#0a0a0a] border border-white/10 p-5 rounded-sm">
-                <Zap className="w-6 h-6 text-[#ff2a3b] mb-2" />
+                <Zap className="w-6 h-6 text-[#C8010A] mb-2" />
                 <span className="text-xs font-mono text-gray-400 block uppercase">Account Activation</span>
                 <span className="font-oswald text-lg sm:text-xl font-bold text-white">Grand Opening Day</span>
                 <p className="text-xs sm:text-sm text-gray-300 mt-1">Pre-launch memberships start on opening or 1st check-in.</p>
               </div>
 
               <div className="bg-[#0a0a0a] border border-white/10 p-5 rounded-sm">
-                <Package className="w-6 h-6 text-[#ff2a3b] mb-2" />
+                <Package className="w-6 h-6 text-[#C8010A] mb-2" />
                 <span className="text-xs font-mono text-gray-400 block uppercase">Physical Kit Pickup</span>
                 <span className="font-oswald text-lg sm:text-xl font-bold text-white">On-Site Handover</span>
                 <p className="text-xs sm:text-sm text-gray-300 mt-1">Starter bag, shaker, and towel handed over at reception.</p>
@@ -79,7 +79,7 @@ export default function ShippingPolicyPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">3.</span> Physical Merchandise &amp; Starter Kit Delivery
+              <span className="text-[#C8010A]">3.</span> Physical Merchandise &amp; Starter Kit Delivery
             </h2>
             <p>
               Certain premium memberships (such as the <strong>Pre-Launch Founder Pass</strong> and Elite Annual Membership) include physical welcome kits (Armour Gym Duffel Bag, Stainless Steel Shaker, Heavy-Duty Workout Towel) and RFID biometric access cards.
@@ -93,7 +93,7 @@ export default function ShippingPolicyPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">4.</span> Non-Receipt of Digital Order Confirmation
+              <span className="text-[#C8010A]">4.</span> Non-Receipt of Digital Order Confirmation
             </h2>
             <p>
               If your payment was debited from your bank account but you did not receive an email or WhatsApp confirmation within 15 minutes, please check your Spam/Junk folder or reach out immediately with your bank transaction reference ID:
@@ -105,7 +105,7 @@ export default function ShippingPolicyPage() {
               </div>
               <div>
                 <span className="text-xs text-gray-400 font-bold block">EMAIL SUPPORT</span>
-                <span className="font-oswald text-lg sm:text-xl font-bold text-[#ff2a3b]">armour247gym@gmail.com</span>
+                <span className="font-oswald text-lg sm:text-xl font-bold text-[#C8010A]">armour247gym@gmail.com</span>
               </div>
             </div>
           </section>

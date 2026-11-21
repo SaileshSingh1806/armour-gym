@@ -1,56 +1,65 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
+  let orderId: unknown;
   try {
-    const body = await req.json();
-    const { orderId } = body;
+    const body: unknown = await req.json();
+    orderId = body && typeof body === "object" && "orderId" in body
+      ? (body as { orderId: unknown }).orderId
+      : undefined;
+  } catch {
+    return NextResponse.json({ success: false, error: "Invalid request body." }, { status: 400 });
+  }
 
-    if (!orderId) {
+  if (typeof orderId !== "string" || !/^[A-Za-z0-9_-]{8,80}$/.test(orderId)) {
+    return NextResponse.json({ success: false, error: "Invalid order ID." }, { status: 400 });
+  }
+
+  const appId = process.env.CASHFREE_APP_ID;
+  const secretKey = process.env.CASHFREE_SECRET_KEY;
+  if (!appId || !secretKey || appId === "YOUR_CASHFREE_APP_ID") {
+    return NextResponse.json(
+      { success: false, error: "Payment verification is currently unavailable." },
+      { status: 503 },
+    );
+  }
+
+  const environment = process.env.CASHFREE_ENV === "PRODUCTION" ? "PRODUCTION" : "SANDBOX";
+  const baseUrl = environment === "PRODUCTION"
+    ? "https://api.cashfree.com/pg/orders/"
+    : "https://sandbox.cashfree.com/pg/orders/";
+
+  try {
+    const cfRes = await fetch(baseUrl + encodeURIComponent(orderId), {
+      headers: {
+        "x-client-id": appId,
+        "x-client-secret": secretKey,
+        "x-api-version": "2023-08-01",
+      },
+      cache: "no-store",
+    });
+    if (!cfRes.ok) {
       return NextResponse.json(
-        { success: false, error: "Order ID is required." },
-        { status: 400 }
+        { success: false, error: "The payment provider could not verify this order." },
+        { status: 502 },
       );
     }
-
-    const appId = process.env.CASHFREE_APP_ID;
-    const secretKey = process.env.CASHFREE_SECRET_KEY;
-    const environment = process.env.CASHFREE_ENV || "SANDBOX";
-
-    if (appId && secretKey && appId !== "YOUR_CASHFREE_APP_ID") {
-      const baseUrl =
-        environment === "PRODUCTION"
-          ? `https://api.cashfree.com/pg/orders/${orderId}`
-          : `https://sandbox.cashfree.com/pg/orders/${orderId}`;
-
-      const cfRes = await fetch(baseUrl, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "x-client-id": appId,
-          "x-client-secret": secretKey,
-          "x-api-version": "2023-08-01",
-        },
-      });
-
-      const cfData = await cfRes.json();
-
-      return NextResponse.json({
-        success: true,
-        order_status: cfData.order_status,
-        data: cfData,
-      });
+    const data: unknown = await cfRes.json();
+    const status = data && typeof data === "object" && "order_status" in data
+      ? (data as { order_status: unknown }).order_status
+      : undefined;
+    if (typeof status !== "string") {
+      return NextResponse.json({ success: false, error: "Invalid gateway response." }, { status: 502 });
     }
-
     return NextResponse.json({
       success: true,
-      order_status: "PAID",
-      message: "Order verified in demo mode.",
+      verified: environment === "PRODUCTION" && status === "PAID",
+      testPayment: environment === "SANDBOX" && status === "PAID",
+      order_status: status,
+      environment,
     });
-  } catch (error: any) {
-    console.error("Verify order error:", error);
-    return NextResponse.json(
-      { success: false, error: error.message || "Internal Server Error" },
-      { status: 500 }
-    );
+  } catch (error: unknown) {
+    console.error("Cashfree verification failed:", error instanceof Error ? error.message : "Unknown error");
+    return NextResponse.json({ success: false, error: "Payment verification unavailable." }, { status: 503 });
   }
 }

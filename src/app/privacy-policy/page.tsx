@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
         {/* Breadcrumb Back Link */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-mono text-gray-400 hover:text-[#ff2a3b] transition-colors mb-8 uppercase tracking-wider"
+          className="inline-flex items-center gap-2 text-sm font-mono text-gray-400 hover:text-[#C8010A] transition-colors mb-8 uppercase tracking-wider"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Home</span>
@@ -22,12 +22,12 @@ export default function PrivacyPolicyPage() {
 
         {/* Header */}
         <div className="border-b border-white/10 pb-8 mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#ff2a3b]/10 border border-[#ff2a3b]/30 rounded-full text-[#ff2a3b] text-xs sm:text-sm font-oswald font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#C8010A]/10 border border-[#C8010A]/30 rounded-full text-[#C8010A] text-xs sm:text-sm font-oswald font-bold uppercase tracking-wider mb-4">
             <Lock className="w-4 h-4" />
             <span>DATA PROTECTION &amp; PRIVACY</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-oswald font-bold uppercase tracking-tight text-white">
-            PRIVACY <span className="text-[#ff2a3b]">POLICY</span>
+            PRIVACY <span className="text-[#C8010A]">POLICY</span>
           </h1>
           <p className="text-sm font-mono text-gray-400 mt-2">
             Effective Date: January 1, 2026 • Last Updated: October 2026
@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
           
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">1.</span> Overview
+              <span className="text-[#C8010A]">1.</span> Overview
             </h2>
             <p>
               At <strong>Armour 24-7 Gym</strong> (located at C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445), we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy outlines our practices concerning the collection, storage, use, and disclosure of personal information collected through our website, mobile communications, and physical facility operations.
@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">2.</span> Information We Collect
+              <span className="text-[#C8010A]">2.</span> Information We Collect
             </h2>
             <p>We may collect and process the following categories of information:</p>
             <ul className="list-disc list-inside space-y-3 text-gray-200 pl-2">
@@ -61,7 +61,7 @@ export default function PrivacyPolicyPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">3.</span> How We Use Your Information
+              <span className="text-[#C8010A]">3.</span> How We Use Your Information
             </h2>
             <p>Your information is used strictly to:</p>
             <ul className="list-disc list-inside space-y-3 text-gray-200 pl-2">
@@ -75,7 +75,7 @@ export default function PrivacyPolicyPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">4.</span> Payment Processing &amp; Security
+              <span className="text-[#C8010A]">4.</span> Payment Processing &amp; Security
             </h2>
             <p>
               When you pay online on our website, your payment credentials are transmitted directly over 256-bit SSL encrypted channels to authorized Indian Payment Gateways. We do not store sensitive cardholder data, banking passwords, or UPI PINs on our servers.
@@ -84,7 +84,7 @@ export default function PrivacyPolicyPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">5.</span> Third-Party Disclosures
+              <span className="text-[#C8010A]">5.</span> Third-Party Disclosures
             </h2>
             <p>
               We do not sell, trade, rent, or commercialize your personal information to third parties. We share information only with trusted service partners (such as payment processors, SMS/WhatsApp notification gateways, and cloud infrastructure providers) who are legally bound to uphold data confidentiality.
@@ -93,7 +93,7 @@ export default function PrivacyPolicyPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">6.</span> Data Retention &amp; Rights
+              <span className="text-[#C8010A]">6.</span> Data Retention &amp; Rights
             </h2>
             <p>
               We retain membership and billing records for as long as your account remains active and as required by Indian taxation and accounting laws. You have the right to request access to, correction of, or deletion of your non-statutory personal data by contacting our grievance officer.
@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           {/* Grievance Officer */}
-          <div className="bg-[#181818] border border-[#ff2a3b]/40 p-6 sm:p-8 rounded-sm">
+          <div className="bg-[#181818] border border-[#C8010A]/40 p-6 sm:p-8 rounded-sm">
             <h3 className="text-xl font-oswald font-bold uppercase text-white mb-2">
               Privacy Grievance Officer
             </h3>
@@ -111,7 +111,7 @@ export default function PrivacyPolicyPage() {
             <div className="space-y-2.5 text-sm sm:text-base text-gray-200">
               <p><strong>Officer:</strong> Armour 24-7 Compliance Desk</p>
               <p><strong>Address:</strong> C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad 382445</p>
-              <p><strong>Email:</strong> <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] font-bold hover:underline">armour247gym@gmail.com</a></p>
+              <p><strong>Email:</strong> <a href="mailto:armour247gym@gmail.com" className="text-[#C8010A] font-bold hover:underline">armour247gym@gmail.com</a></p>
               <p><strong>Phone:</strong> <a href="tel:+918160697163" className="text-white font-bold hover:underline">+91 81606 97163</a></p>
             </div>
           </div>

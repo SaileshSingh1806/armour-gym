@@ -1,235 +1,148 @@
-import Link from "next/link";
 import Image from "next/image";
-import {
-  Dumbbell,
-  Clock,
-  Award,
-  ArrowRight,
-  ShieldCheck,
-  CheckCircle2,
-  Users,
-} from "lucide-react";
+import Link from "next/link";
+import { getPublishedImages } from "@/lib/cloudinary-media";
+import { ArrowUpRight, Clock3, Dumbbell, MapPin, Users } from "lucide-react";
 
 export const metadata = {
-  title: "About Us | Armour 24-7 Gym Ahmedabad",
-  description: "Learn about Armour 24-7 Gym in Hathijan Circle, Ahmedabad. 24/7 biometric gym access, imported strength machinery, and certified coaching staff.",
+  title: "About ARMOUR 24-7 Gym | Hathijan, Ahmedabad",
+  description:
+    "Explore ARMOUR 24-7 Gym in Hathijan, Ahmedabad. Discover our training floor, imported strength equipment and member access.",
+  alternates: { canonical: "/about" },
 };
 
-const stats = [
-  { value: "24-7", label: "Always Open Access", sub: "Biometric Keycard Entry" },
-  { value: "250+", label: "Active Members", sub: "Growing Fitness Community" },
-  { value: "40+", label: "Strength Machines", sub: "Plate-Loaded & Free Weights" },
-  { value: "8+", label: "Certified Coaches", sub: "Floor Guidance & Personal Training" },
-];
+const strengths = [
+  {
+    Icon: Clock3,
+    title: "Train on your schedule",
+    detail: "24/7 member access, subject to facility policies and scheduled closures.",
+  },
+  {
+    Icon: Dumbbell,
+    title: "Imported equipment",
+    detail: "A training floor built around strength, free weights and cardio.",
+  },
+  {
+    Icon: Users,
+    title: "Training guidance",
+    detail: "Support with equipment and routines, with personal training enquiries welcome.",
+  },
+] as const;
 
-const pillars = [
-  {
-    icon: Clock,
-    title: "Round-The-Clock Biometric Entry",
-    desc: "Your workout schedule shouldn't be limited by early closing hours. Registered members can enter the facility at any hour of the day or night through automated biometric access.",
-    image: "/images/dummy-hero.webp",
-  },
-  {
-    icon: Dumbbell,
-    title: "Imported Plate-Loaded Strength Equipment",
-    desc: "Equipped with heavy dumbbells, Olympic barbells, squat platforms, and plate-loaded machines selected for natural biomechanics and progressive overload training.",
-    image: "/images/dummy-gallery-1.webp",
-  },
-  {
-    icon: Award,
-    title: "Coaching & Form Assistance",
-    desc: "Certified trainers are on the gym floor during peak hours to guide beginners through equipment operation, correct lifting posture, and prevent training injuries.",
-    image: "/images/dummy-gallery-4.webp",
-  },
-  {
-    icon: Users,
-    title: "Dedicated Fitness & Studio Zones",
-    desc: "Spacious air-conditioned floors with separate areas for heavy barbell work, machine circuits, cardiovascular endurance, and guided group fitness sessions.",
-    image: "/images/dummy-gallery-6.webp",
-  },
-];
+export const dynamic = "force-dynamic";
 
-// Coaching team representation with human trainer portraits
-const coaches = [
-  {
-    name: "Strength & Conditioning Coach",
-    role: "Barbell & Heavy Resistance Coach",
-    experience: "Experienced in barbell mechanics, powerlifting form, and hypertrophy periodization.",
-    specialties: ["Compound Movements", "Strength Progression", "Form Correction"],
-    image: "/images/coach-1.webp",
-  },
-  {
-    name: "Functional Fitness & Cardio Trainer",
-    role: "Endurance & Conditioning Specialist",
-    experience: "Guides high-energy circuit training, cardiovascular endurance, and fat loss conditioning.",
-    specialties: ["HIIT & Circuit", "Agility Drills", "Cardio Conditioning"],
-    image: "/images/coach-2.webp",
-  },
-  {
-    name: "Personal Trainer & Nutrition Consultant",
-    role: "Personal Coaching & Body Composition",
-    experience: "Works 1-on-1 with members needing customized exercise splits and daily diet structure.",
-    specialties: ["1-on-1 PT", "Macro Guidance", "Beginner Fundamentals"],
-    image: "/images/coach-3.webp",
-  },
-];
-
-export default function AboutPage() {
+export default async function AboutPage() {
+  const images = await getPublishedImages();
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen pt-28 md:pt-36 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Header */}
-        <div className="max-w-3xl mb-14">
-          <span className="text-sm sm:text-base font-oswald uppercase tracking-widest text-[#ff2a3b] font-bold block mb-2">
-            Hathijan Circle • Ahmedabad
-          </span>
-          <h1 className="text-4xl sm:text-6xl font-oswald font-bold uppercase tracking-tight text-white mb-4">
-            About <span className="text-[#ff2a3b]">Armour 24-7 Gym</span>
-          </h1>
-          <p className="text-base sm:text-lg text-gray-200 font-body leading-relaxed">
-            Armour 24-7 Gym was established to bring serious, accessible, round-the-clock strength training to Hathijan Circle, Ahmedabad. We combine modern plate-loaded equipment, certified coaching, and flexible 24/7 access to give members a consistent space to pursue their fitness goals.
-          </p>
-        </div>
-
-        {/* Stats Row */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
-          {stats.map((s, idx) => (
-            <div key={idx} className="bg-[#141414] border border-white/10 p-5 sm:p-6 rounded-sm">
-              <span className="font-oswald text-4xl sm:text-5xl font-bold text-[#ff2a3b] block">
-                {s.value}
-              </span>
-              <p className="font-oswald font-bold uppercase text-sm sm:text-base text-white mt-1.5">
-                {s.label}
-              </p>
-              <p className="text-xs sm:text-sm text-gray-300 font-body mt-0.5">
-                {s.sub}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Core Pillars */}
-        <div className="space-y-12 mb-20">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-sm sm:text-base font-oswald uppercase tracking-widest text-[#ff2a3b] font-bold block mb-1">
-              Facility Standards
+    <div className="min-h-screen bg-[#090A0C] pb-20 pt-28 text-white sm:pt-36">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 border-b border-white/10 pb-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20 lg:pb-24">
+          <div>
+            <span className="mb-7 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.23em] text-[#FF858A]">
+              <span aria-hidden="true" className="h-px w-10 bg-[#C8010A]" />
+              OUR STORY
             </span>
-            <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white">
-              What Sets <span className="text-[#ff2a3b]">Armour</span> Apart
-            </h2>
+            <h1 className="font-oswald text-[clamp(3.75rem,7.5vw,8.5rem)] font-bold uppercase leading-[0.9] tracking-tight">
+              MORE THAN
+              <br />
+              A GYM.
+              <br />
+              <span className="text-[#C8010A]">A MOVEMENT.</span>
+            </h1>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {pillars.map((pillar, idx) => {
-              const Icon = pillar.icon;
-              return (
-                <div key={idx} className="bg-[#141414] border border-white/10 rounded-sm overflow-hidden flex flex-col justify-between">
-                  <div className="relative h-64 sm:h-72 w-full">
-                    <Image
-                      src={pillar.image}
-                      alt={pillar.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent" />
-                  </div>
-                  <div className="p-6 sm:p-7 space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-sm bg-[#ff2a3b]/10 text-[#ff2a3b] flex items-center justify-center shrink-0">
-                        <Icon className="w-5 h-5" />
-                      </div>
-                      <h3 className="font-oswald font-bold uppercase text-xl sm:text-2xl text-white">
-                        {pillar.title}
-                      </h3>
-                    </div>
-                    <p className="text-sm sm:text-base text-gray-200 leading-relaxed font-body">
-                      {pillar.desc}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Floor Coaches Section */}
-        <div className="mb-20">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-sm sm:text-base font-oswald uppercase tracking-widest text-[#ff2a3b] font-bold block mb-1">
-              Certified Mentors
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-oswald font-bold uppercase text-white leading-tight">
-              Our Coaching <span className="text-[#ff2a3b]">Staff</span>
-            </h2>
-            <p className="text-base sm:text-lg text-gray-200 mt-2 font-body">
-              Floor coaches available to support your form and workout structure.
+          <div>
+            <p className="max-w-lg text-base leading-relaxed text-white/70 sm:text-lg">
+              ARMOUR 24-7 is a place to train with purpose. From your first workout
+              to your next personal best, the floor is built for consistency,
+              strength and progress.
             </p>
+            <Link
+              href="/#gallery"
+              className="mt-8 inline-flex items-center gap-3 border-b border-[#C8010A] pb-3 font-oswald text-sm font-bold uppercase tracking-wider text-white transition-colors hover:text-[#FF858A]"
+            >
+              Explore our gym floor <ArrowUpRight aria-hidden="true" className="size-5" />
+            </Link>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {coaches.map((c, i) => (
-              <div key={i} className="bg-[#141414] border border-white/10 rounded-sm overflow-hidden flex flex-col justify-between group hover:border-[#ff2a3b]/40 transition-colors">
-                <div className="relative h-72 sm:h-80 md:h-96 w-full overflow-hidden bg-black/40">
-                  <Image
-                    src={c.image}
-                    alt={c.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/30 to-transparent" />
-                  <div className="absolute bottom-3 left-4 right-4">
-                    <span className="text-xs font-oswald font-bold uppercase tracking-widest text-[#ff2a3b] bg-black/70 px-2.5 py-1 rounded-sm backdrop-blur-sm border border-white/10 inline-block mb-1">
-                      {c.role}
-                    </span>
-                    <h3 className="font-oswald font-bold uppercase text-xl sm:text-2xl text-white">
-                      {c.name}
-                    </h3>
-                  </div>
-                </div>
-                <div className="p-6 space-y-3.5">
-                  <p className="text-sm sm:text-base text-gray-200 leading-relaxed font-body">
-                    {c.experience}
-                  </p>
-                  <div className="flex flex-wrap gap-2 pt-1">
-                    {c.specialties.map((spec, sIdx) => (
-                      <span key={sIdx} className="text-xs sm:text-sm font-semibold bg-white/5 border border-white/10 text-gray-200 px-3 py-1 rounded-sm">
-                        {spec}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+        <div className="grid gap-3 py-8 sm:grid-cols-12 sm:gap-4 sm:py-12">
+          <div className="relative h-80 overflow-hidden sm:col-span-7 sm:h-[530px]">
+            <Image
+              src={images["about-hero"].src}
+              alt={images["about-hero"].src.startsWith("/images/dummy-") ? "Decorative gym image" : "ARMOUR 24-7 Gym floor beneath the illuminated ARMOUR sign"}
+              fill
+              priority
+              sizes="(max-width: 640px) 100vw, 58vw"
+              className="object-cover"
+              style={{ objectPosition: images["about-hero"].position }}
+            />
+          </div>
+          <div className="relative h-80 overflow-hidden sm:col-span-5 sm:h-[530px]">
+            <Image
+              src={images["about-side"].src}
+              alt={images["about-side"].src.startsWith("/images/dummy-") ? "Decorative fitness equipment photo" : "Training machines and free weights inside ARMOUR 24-7 Gym"}
+              fill
+              sizes="(max-width: 640px) 100vw, 42vw"
+              className="object-cover"
+              style={{ objectPosition: images["about-side"].position }}
+            />
+          </div>
+        </div>
+
+        <section aria-labelledby="why-join-heading" className="py-12 sm:py-20">
+          <h2 id="why-join-heading" className="font-oswald text-4xl font-semibold text-white sm:text-6xl">
+            Built around your goals.
+          </h2>
+          <div className="mt-10 grid border-t border-white/15 md:grid-cols-3">
+            {strengths.map(({ Icon, title, detail }) => (
+              <article key={title} className="border-b border-white/15 py-8 md:border-b-0 md:px-7 md:first:pl-0">
+                <Icon aria-hidden="true" className="mb-5 size-7 text-[#FF858A]" />
+                <h3 className="font-oswald text-2xl font-semibold text-white">{title}</h3>
+                <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/65 sm:text-base">
+                  {detail}
+                </p>
+              </article>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* Visit CTA */}
-        <div className="bg-[#141414] border border-white/10 p-8 sm:p-10 rounded-sm text-center max-w-3xl mx-auto space-y-4">
-          <h2 className="font-oswald text-3xl sm:text-4xl font-bold uppercase text-white">
-            Visit Our Facility In Hathijan Circle
-          </h2>
-          <p className="text-base sm:text-lg text-gray-200 font-body max-w-xl mx-auto leading-relaxed">
-            Walk in during front desk hours (06:00 AM – 10:00 PM) to inspect the equipment or take a trial workout session (₹500).
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 pt-2">
-            <Link
-              href="/pricing"
-              className="bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold uppercase text-sm sm:text-base px-8 py-3.5 rounded-sm transition-colors"
-            >
-              View Membership Rates
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-white/10 hover:bg-white/20 text-white font-oswald font-bold uppercase text-sm sm:text-base px-8 py-3.5 rounded-sm transition-colors"
-            >
-              Contact Front Desk
-            </Link>
+        <section className="grid items-center gap-10 border-y border-white/10 py-16 lg:grid-cols-2 lg:gap-16 lg:py-24">
+          <div className="relative h-[350px] overflow-hidden sm:h-[460px]">
+            <Image
+              src={images["about-bottom"].src}
+              alt={images["about-bottom"].src.startsWith("/images/dummy-") ? "Decorative strength training image" : "ARMOUR 24-7 dumbbell and cable machine area"}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+              style={{ objectPosition: images["about-bottom"].position }}
+            />
           </div>
-        </div>
-
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#FF858A]">COME SEE FOR YOURSELF</p>
+            <h2 className="mt-4 font-oswald text-5xl font-semibold uppercase leading-none sm:text-6xl">
+              YOUR NEXT REP STARTS HERE.
+            </h2>
+            <p className="mt-6 max-w-lg text-base leading-relaxed text-white/65">
+              Visit us at Shalin Square, Hathijan Circle, Ahmedabad.
+              See the equipment, ask about training and choose what works for you.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex min-h-12 items-center gap-3 bg-[#C8010A] px-6 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-black"
+              >
+                Contact the team <ArrowUpRight aria-hidden="true" className="size-5" />
+              </Link>
+              <a
+                href="https://maps.app.goo.gl/fdHFDqTDaHNvw5Pf6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center gap-2 border border-white/30 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
+              >
+                <MapPin aria-hidden="true" className="size-4" /> Directions
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

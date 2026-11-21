@@ -1,137 +1,108 @@
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight, Clock3, Mail, MapPin, MessageSquare, Phone } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  MessageSquare,
-  ShieldCheck,
-} from "lucide-react";
+import { getPublishedImages } from "@/lib/cloudinary-media";
 
 export const metadata = {
-  title: "Contact & Location | Armour 24-7 Gym Ahmedabad 382445",
-  description: "Visit Armour 24-7 Gym in Hathijan Circle, Ahmedabad, Gujarat 382445. Inquire about membership plans or book a demo workout session.",
+  title: "Contact & Location | ARMOUR 24-7 Gym Ahmedabad",
+  description: "Visit ARMOUR 24-7 Gym in Hathijan Circle, Ahmedabad, or enquire about memberships and demo sessions.",
+  alternates: { canonical: "/contact" },
 };
 
-export default function ContactPage() {
+export const dynamic = "force-dynamic";
+
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ plan?: string | string[]; program?: string | string[] }>;
+}) {
+  const [params, images] = await Promise.all([searchParams, getPublishedImages()]);
+  const initialPlan = typeof params.plan === "string" ? params.plan : undefined;
+
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen pt-28 md:pt-36 pb-20 px-4 sm:px-6 lg:px-8">
-      {/* Header */}
-      <div className="max-w-7xl mx-auto text-center mb-14">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/5 border border-white/10 text-[#ff2a3b] text-sm font-oswald font-bold uppercase tracking-widest mb-3 rounded-sm">
-          <MapPin className="w-4 h-4" />
-          Hathijan Circle • Ahmedabad 382445
+    <div className="min-h-screen bg-[#090A0C] pb-24 pt-28 text-white sm:pt-36">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 border-b border-white/10 pb-12 lg:grid-cols-[1fr_0.9fr] lg:items-end lg:gap-20 lg:pb-20">
+          <div>
+            <p className="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.23em] text-[#FF858A]">
+              <span aria-hidden="true" className="h-px w-10 bg-[#C8010A]" />
+              CONNECT WITH ARMOUR
+            </p>
+            <h1 className="font-oswald text-[clamp(3.65rem,7vw,8rem)] font-bold uppercase leading-[0.9] tracking-tight">
+              YOUR NEXT
+              <br />
+              STEP <span className="text-[#C8010A]">STARTS HERE.</span>
+            </h1>
+          </div>
+          <p className="max-w-lg text-base leading-relaxed text-white/65 sm:text-lg">
+            Visit our floor in Hathijan Circle, or send your membership enquiry.
+            We can help with plans, training and demo session details.
+          </p>
         </div>
-        <h1 className="font-oswald text-4xl sm:text-6xl font-bold uppercase tracking-tight text-white">
-          Contact &amp; <span className="text-[#ff2a3b]">Location</span>
-        </h1>
-        <p className="max-w-xl mx-auto mt-3 text-base sm:text-lg text-gray-200 font-body leading-relaxed">
-          Walk in to our Hathijan Circle facility during desk hours or submit your enquiry below for plan details and demo session bookings.
-        </p>
-      </div>
 
-      {/* Main Grid: Info + LeadForm */}
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
-          {/* Left Column: Contact Details & Hours (5 cols) */}
-          <div className="lg:col-span-5 space-y-6">
-            
-            {/* Address Card */}
-            <div className="bg-[#141414] border border-white/10 p-6 sm:p-7 rounded-sm space-y-4">
-              <h2 className="font-oswald text-xl font-bold uppercase text-white border-b border-white/10 pb-3">
-                Facility Address
-              </h2>
-              <div className="flex items-start gap-3.5">
-                <MapPin className="w-5 h-5 text-[#ff2a3b] shrink-0 mt-0.5" />
-                <div className="space-y-1.5 font-body text-sm sm:text-base text-gray-200">
-                  <p className="font-bold text-white text-base sm:text-lg">Armour 24-7 Gym</p>
-                  <p>C-601, 602 Shalin Square, Hathijan Circle,</p>
-                  <p>Ahmedabad, Gujarat — 382445, India</p>
-                  <div className="pt-2">
-                    <a
-                      href="https://maps.app.goo.gl/fdHFDqTDaHNvw5Pf6"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm sm:text-base font-semibold text-[#ff2a3b] hover:underline"
-                    >
-                      <MapPin className="w-4 h-4" />
-                      <span>Open in Google Maps ↗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+        <div className="grid items-start gap-12 py-14 lg:grid-cols-12 lg:gap-16 lg:py-20">
+          <div className="space-y-10 lg:col-span-5">
+            <div className="relative h-64 overflow-hidden bg-[#171717] sm:h-80">
+              <Image
+                src={images["contact-photo"].src}
+                alt={images["contact-photo"].src.startsWith("/images/dummy-") ? "Decorative gym preview image" : "Interior of ARMOUR 24-7 Gym with illuminated branding"}
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover"
+                style={{ objectPosition: images["contact-photo"].position }}
+              />
             </div>
 
-            {/* Direct Communication Channels */}
-            <div className="bg-[#141414] border border-white/10 p-6 sm:p-7 rounded-sm space-y-4">
-              <h2 className="font-oswald text-xl font-bold uppercase text-white border-b border-white/10 pb-3">
-                Phone &amp; Email
-              </h2>
-              <div className="space-y-4 text-sm sm:text-base font-body text-gray-200">
-                <div className="flex items-center gap-3.5">
-                  <Phone className="w-5 h-5 text-[#ff2a3b] shrink-0" />
-                  <div>
-                    <span className="text-xs text-gray-400 font-oswald font-bold uppercase tracking-wider block">Call Desk</span>
-                    <a href="tel:+918160697163" className="hover:text-white transition-colors font-bold text-base sm:text-lg">
-                      +91 81606 97163
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3.5">
-                  <MessageSquare className="w-5 h-5 text-green-400 shrink-0" />
-                  <div>
-                    <span className="text-xs text-gray-400 font-oswald font-bold uppercase tracking-wider block">WhatsApp Support</span>
-                    <a
-                      href="https://wa.me/918160697163?text=Hi%20Armour%20Gym%2C%20I%20want%20to%20know%20more%20about%20membership%20plans"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-white transition-colors font-bold text-base sm:text-lg text-green-400 hover:underline"
-                    >
-                      Chat on WhatsApp (+91 81606 97163)
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3.5">
-                  <Mail className="w-5 h-5 text-[#ff2a3b] shrink-0" />
-                  <div>
-                    <span className="text-xs text-gray-400 font-oswald font-bold uppercase tracking-wider block">Official Email</span>
-                    <a href="mailto:armour247gym@gmail.com" className="hover:text-white transition-colors font-semibold text-sm sm:text-base">
-                      armour247gym@gmail.com
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <h2 className="font-oswald text-3xl font-semibold text-white">Find us</h2>
+              <p className="mt-4 flex items-start gap-3 text-base leading-relaxed text-white/70">
+                <MapPin aria-hidden="true" className="mt-1 size-5 shrink-0 text-[#FF858A]" />
+                <span>C-601, 602 Shalin Square, Hathijan Circle,<br />Ahmedabad, Gujarat 382445, India</span>
+              </p>
+              <a
+                href="https://maps.app.goo.gl/fdHFDqTDaHNvw5Pf6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 border-b border-[#C8010A] pb-2 text-sm font-semibold text-white hover:text-[#FF858A]"
+              >
+                Open Google Maps <ArrowUpRight aria-hidden="true" className="size-4" />
+              </a>
             </div>
 
-            {/* Hours */}
-            <div className="bg-[#141414] border border-white/10 p-6 sm:p-7 rounded-sm space-y-3.5 text-sm sm:text-base font-body text-gray-200">
-              <h2 className="font-oswald text-xl font-bold uppercase text-white border-b border-white/10 pb-2.5">
-                Facility Operating Hours
-              </h2>
-              <div className="flex justify-between border-b border-white/5 pb-2.5">
-                <span>Biometric Member Entry</span>
-                <span className="text-[#ff2a3b] font-bold">24 Hours / 7 Days *</span>
-              </div>
-              <div className="flex justify-between border-b border-white/5 pb-2.5">
-                <span>Front Desk Staff &amp; Tours</span>
-                <span className="text-white font-semibold">06:00 AM – 10:00 PM</span>
-              </div>
-              <p className="text-xs sm:text-sm text-gray-400 pt-1 leading-relaxed">
-                * 24/7 access is subject to management rights and facility safety rules. See our <Link href="/terms-conditions" className="text-[#ff2a3b] underline font-semibold">Terms &amp; Conditions</Link>.
+            <div className="grid gap-5 border-y border-white/10 py-8 text-sm sm:text-base">
+              <a href="tel:+918160697163" className="flex items-center gap-3 text-white/75 transition-colors hover:text-white">
+                <Phone aria-hidden="true" className="size-5 text-[#FF858A]" /> +91 81606 97163
+              </a>
+              <a href="mailto:armour247gym@gmail.com" className="flex items-center gap-3 break-all text-white/75 transition-colors hover:text-white">
+                <Mail aria-hidden="true" className="size-5 text-[#FF858A]" /> armour247gym@gmail.com
+              </a>
+              <a
+                href="https://wa.me/918160697163"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-white/75 transition-colors hover:text-white"
+              >
+                <MessageSquare aria-hidden="true" className="size-5 text-[#FF858A]" /> Chat on WhatsApp
+              </a>
+            </div>
+
+            <div className="flex items-start gap-3 text-sm text-white/65">
+              <Clock3 aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-[#FF858A]" />
+              <p>
+                Member access schedule: 24/7*<br />
+                Front desk: 6:00 am – 10:00 pm.
+                <span className="mt-2 block text-xs text-white/45">
+                  * Subject to scheduled closures, facility guidelines and management policies. See{" "}
+                  <Link href="/terms-conditions" className="underline underline-offset-2">terms</Link>.
+                </span>
               </p>
             </div>
-
           </div>
 
-          {/* Right Column: Lead Form (7 cols) */}
           <div className="lg:col-span-7">
-            <LeadForm />
+            <LeadForm initialPlan={initialPlan} />
           </div>
-
         </div>
       </div>
     </div>

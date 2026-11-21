@@ -14,7 +14,7 @@ export default function RefundPolicyPage() {
         {/* Breadcrumb Back Link */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-mono text-gray-400 hover:text-[#ff2a3b] transition-colors mb-8 uppercase tracking-wider"
+          className="inline-flex items-center gap-2 text-sm font-mono text-gray-400 hover:text-[#C8010A] transition-colors mb-8 uppercase tracking-wider"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Home</span>
@@ -22,12 +22,12 @@ export default function RefundPolicyPage() {
 
         {/* Header */}
         <div className="border-b border-white/10 pb-8 mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#ff2a3b]/10 border border-[#ff2a3b]/30 rounded-full text-[#ff2a3b] text-xs sm:text-sm font-oswald font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#C8010A]/10 border border-[#C8010A]/30 rounded-full text-[#C8010A] text-xs sm:text-sm font-oswald font-bold uppercase tracking-wider mb-4">
             <RefreshCw className="w-4 h-4" />
             <span>CUSTOMER ASSURANCE</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-oswald font-bold uppercase tracking-tight text-white">
-            REFUND &amp; <span className="text-[#ff2a3b]">CANCELLATION POLICY</span>
+            REFUND &amp; <span className="text-[#C8010A]">CANCELLATION POLICY</span>
           </h1>
           <p className="text-sm font-mono text-gray-400 mt-2">
             Effective Date: January 1, 2026 • Last Updated: October 2026
@@ -38,8 +38,8 @@ export default function RefundPolicyPage() {
         <div className="space-y-10 text-base text-gray-200 leading-relaxed font-body">
           
           {/* Highlight Card: 100% Pre-Launch Guarantee */}
-          <div className="bg-gradient-to-r from-[#1c1414] to-[#141414] border-2 border-[#ff2a3b]/60 p-6 sm:p-8 rounded-sm space-y-3">
-            <div className="flex items-center gap-2.5 text-[#ff2a3b]">
+          <div className="bg-gradient-to-r from-[#1c1414] to-[#141414] border-2 border-[#C8010A]/60 p-6 sm:p-8 rounded-sm space-y-3">
+            <div className="flex items-center gap-2.5 text-[#C8010A]">
               <ShieldCheck className="w-7 h-7 shrink-0" />
               <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider">
                 100% Pre-Launch Money-Back Guarantee
@@ -52,10 +52,10 @@ export default function RefundPolicyPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">1.</span> Strict No-Refund Policy (Post-Registration / Once Paid)
+              <span className="text-[#C8010A]">1.</span> Strict No-Refund Policy (Post-Registration / Once Paid)
             </h2>
-            <div className="bg-[#1c1414] border border-[#ff2a3b]/40 p-5 rounded-sm space-y-2">
-              <p className="font-oswald text-lg font-bold text-[#ff2a3b] uppercase tracking-wide">
+            <div className="bg-[#1c1414] border border-[#C8010A]/40 p-5 rounded-sm space-y-2">
+              <p className="font-oswald text-lg font-bold text-[#C8010A] uppercase tracking-wide">
                 FEES ONCE PAID ARE STRICTLY NON-REFUNDABLE UNDER ANY CIRCUMSTANCES
               </p>
               <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
@@ -71,7 +71,7 @@ export default function RefundPolicyPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">2.</span> Absolute Zero Membership Freeze Policy
+              <span className="text-[#C8010A]">2.</span> Absolute Zero Membership Freeze Policy
             </h2>
             <div className="bg-[#0a0a0a] border border-white/10 p-5 rounded-sm space-y-2">
               <p className="font-oswald text-lg font-bold text-white uppercase tracking-wide">
@@ -90,7 +90,7 @@ export default function RefundPolicyPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">3.</span> Duplicate Transactions &amp; Billing Errors
+              <span className="text-[#C8010A]">3.</span> Duplicate Transactions &amp; Billing Errors
             </h2>
             <p className="text-base text-gray-200 leading-relaxed">
               In the rare event of a technical payment gateway failure, double charge, or duplicate transaction where the member&apos;s bank account or UPI was debited multiple times for a single order:
@@ -111,7 +111,7 @@ export default function RefundPolicyPage() {
           </section>
 
           {/* Support Box */}
-          <div className="bg-[#181818] border border-[#ff2a3b]/40 p-6 sm:p-8 rounded-sm">
+          <div className="bg-[#181818] border border-[#C8010A]/40 p-6 sm:p-8 rounded-sm">
             <h3 className="text-xl font-oswald font-bold uppercase text-white mb-2">
               Need Help with a Refund or Billing?
             </h3>
@@ -119,7 +119,7 @@ export default function RefundPolicyPage() {
               Our customer support desk is available daily from 06:00 AM to 10:00 PM:
             </p>
             <div className="space-y-2.5 text-sm sm:text-base text-gray-200">
-              <p><strong>Email:</strong> <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] font-bold hover:underline">armour247gym@gmail.com</a></p>
+              <p><strong>Email:</strong> <a href="mailto:armour247gym@gmail.com" className="text-[#C8010A] font-bold hover:underline">armour247gym@gmail.com</a></p>
               <p><strong>Phone / WhatsApp:</strong> <a href="tel:+918160697163" className="text-white font-bold hover:underline">+91 81606 97163</a></p>
               <p><strong>Address:</strong> C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad 382445</p>
             </div>

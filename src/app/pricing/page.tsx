@@ -103,11 +103,11 @@ export default function PricingPage() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="eyebrow text-sm sm:text-base text-[#ff2a3b] font-bold block mb-2 tracking-[0.2em]">
+          <span className="eyebrow text-sm sm:text-base text-[#C8010A] font-bold block mb-2 tracking-[0.2em]">
             MEMBERSHIP TIERS • HATHIJAN CIRCLE
           </span>
           <h1 className="text-4xl sm:text-6xl font-oswald font-bold uppercase tracking-tight text-white mb-4">
-            Membership <span className="text-[#ff2a3b]">Plans</span>
+            Membership <span className="text-[#C8010A]">Plans</span>
           </h1>
           <p className="text-base sm:text-lg text-gray-200 font-body leading-relaxed max-w-2xl mx-auto">
             Transparent pricing with round-the-clock biometric facility access, imported plate-loaded machines, and certified floor coaches in Ahmedabad.
@@ -118,17 +118,17 @@ export default function PricingPage() {
         {/* DEMO WORKOUT PASS — Prominent Featured Callout Banner        */}
         {/* ============================================================ */}
         <div className="bg-gradient-to-r from-[#171717] via-[#141414] to-[#171717] border border-white/10 rounded-sm p-6 sm:p-8 mb-14 shadow-xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[#ff2a3b]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#C8010A]/5 rounded-full blur-3xl pointer-events-none" />
           
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="flex items-start sm:items-center gap-4 sm:gap-6">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-sm bg-[#ff2a3b]/10 border border-[#ff2a3b]/30 flex flex-col items-center justify-center text-[#ff2a3b] shrink-0 font-oswald font-bold">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-sm bg-[#C8010A]/10 border border-[#C8010A]/30 flex flex-col items-center justify-center text-[#C8010A] shrink-0 font-oswald font-bold">
                 <span className="text-2xl sm:text-3xl leading-none">₹500</span>
                 <span className="text-xs uppercase tracking-wider text-gray-300 mt-0.5 font-bold">Trial</span>
               </div>
               <div>
                 <div className="flex flex-wrap items-center gap-2.5 mb-1.5">
-                  <span className="text-xs font-oswald font-bold uppercase tracking-wider px-2.5 py-1 rounded-sm bg-[#ff2a3b] text-white">
+                  <span className="text-xs font-oswald font-bold uppercase tracking-wider px-2.5 py-1 rounded-sm bg-[#C8010A] text-white">
                     SINGLE WORKOUT SESSION
                   </span>
                   <span className="text-xs sm:text-sm text-gray-300 font-body">No lock-in or membership commitment</span>
@@ -144,7 +144,7 @@ export default function PricingPage() {
 
             <Link
               href="/contact?plan=demo"
-              className="bg-white hover:bg-[#ff2a3b] text-black hover:text-white font-oswald font-bold uppercase text-sm sm:text-base px-8 py-4 rounded-sm transition-colors shrink-0 tracking-wider inline-flex items-center gap-2 shadow-lg"
+              className="bg-white hover:bg-[#C8010A] text-black hover:text-white font-oswald font-bold uppercase text-sm sm:text-base px-8 py-4 rounded-sm transition-colors shrink-0 tracking-wider inline-flex items-center gap-2 shadow-lg"
             >
               <span>Book Demo Session (₹500)</span>
               <ArrowRight className="w-4 h-4" />
@@ -182,7 +182,7 @@ export default function PricingPage() {
                       <span
                         className={`text-xs font-oswald font-bold uppercase tracking-wider px-3 py-1 rounded-sm ${
                           plan.highlight
-                            ? "bg-[#ff2a3b] text-white shadow-sm"
+                            ? "bg-[#C8010A] text-white shadow-sm"
                             : "bg-white/10 text-gray-200"
                         }`}
                       >
@@ -215,7 +215,7 @@ export default function PricingPage() {
                         {plan.period}
                       </span>
                     </div>
-                    <div className="text-sm sm:text-base font-bold text-[#ff2a3b] font-body mt-1">
+                    <div className="text-sm sm:text-base font-bold text-[#C8010A] font-body mt-1">
                       {plan.equivalent}
                     </div>
                   </div>
@@ -229,7 +229,7 @@ export default function PricingPage() {
                   <div className="space-y-3 text-sm sm:text-base text-gray-200 font-body mb-8">
                     {plan.features.map((feat, idx) => (
                       <div key={idx} className="flex items-start gap-2.5">
-                        <Check className="w-4.5 h-4.5 text-[#ff2a3b] shrink-0 mt-0.5" />
+                        <Check className="w-4.5 h-4.5 text-[#C8010A] shrink-0 mt-0.5" />
                         <span className="leading-snug">{feat}</span>
                       </div>
                     ))}
@@ -242,8 +242,8 @@ export default function PricingPage() {
                     href={plan.ctaLink}
                     className={`w-full py-3.5 px-4 text-sm sm:text-base font-oswald font-bold uppercase tracking-wider rounded-sm text-center block transition-colors ${
                       plan.highlight
-                        ? "bg-[#ff2a3b] hover:bg-white hover:text-black text-white shadow-lg"
-                        : "bg-white/10 hover:bg-[#ff2a3b] text-white"
+                        ? "bg-[#C8010A] hover:bg-white hover:text-black text-white shadow-lg"
+                        : "bg-white/10 hover:bg-[#C8010A] text-white"
                     }`}
                   >
                     {plan.ctaText}
@@ -259,7 +259,7 @@ export default function PricingPage() {
         {/* ============================================================ */}
         <div className="bg-[#121212] border border-white/10 p-6 sm:p-8 rounded-sm max-w-4xl mx-auto space-y-4">
           <div className="flex items-center gap-2 text-white font-oswald uppercase font-bold text-lg sm:text-xl">
-            <Info className="w-5 h-5 text-[#ff2a3b]" />
+            <Info className="w-5 h-5 text-[#C8010A]" />
             <span>Important Membership Terms &amp; Policies</span>
           </div>
 
@@ -292,8 +292,8 @@ export default function PricingPage() {
 
           <div className="pt-3 text-xs sm:text-sm text-gray-400 font-body border-t border-white/5">
             For corporate enrollments or queries, contact our front desk at{" "}
-            <a href="tel:+918160697163" className="text-[#ff2a3b] underline font-semibold">+91 81606 97163</a>{" "}
-            or email <a href="mailto:armour247gym@gmail.com" className="text-[#ff2a3b] underline">armour247gym@gmail.com</a>.
+            <a href="tel:+918160697163" className="text-[#C8010A] underline font-semibold">+91 81606 97163</a>{" "}
+            or email <a href="mailto:armour247gym@gmail.com" className="text-[#C8010A] underline">armour247gym@gmail.com</a>.
           </div>
         </div>
 

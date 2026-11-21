@@ -9,29 +9,33 @@ import { Menu, X, ArrowRight, Phone, MessageSquare } from "lucide-react";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Programs", href: "/#programs" },
-  { name: "Ladies Program", href: "/#ladies-program" },
-  { name: "Facility", href: "/#gallery" },
+  { name: "Studios", href: "/#studios" },
   { name: "About", href: "/about" },
   { name: "Pricing", href: "/pricing" },
   { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [mobileMenuState, setMobileMenuState] = useState({ open: false, pathname: "" });
+  const isMobileMenuOpen = mobileMenuState.open && mobileMenuState.pathname === pathname;
+  const [isScrolled, setIsScrolled] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
-  // Close mobile menu on route change
+  // Keep the first viewport immersive; restore legibility over later sections.
   useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [pathname]);
+    const onScroll = () => setIsScrolled(window.scrollY > 48);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Lock body scroll and handle Esc key when mobile menu is open
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape" && isMobileMenuOpen) {
-        setIsMobileMenuOpen(false);
+        setMobileMenuState({ open: false, pathname });
         toggleButtonRef.current?.focus();
       }
     };
@@ -47,34 +51,33 @@ export default function Navbar() {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isMobileMenuOpen]);
+  }, [isMobileMenuOpen, pathname]);
 
   const toggleMenu = () => {
-    setIsMobileMenuOpen((prev) => !prev);
+    setMobileMenuState((prev) => ({
+      open: !(prev.open && prev.pathname === pathname),
+      pathname,
+    }));
   };
 
   const closeMenu = () => {
-    setIsMobileMenuOpen(false);
+    setMobileMenuState({ open: false, pathname });
   };
 
   return (
     <>
-      {/* 
-        Header is permanently transparent across all scroll states.
-        A subtle linear gradient at the very top ensures high contrast and readability 
-        over the hero image and bright background areas without creating a solid strip.
-      */}
+      {/* Transparent over the homepage hero; an opaque surface appears while scrolling. */}
       <header
         id="mainHeader"
-        className="fixed top-0 left-0 right-0 z-50 transition-colors duration-200 bg-gradient-to-b from-black/85 via-black/45 to-transparent py-4 sm:py-4.5 md:py-5"
+        className={`fixed top-0 left-0 right-0 z-50 border-b transition-[background-color,border-color,padding,backdrop-filter] duration-500 ${isScrolled || pathname !== "/" || isMobileMenuOpen ? "border-white/10 bg-[#08090B]/95 py-3 shadow-[0_12px_50px_rgba(0,0,0,0.25)] backdrop-blur-xl" : "border-transparent bg-gradient-to-b from-black/80 to-transparent py-4 sm:py-5"}`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center gap-6">
           
           {/* Brand Logo - Enlarged for mobile prominence */}
           <Link
             href="/"
             onClick={closeMenu}
-            className="flex items-center group relative z-10 py-1 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff2a3b] rounded-sm"
+            className="flex items-center group relative z-10 py-1 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8010A] rounded-sm"
             aria-label="Armour 24-7 Gym Homepage"
           >
             <Image
@@ -93,15 +96,15 @@ export default function Navbar() {
             className="hidden lg:flex items-center gap-7 xl:gap-9 text-sm xl:text-base font-semibold uppercase tracking-wider text-gray-200"
           >
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = link.href === "/" ? pathname === "/" : !link.href.includes("#") && pathname === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`transition-colors py-1.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#ff2a3b] rounded-sm ${
+                  className={`transition-colors py-1.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C8010A] rounded-sm ${
                     isActive
-                      ? "text-[#ff2a3b] font-bold"
-                      : "hover:text-[#ff2a3b] text-gray-300"
+                      ? "text-[#C8010A] font-bold"
+                      : "hover:text-[#C8010A] text-gray-300"
                   }`}
                 >
                   {link.name}
@@ -114,7 +117,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact"
-              className="bg-[#ff2a3b] hover:bg-white hover:text-black text-white font-oswald font-bold px-6 py-3 text-sm uppercase tracking-wider transition-colors rounded-sm inline-flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="bg-[#C8010A] hover:bg-white hover:text-black text-white font-oswald font-bold px-6 py-3 text-sm uppercase tracking-wider transition-colors rounded-sm inline-flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               <span>Join Now</span>
               <ArrowRight className="w-4 h-4" />
@@ -126,7 +129,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={closeMenu}
-              className="bg-[#ff2a3b] text-white font-oswald font-bold px-4 py-2 text-sm uppercase tracking-wider rounded-sm shadow-md"
+              className="bg-[#C8010A] text-white font-oswald font-bold px-4 py-2 text-sm uppercase tracking-wider rounded-sm shadow-md"
             >
               Join
             </Link>
@@ -135,13 +138,13 @@ export default function Navbar() {
               ref={toggleButtonRef}
               onClick={toggleMenu}
               type="button"
-              className="w-11 h-11 flex items-center justify-center rounded-sm bg-black/50 hover:bg-black/70 text-white border border-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff2a3b]"
+              className="w-11 h-11 flex items-center justify-center rounded-sm bg-black/50 hover:bg-black/70 text-white border border-white/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8010A]"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open navigation menu"}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-navigation-drawer"
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6 text-[#ff2a3b]" />
+                <X className="w-6 h-6 text-[#C8010A]" />
               ) : (
                 <Menu className="w-6 h-6 text-white" />
               )}
@@ -172,12 +175,12 @@ export default function Navbar() {
                   onClick={closeMenu}
                   className={`py-3.5 px-3 text-xl font-oswald font-bold uppercase tracking-wider rounded-sm flex items-center justify-between transition-colors ${
                     isActive
-                      ? "text-[#ff2a3b] bg-white/5"
+                      ? "text-[#C8010A] bg-white/5"
                       : "text-gray-200 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   <span>{link.name}</span>
-                  <ArrowRight className={`w-5 h-5 ${isActive ? "text-[#ff2a3b]" : "text-gray-600"}`} />
+                  <ArrowRight className={`w-5 h-5 ${isActive ? "text-[#C8010A]" : "text-gray-600"}`} />
                 </Link>
               );
             })}
@@ -188,7 +191,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={closeMenu}
-              className="block w-full py-4 text-center bg-[#ff2a3b] text-white font-oswald font-bold text-base uppercase tracking-wider rounded-sm hover:bg-white hover:text-black transition-colors"
+              className="block w-full py-4 text-center bg-[#C8010A] text-white font-oswald font-bold text-base uppercase tracking-wider rounded-sm hover:bg-white hover:text-black transition-colors"
             >
               Join Armour 24-7 Gym
             </Link>
@@ -198,7 +201,7 @@ export default function Navbar() {
                 href="tel:+918160697163"
                 className="py-3 px-3 bg-[#181818] border border-white/10 rounded-sm text-sm font-oswald font-bold uppercase text-gray-200 hover:text-white flex items-center justify-center gap-2"
               >
-                <Phone className="w-4 h-4 text-[#ff2a3b]" />
+                <Phone className="w-4 h-4 text-[#C8010A]" />
                 <span>Call Desk</span>
               </a>
               <a

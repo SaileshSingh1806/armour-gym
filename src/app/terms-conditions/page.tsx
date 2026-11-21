@@ -14,7 +14,7 @@ export default function TermsConditionsPage() {
         {/* Breadcrumb Back Link */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-mono text-gray-400 hover:text-[#ff2a3b] transition-colors mb-8 uppercase tracking-wider"
+          className="inline-flex items-center gap-2 text-sm font-mono text-gray-400 hover:text-[#C8010A] transition-colors mb-8 uppercase tracking-wider"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Home</span>
@@ -22,12 +22,12 @@ export default function TermsConditionsPage() {
 
         {/* Header */}
         <div className="border-b border-white/10 pb-8 mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#ff2a3b]/10 border border-[#ff2a3b]/30 rounded-full text-[#ff2a3b] text-xs sm:text-sm font-oswald font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#C8010A]/10 border border-[#C8010A]/30 rounded-full text-[#C8010A] text-xs sm:text-sm font-oswald font-bold uppercase tracking-wider mb-4">
             <FileText className="w-4 h-4" />
             <span>LEGAL &amp; COMPLIANCE</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-oswald font-bold uppercase tracking-tight text-white">
-            TERMS &amp; <span className="text-[#ff2a3b]">CONDITIONS</span>
+            TERMS &amp; <span className="text-[#C8010A]">CONDITIONS</span>
           </h1>
           <p className="text-sm font-mono text-gray-400 mt-2">
             Effective Date: January 1, 2026 • Last Updated: October 2026
@@ -39,7 +39,7 @@ export default function TermsConditionsPage() {
           
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">1.</span> Introduction &amp; Acceptance of Terms
+              <span className="text-[#C8010A]">1.</span> Introduction &amp; Acceptance of Terms
             </h2>
             <p>
               Welcome to <strong>Armour 24-7 Gym</strong> (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;), operated at <strong>C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445</strong>. By accessing our website, purchasing memberships (including the Pre-Launch Founder Pass), or utilizing our physical training facilities, you agree to comply with and be bound by the following Terms and Conditions.
@@ -51,7 +51,7 @@ export default function TermsConditionsPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">2.</span> 24/7 Facility Access &amp; Management Rights
+              <span className="text-[#C8010A]">2.</span> 24/7 Facility Access &amp; Management Rights
             </h2>
             <ul className="list-disc list-inside space-y-3 text-gray-200 pl-2">
               <li><strong>24/7 Access Privileges:</strong> Valid membership entitles the registered holder to round-the-clock facility access using biometric recognition or assigned RFID credentials.</li>
@@ -65,10 +65,10 @@ export default function TermsConditionsPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">3.</span> Fees Non-Refundable &amp; No Membership Freeze Policy
+              <span className="text-[#C8010A]">3.</span> Fees Non-Refundable &amp; No Membership Freeze Policy
             </h2>
-            <div className="bg-[#1c1414] border border-[#ff2a3b]/40 p-5 rounded-sm space-y-2 text-white">
-              <p className="font-oswald text-lg font-bold text-[#ff2a3b] uppercase tracking-wide">
+            <div className="bg-[#1c1414] border border-[#C8010A]/40 p-5 rounded-sm space-y-2 text-white">
+              <p className="font-oswald text-lg font-bold text-[#C8010A] uppercase tracking-wide">
                 STRICT NO-REFUND POLICY — FEES ONCE PAID WILL NOT BE REFUNDED UNDER ANY CIRCUMSTANCES
               </p>
               <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
@@ -87,7 +87,7 @@ export default function TermsConditionsPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">4.</span> Payment Terms &amp; Digital Transactions
+              <span className="text-[#C8010A]">4.</span> Payment Terms &amp; Digital Transactions
             </h2>
             <p>
               All online transactions are securely encrypted and processed through RBI-authorized payment gateways. We accept UPI (PhonePe, Google Pay, Paytm, BHIM), Credit Cards, Debit Cards, and Netbanking.
@@ -99,7 +99,7 @@ export default function TermsConditionsPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">5.</span> Health, Safety &amp; Assumption of Risk
+              <span className="text-[#C8010A]">5.</span> Health, Safety &amp; Assumption of Risk
             </h2>
             <p>
               Physical exercise, heavy weightlifting, and high-intensity cardiovascular conditioning carry inherent risks of injury. You acknowledge that you are in adequate physical health to participate in strenuous exercise. Armour 24-7 Gym strongly encourages consulting a certified medical practitioner before starting any rigorous fitness regimen.
@@ -111,7 +111,7 @@ export default function TermsConditionsPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">6.</span> Limitation of Liability
+              <span className="text-[#C8010A]">6.</span> Limitation of Liability
             </h2>
             <p>
               To the maximum extent permitted under applicable laws in India, Armour 24-7 Gym, its directors, coaches, and staff shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the loss of personal belongings, misuse of machines, or physical injuries sustained on the premises, except in cases of proven gross negligence.
@@ -120,7 +120,7 @@ export default function TermsConditionsPage() {
 
           <section className="bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-sm space-y-4">
             <h2 className="text-2xl sm:text-3xl font-oswald font-bold uppercase text-white tracking-wider flex items-center gap-2">
-              <span className="text-[#ff2a3b]">7.</span> Governing Law &amp; Jurisdiction
+              <span className="text-[#C8010A]">7.</span> Governing Law &amp; Jurisdiction
             </h2>
             <p>
               These Terms &amp; Conditions shall be governed by and construed in accordance with the laws of India. Any legal disputes or claims arising hereunder shall be subject to the exclusive jurisdiction of the competent courts in <strong>Ahmedabad, Gujarat</strong>.
@@ -128,7 +128,7 @@ export default function TermsConditionsPage() {
           </section>
 
           {/* Contact & Escalation */}
-          <div className="bg-[#181818] border border-[#ff2a3b]/40 p-6 sm:p-8 rounded-sm">
+          <div className="bg-[#181818] border border-[#C8010A]/40 p-6 sm:p-8 rounded-sm">
             <h3 className="text-xl font-oswald font-bold uppercase text-white mb-3">
               Questions or Grievances?
             </h3>
@@ -137,16 +137,16 @@ export default function TermsConditionsPage() {
             </p>
             <div className="space-y-2.5 text-sm sm:text-base text-gray-200">
               <p className="flex items-center gap-2.5">
-                <MapPin className="w-5 h-5 text-[#ff2a3b] shrink-0" />
+                <MapPin className="w-5 h-5 text-[#C8010A] shrink-0" />
                 <span>C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445</span>
               </p>
               <p className="flex items-center gap-2.5">
-                <Phone className="w-5 h-5 text-[#ff2a3b] shrink-0" />
+                <Phone className="w-5 h-5 text-[#C8010A] shrink-0" />
                 <a href="tel:+918160697163" className="hover:text-white font-bold">+91 81606 97163</a>
               </p>
               <p className="flex items-center gap-2.5">
-                <Mail className="w-5 h-5 text-[#ff2a3b] shrink-0" />
-                <a href="mailto:armour247gym@gmail.com" className="hover:text-white font-bold text-[#ff2a3b]">armour247gym@gmail.com</a>
+                <Mail className="w-5 h-5 text-[#C8010A] shrink-0" />
+                <a href="mailto:armour247gym@gmail.com" className="hover:text-white font-bold text-[#C8010A]">armour247gym@gmail.com</a>
               </p>
             </div>
           </div>
