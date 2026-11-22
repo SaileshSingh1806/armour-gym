@@ -111,19 +111,6 @@ export default async function ContactPage({
                 </span>
               </p>
             </div>
-
-            {/* Legal Ownership Box for KYC */}
-            <div className="rounded-sm border border-white/15 bg-[#141518] p-5 text-xs text-white/75 space-y-2">
-              <p className="font-oswald text-xs font-bold uppercase tracking-[0.2em] text-[#FF858A]">
-                LEGAL &amp; BUSINESS ENTITY
-              </p>
-              <p className="leading-relaxed text-sm">
-                <strong className="text-white">Armour 24-7 Gym</strong> is an individual / sole proprietorship enterprise owned and operated by <strong className="text-white font-semibold">Sailesh Singh Shivraj</strong>.
-              </p>
-              <p className="text-white/50 text-xs">
-                Registered Facility Address: C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445.
-              </p>
-            </div>
           </div>
 
           <div className="lg:col-span-7">

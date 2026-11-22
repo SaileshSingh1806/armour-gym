@@ -119,7 +119,6 @@ export default function RefundPolicyPage() {
               Our customer support desk is available daily from 06:00 AM to 10:00 PM:
             </p>
             <div className="space-y-2.5 text-sm sm:text-base text-gray-200">
-              <p><strong>Legal Entity:</strong> Armour 24-7 Gym (Proprietor: Sailesh Singh Shivraj)</p>
               <p><strong>Email:</strong> <a href="mailto:armour247gym@gmail.com" className="text-[#C8010A] font-bold hover:underline">armour247gym@gmail.com</a></p>
               <p><strong>Phone / WhatsApp:</strong> <a href="tel:+918160697163" className="text-white font-bold hover:underline">+91 81606 97163</a></p>
               <p><strong>Address:</strong> C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad 382445</p>

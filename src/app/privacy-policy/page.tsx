@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
               <span className="text-[#C8010A]">1.</span> Overview
             </h2>
             <p>
-              At <strong>Armour 24-7 Gym</strong> (an individual / sole proprietorship enterprise legally owned and operated by <strong>Sailesh Singh Shivraj</strong>, located at C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445), we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy outlines our practices concerning the collection, storage, use, and disclosure of personal information collected through our website, mobile communications, and physical facility operations.
+              At <strong>Armour 24-7 Gym</strong> (located at C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445), we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy outlines our practices concerning the collection, storage, use, and disclosure of personal information collected through our website, mobile communications, and physical facility operations.
             </p>
           </section>
 

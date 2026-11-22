@@ -42,7 +42,7 @@ export default function ShippingPolicyPage() {
               <span className="text-[#C8010A]">1.</span> Nature of Services &amp; Products
             </h2>
             <p>
-              <strong>Armour 24-7 Gym</strong> (an individual business owned and operated by <strong>Sailesh Singh Shivraj</strong>) operates a premier physical fitness training center and bodybuilding gym facility. Services sold online through this website primarily consist of <strong>Digital Membership Passes, Gym Subscriptions, Pre-Launch Passes, and Personal Coaching Programs</strong>.
+              <strong>Armour 24-7 Gym</strong> operates a premier physical fitness training center and bodybuilding gym facility. Services sold online through this website primarily consist of <strong>Digital Membership Passes, Gym Subscriptions, Pre-Launch Passes, and Personal Coaching Programs</strong>.
             </p>
           </section>
 

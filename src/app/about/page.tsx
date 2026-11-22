@@ -156,31 +156,6 @@ export default async function AboutPage() {
             </div>
           </div>
         </section>
-
-        {/* Business & Legal Information for KYC Compliance */}
-        <section aria-labelledby="business-ownership-heading" className="pt-16 sm:pt-20">
-          <div className="rounded-sm border border-white/15 bg-[#121316] p-7 sm:p-10">
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#FF858A]">
-              BUSINESS &amp; LEGAL INFORMATION
-            </span>
-            <h2 id="business-ownership-heading" className="mt-2 font-oswald text-2xl font-bold uppercase tracking-wide text-white sm:text-3xl">
-              ARMOUR 24-7 GYM
-            </h2>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/70 sm:text-base">
-              Armour 24-7 Gym is an individual / sole proprietorship fitness enterprise legally owned and operated by <strong className="text-white font-semibold">Sailesh Singh Shivraj</strong>.
-            </p>
-            <div className="mt-6 grid gap-4 border-t border-white/10 pt-6 text-xs text-white/60 sm:grid-cols-2 sm:text-sm">
-              <div>
-                <span className="block text-white/40 uppercase tracking-wider text-[11px] font-bold">Registered Facility Address</span>
-                <span className="mt-1 block text-white/80">C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445</span>
-              </div>
-              <div>
-                <span className="block text-white/40 uppercase tracking-wider text-[11px] font-bold">Proprietor &amp; Support Contact</span>
-                <span className="mt-1 block text-white/80">Sailesh Singh Shivraj • +91 81606 97163 • armour247gym@gmail.com</span>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );

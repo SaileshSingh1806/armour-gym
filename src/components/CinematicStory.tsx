@@ -115,7 +115,7 @@ export default function CinematicStory({ images }: { images: SiteImages }) {
               <article className="group overflow-hidden rounded-sm border border-white/10 bg-[#111317] transition-colors duration-500 hover:border-white/25">
                 <ParallaxFrame
                   speed={10}
-                  className="relative h-[260px] sm:h-[340px] lg:h-[380px] w-full overflow-hidden"
+                  className="relative aspect-[16/10] w-full overflow-hidden"
                   overlay={
                     <div className="pointer-events-none absolute inset-0 flex items-start justify-between bg-gradient-to-t from-black/60 via-transparent to-black/25 p-5 sm:p-6">
                       <span className="rounded-sm border border-white/30 bg-black/60 px-3 py-1.5 font-oswald text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">

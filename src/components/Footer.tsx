@@ -155,13 +155,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border-t border-white/10 py-7 text-xs text-white/45 sm:text-sm lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <p>© 2026 ARMOUR 24-7 GYM. All rights reserved.</p>
-            <p className="mt-1 text-xs text-white/40">
-              Armour 24-7 Gym is an individual business owned and operated by <strong className="font-medium text-white/70">Sailesh Singh Shivraj</strong>.
-            </p>
-          </div>
+        <div className="flex flex-col gap-5 border-t border-white/10 py-7 text-xs text-white/45 sm:text-sm lg:flex-row lg:items-center lg:justify-between">
+          <p>© 2026 ARMOUR 24-7 GYM. All rights reserved.</p>
           <nav aria-label="Legal information">
             <ul className="flex flex-wrap gap-x-5 gap-y-3">
               {policies.map((item) => (
