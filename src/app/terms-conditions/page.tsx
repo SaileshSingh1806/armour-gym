@@ -42,7 +42,7 @@ export default function TermsConditionsPage() {
               <span className="text-[#C8010A]">1.</span> Introduction &amp; Acceptance of Terms
             </h2>
             <p>
-              Welcome to <strong>Armour 24-7 Gym</strong> (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;), operated at <strong>C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445</strong>. By accessing our website, purchasing memberships (including the Pre-Launch Founder Pass), or utilizing our physical training facilities, you agree to comply with and be bound by the following Terms and Conditions.
+              Welcome to <strong>Armour 24-7 Gym</strong> (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;), an individual / sole proprietorship business enterprise legally owned and operated by <strong>Sailesh Singh Shivraj</strong>, situated at <strong>C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445</strong>. By accessing our website, purchasing memberships (including the Pre-Launch Founder Pass), or utilizing our physical training facilities, you agree to comply with and be bound by the following Terms and Conditions.
             </p>
             <p>
               If you disagree with any part of these terms, you must refrain from purchasing memberships or using the gym facilities.
@@ -136,6 +136,10 @@ export default function TermsConditionsPage() {
               For any clarification regarding these terms, contact our administrative desk:
             </p>
             <div className="space-y-2.5 text-sm sm:text-base text-gray-200">
+              <p className="flex items-center gap-2.5 text-white/90">
+                <span className="font-bold text-[#FF858A]">Legal Entity / Proprietor:</span>
+                <span>Armour 24-7 Gym (Sailesh Singh Shivraj)</span>
+              </p>
               <p className="flex items-center gap-2.5">
                 <MapPin className="w-5 h-5 text-[#C8010A] shrink-0" />
                 <span>C-601, 602 Shalin Square, Hathijan Circle, Ahmedabad, Gujarat 382445</span>
